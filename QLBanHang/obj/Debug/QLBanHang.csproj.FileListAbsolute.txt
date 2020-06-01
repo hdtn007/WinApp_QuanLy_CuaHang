@@ -1,0 +1,24 @@
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\bin\Debug\QLBanHang.exe.config
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\bin\Debug\QLBanHang.exe
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\bin\Debug\QLBanHang.pdb
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Properties.Resources.resources
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.csproj.GenerateResource.cache
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.csproj.CoreCompileInputs.cache
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.exe
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.pdb
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Form1.resources
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Form2.resources
+F:\Ho Doan Thanh Ngoan\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.csprojAssemblyReference.cache
+D:\winapp\QLBanHang\QLBanHang\bin\Debug\QLBanHang.exe.config
+D:\winapp\QLBanHang\QLBanHang\bin\Debug\QLBanHang.exe
+D:\winapp\QLBanHang\QLBanHang\bin\Debug\QLBanHang.pdb
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Form1.resources
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Form2.resources
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Properties.Resources.resources
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.csproj.GenerateResource.cache
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.csproj.CoreCompileInputs.cache
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.exe
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.pdb
+D:\winapp\QLBanHang\QLBanHang\bin\Debug\aa\QLBanHang.resources.dll
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Form2.aa.resources
+D:\winapp\QLBanHang\QLBanHang\obj\Debug\aa\QLBanHang.resources.dll

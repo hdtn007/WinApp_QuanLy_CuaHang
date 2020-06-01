@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLBanHang", "QLBanHang\QLBanHang.csproj", "{1F3595B7-52DF-4E76-816C-345CC95625E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F3595B7-52DF-4E76-816C-345CC95625E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3595B7-52DF-4E76-816C-345CC95625E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F3595B7-52DF-4E76-816C-345CC95625E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F3595B7-52DF-4E76-816C-345CC95625E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3732B898-751B-425D-9EE9-B275EB86FB12}
+	EndGlobalSection
+EndGlobal
