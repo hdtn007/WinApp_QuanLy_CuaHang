@@ -28,20 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.txtmailsaoluu = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.hidepassmoi2 = new System.Windows.Forms.PictureBox();
+            this.showpassmoi2 = new System.Windows.Forms.PictureBox();
+            this.hidepassmoi1 = new System.Windows.Forms.PictureBox();
+            this.showpassmoi1 = new System.Windows.Forms.PictureBox();
+            this.hidepasscu = new System.Windows.Forms.PictureBox();
+            this.showpasscu = new System.Windows.Forms.PictureBox();
+            this.txtThongBaoDoiMK = new System.Windows.Forms.Label();
             this.txtMatKhauCu = new System.Windows.Forms.TextBox();
             this.btnHuyMatKhau = new System.Windows.Forms.Button();
             this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.btnLuuMatKhau = new System.Windows.Forms.Button();
             this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -316,19 +326,17 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.txtThongBaoDoiMK = new System.Windows.Forms.Label();
-            this.showpasscu = new System.Windows.Forms.PictureBox();
-            this.showpassmoi1 = new System.Windows.Forms.PictureBox();
-            this.showpassmoi2 = new System.Windows.Forms.PictureBox();
-            this.hidepasscu = new System.Windows.Forms.PictureBox();
-            this.hidepassmoi1 = new System.Windows.Forms.PictureBox();
-            this.hidepassmoi2 = new System.Windows.Forms.PictureBox();
-            this.label67 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidepasscu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpasscu)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabledulieuthongke)).BeginInit();
             this.groupBox18.SuspendLayout();
@@ -387,12 +395,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCTHD)).BeginInit();
             this.gbDanhSachCTHD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachcthd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showpasscu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidepasscu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -430,6 +432,7 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.txtmailsaoluu);
             this.groupBox13.Controls.Add(this.label67);
             this.groupBox13.Controls.Add(this.hidepassmoi2);
             this.groupBox13.Controls.Add(this.showpassmoi2);
@@ -444,11 +447,79 @@
             this.groupBox13.Controls.Add(this.btnLuuMatKhau);
             this.groupBox13.Controls.Add(this.txtNhapLaiMatKhau);
             this.groupBox13.Controls.Add(this.label38);
+            this.groupBox13.Controls.Add(this.label68);
             this.groupBox13.Controls.Add(this.label46);
             this.groupBox13.Controls.Add(this.label44);
             resources.ApplyResources(this.groupBox13, "groupBox13");
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.TabStop = false;
+            // 
+            // txtmailsaoluu
+            // 
+            this.txtmailsaoluu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtmailsaoluu, "txtmailsaoluu");
+            this.txtmailsaoluu.Name = "txtmailsaoluu";
+            // 
+            // label67
+            // 
+            resources.ApplyResources(this.label67, "label67");
+            this.label67.ForeColor = System.Drawing.Color.Red;
+            this.label67.Name = "label67";
+            // 
+            // hidepassmoi2
+            // 
+            this.hidepassmoi2.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.hidepassmoi2, "hidepassmoi2");
+            this.hidepassmoi2.Name = "hidepassmoi2";
+            this.hidepassmoi2.TabStop = false;
+            this.hidepassmoi2.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // showpassmoi2
+            // 
+            this.showpassmoi2.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.showpassmoi2, "showpassmoi2");
+            this.showpassmoi2.Name = "showpassmoi2";
+            this.showpassmoi2.TabStop = false;
+            this.showpassmoi2.Click += new System.EventHandler(this.showpassmoi2_Click);
+            // 
+            // hidepassmoi1
+            // 
+            this.hidepassmoi1.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.hidepassmoi1, "hidepassmoi1");
+            this.hidepassmoi1.Name = "hidepassmoi1";
+            this.hidepassmoi1.TabStop = false;
+            this.hidepassmoi1.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // showpassmoi1
+            // 
+            this.showpassmoi1.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.showpassmoi1, "showpassmoi1");
+            this.showpassmoi1.Name = "showpassmoi1";
+            this.showpassmoi1.TabStop = false;
+            this.showpassmoi1.Click += new System.EventHandler(this.showpassmoi1_Click);
+            // 
+            // hidepasscu
+            // 
+            this.hidepasscu.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.hidepasscu, "hidepasscu");
+            this.hidepasscu.Name = "hidepasscu";
+            this.hidepasscu.TabStop = false;
+            this.hidepasscu.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // showpasscu
+            // 
+            this.showpasscu.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.showpasscu, "showpasscu");
+            this.showpasscu.Name = "showpasscu";
+            this.showpasscu.TabStop = false;
+            this.showpasscu.Click += new System.EventHandler(this.showpasscu_Click);
+            // 
+            // txtThongBaoDoiMK
+            // 
+            resources.ApplyResources(this.txtThongBaoDoiMK, "txtThongBaoDoiMK");
+            this.txtThongBaoDoiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtThongBaoDoiMK.ForeColor = System.Drawing.Color.White;
+            this.txtThongBaoDoiMK.Name = "txtThongBaoDoiMK";
             // 
             // txtMatKhauCu
             // 
@@ -488,6 +559,11 @@
             // 
             resources.ApplyResources(this.label38, "label38");
             this.label38.Name = "label38";
+            // 
+            // label68
+            // 
+            resources.ApplyResources(this.label68, "label68");
+            this.label68.Name = "label68";
             // 
             // label46
             // 
@@ -2580,67 +2656,6 @@
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
-            // txtThongBaoDoiMK
-            // 
-            resources.ApplyResources(this.txtThongBaoDoiMK, "txtThongBaoDoiMK");
-            this.txtThongBaoDoiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtThongBaoDoiMK.ForeColor = System.Drawing.Color.White;
-            this.txtThongBaoDoiMK.Name = "txtThongBaoDoiMK";
-            // 
-            // showpasscu
-            // 
-            this.showpasscu.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.showpasscu, "showpasscu");
-            this.showpasscu.Name = "showpasscu";
-            this.showpasscu.TabStop = false;
-            this.showpasscu.Click += new System.EventHandler(this.showpasscu_Click);
-            // 
-            // showpassmoi1
-            // 
-            this.showpassmoi1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.showpassmoi1, "showpassmoi1");
-            this.showpassmoi1.Name = "showpassmoi1";
-            this.showpassmoi1.TabStop = false;
-            this.showpassmoi1.Click += new System.EventHandler(this.showpassmoi1_Click);
-            // 
-            // showpassmoi2
-            // 
-            this.showpassmoi2.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.showpassmoi2, "showpassmoi2");
-            this.showpassmoi2.Name = "showpassmoi2";
-            this.showpassmoi2.TabStop = false;
-            this.showpassmoi2.Click += new System.EventHandler(this.showpassmoi2_Click);
-            // 
-            // hidepasscu
-            // 
-            this.hidepasscu.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.hidepasscu, "hidepasscu");
-            this.hidepasscu.Name = "hidepasscu";
-            this.hidepasscu.TabStop = false;
-            this.hidepasscu.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // hidepassmoi1
-            // 
-            this.hidepassmoi1.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.hidepassmoi1, "hidepassmoi1");
-            this.hidepassmoi1.Name = "hidepassmoi1";
-            this.hidepassmoi1.TabStop = false;
-            this.hidepassmoi1.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // hidepassmoi2
-            // 
-            this.hidepassmoi2.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.hidepassmoi2, "hidepassmoi2");
-            this.hidepassmoi2.Name = "hidepassmoi2";
-            this.hidepassmoi2.TabStop = false;
-            this.hidepassmoi2.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // label67
-            // 
-            resources.ApplyResources(this.label67, "label67");
-            this.label67.ForeColor = System.Drawing.Color.Red;
-            this.label67.Name = "label67";
-            // 
             // Form2
             // 
             resources.ApplyResources(this, "$this");
@@ -2658,6 +2673,12 @@
             this.tabPage1.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidepasscu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpasscu)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabledulieuthongke)).EndInit();
@@ -2741,12 +2762,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCTHD)).EndInit();
             this.gbDanhSachCTHD.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachcthd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showpasscu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showpassmoi2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidepasscu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3046,5 +3061,7 @@
         private System.Windows.Forms.PictureBox hidepasscu;
         private System.Windows.Forms.PictureBox showpasscu;
         private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.TextBox txtmailsaoluu;
+        private System.Windows.Forms.Label label68;
     }
 }

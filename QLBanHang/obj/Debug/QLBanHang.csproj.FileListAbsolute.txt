@@ -22,3 +22,4 @@ D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.pdb
 D:\winapp\QLBanHang\QLBanHang\bin\Debug\aa\QLBanHang.resources.dll
 D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Form2.aa.resources
 D:\winapp\QLBanHang\QLBanHang\obj\Debug\aa\QLBanHang.resources.dll
+D:\WinApp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.csprojAssemblyReference.cache

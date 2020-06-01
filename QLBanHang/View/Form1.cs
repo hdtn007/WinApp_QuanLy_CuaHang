@@ -46,7 +46,7 @@ namespace QLBanHang
             else if (txtMatKhau.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập mật khẩu ✘"; }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source= HO-DOAN-THANH-N\SQLEXPRESS; ;Initial Catalog = QL_CUAHANG;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source= LAPTOP-MN7V8RC1\SQLEXPRESS; ;Initial Catalog = QL_CUAHANG;Integrated Security=True");
                 SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From QUANLY where taikhoan='" + txtTaiKhoan.Text + "'and matkhau='" + txtMatKhau.Text + "'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -73,7 +73,10 @@ namespace QLBanHang
         {
             txtThongBaoDangnhap.Text = "";
             LoadShowEyeF1(true);
-            
+           // txtMatKhau.PasswordChar = '*';
+
+
+
             // txtMatKhau.UseSystemPasswordChar = false;
         }
 
@@ -82,6 +85,7 @@ namespace QLBanHang
             AnMatKhau.Visible = e;
             hienMatKhau.Visible = !e;
             txtMatKhau.UseSystemPasswordChar = !e;
+            
 
 
         }

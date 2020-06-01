@@ -2139,7 +2139,7 @@ namespace QLBanHang
             else if (txtNhapLaiMatKhau.Text != txtMatKhauMoi.Text) { txtThongBaoDoiMK.Text = "✘ Mật khẩu mới không trùng nhau ✘"; }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source= HO-DOAN-THANH-N\SQLEXPRESS; ;Initial Catalog = QL_CUAHANG;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source= LAPTOP-MN7V8RC1\SQLEXPRESS; ;Initial Catalog = QL_CUAHANG;Integrated Security=True");
                 SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From QUANLY where taikhoan='admin'and matkhau='" + txtMatKhauCu.Text + "'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -2152,7 +2152,7 @@ namespace QLBanHang
                     {
                         //  gửi mật khẩu mới vào mail
                         SendMailMob mailMob = new SendMailMob();
-                        if (mailMob.SendMail(txtNhapLaiMatKhau.Text) == true)
+                        if (mailMob.SendMail(txtNhapLaiMatKhau.Text, txtmailsaoluu.Text) == true)
                         {
                             txtThongBaoDoiMK.Text = "";
                             DialogResult m = MessageBox.Show("✓ Đã cập nhật mật khẩu mới thành công! ✓", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

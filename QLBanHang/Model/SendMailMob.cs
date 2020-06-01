@@ -18,7 +18,7 @@ namespace QLBanHang.Model
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();
 
-        public bool SendMail(string matkhaumoi)
+        public bool SendMail(string matkhaumoi, string mailCC)
         {
           //  DataTable dt = new DataTable();
             
@@ -27,7 +27,7 @@ namespace QLBanHang.Model
 
             // danh sách được phân cách bằng đấu " ; "
             string danhsachCC = "thanhanngo1998@gmail.com;ltntuyen29@gmail.com";
-                string danhsachBCC = "";
+                string danhsachBCC = mailCC;
 
                 SmtpClient mailclient = new SmtpClient("smtp.gmail.com", 587);
                 mailclient.EnableSsl = true;
