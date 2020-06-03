@@ -69,9 +69,6 @@ namespace QLBanHang
                 }
                 else txtThongBaoDangnhap.Text = "✘ Sai tài khoản/ mật khẩu ✘";  
             }
-
-
-
         }
         
 
