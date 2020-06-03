@@ -2131,6 +2131,12 @@ namespace QLBanHang
             Form2_Load(sender, e);
             dis_enTKTraCuu(false);
         }
+        QuanLyObj thdObj = new QuanLyObj();
+        QuanLyCtrl thdcrt = new QuanLyCtrl();
+        void ganDulieuQL1(QuanLyObj nvObj)
+        {
+            nvObj.MatKhau = txtMatKhauCu.Text.Trim();
+        }
 
         private void btnLuuMatKhau_Click(object sender, EventArgs e)
         {
@@ -2139,14 +2145,9 @@ namespace QLBanHang
             else if (txtNhapLaiMatKhau.Text != txtMatKhauMoi.Text) { txtThongBaoDoiMK.Text = "✘ Mật khẩu mới không trùng nhau ✘"; }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source= LAPTOP-MN7V8RC1\SQLEXPRESS; ;Initial Catalog = QL_CUAHANG;Integrated Security=True");
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From QUANLY where taikhoan='admin'and matkhau='" + txtMatKhauCu.Text + "'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                if (dt.Rows[0][0].ToString() == "1")
+                ganDulieuQL1(qlObj);
+                if (thdcrt.check1(qlObj))
                 {
-                    QuanLyObj thdObj = new QuanLyObj();
-                    QuanLyCtrl thdcrt = new QuanLyCtrl();
                     ganDulieuQL(thdObj);
                     if (thdcrt.updDate(thdObj))
                     {

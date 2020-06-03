@@ -111,6 +111,32 @@ namespace QLBanHang.Model
             }
             return false;
         }
+
+        public bool Check1(QuanLyObj qlObj)
+        {
+            DataTable dt = new DataTable();
+
+            cmd.CommandText = "Select Count(*) From QUANLY where taikhoan='admin'and matkhau='" + qlObj.MatKhau + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    return true;
+                }
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+            return false;
+        }
         /*
         public bool DelData(string tk)
         {

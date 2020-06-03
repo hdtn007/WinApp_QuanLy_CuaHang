@@ -34,11 +34,16 @@ namespace QLBanHang.Control
         {
             return qlMod.Check(qlObj);
         }
+
+        public bool check1(QuanLyObj qlObj)
+        {
+            return qlMod.Check1(qlObj);
+        }
         /*
         public void SendMailMob(string makhaumoi)
         {
             mailMob.SendMail();
         } */
-        
+
     }
 }
