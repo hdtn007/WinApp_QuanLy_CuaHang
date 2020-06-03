@@ -1,4 +1,7 @@
-﻿using System;
+﻿using QLBanHang.Control;
+using QLBanHang.Model;
+using QLBanHang.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +16,9 @@ namespace QLBanHang
 {
     public partial class Form1 : Form
     {
+        QuanLyCtrl qlcrt = new QuanLyCtrl();
+        QuanLyMod qlmod = new QuanLyMod();
+        QuanLyObj qlObj = new QuanLyObj();
         public Form1()
         {
             InitializeComponent();
@@ -36,21 +42,21 @@ namespace QLBanHang
         {
 
         }
-       
+
+        void ganDulieuQL(QuanLyObj nvObj)
+        {
+            nvObj.Taikhoan = txtTaiKhoan.Text.Trim();
+            nvObj.MatKhau = txtMatKhau.Text.Trim();
+        }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            
-
             if (txtTaiKhoan.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập tài khoản ✘"; }
             else if (txtMatKhau.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập mật khẩu ✘"; }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source= LAPTOP-MN7V8RC1\SQLEXPRESS; ;Initial Catalog = QL_CUAHANG;Integrated Security=True");
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From QUANLY where taikhoan='" + txtTaiKhoan.Text + "'and matkhau='" + txtMatKhau.Text + "'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                if (dt.Rows[0][0].ToString() == "1")
+                ganDulieuQL(qlObj);
+                if(qlcrt.check(qlObj))
                 {
                     Form2 f = new Form2();
 
@@ -61,7 +67,7 @@ namespace QLBanHang
                     txtMatKhau.Text = "";
                     txtThongBaoDangnhap.Text = "";
                 }
-                else txtThongBaoDangnhap.Text = "✘ Sai tài khoản/ mật khẩu ✘";
+                else txtThongBaoDangnhap.Text = "✘ Sai tài khoản/ mật khẩu ✘";  
             }
 
 

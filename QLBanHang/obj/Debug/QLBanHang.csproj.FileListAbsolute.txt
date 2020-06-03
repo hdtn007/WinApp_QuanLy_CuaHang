@@ -23,3 +23,16 @@ D:\winapp\QLBanHang\QLBanHang\bin\Debug\aa\QLBanHang.resources.dll
 D:\winapp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.Form2.aa.resources
 D:\winapp\QLBanHang\QLBanHang\obj\Debug\aa\QLBanHang.resources.dll
 D:\WinApp\QLBanHang\QLBanHang\obj\Debug\QLBanHang.csprojAssemblyReference.cache
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\bin\Debug\QLBanHang.exe.config
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.exe
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.pdb
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\bin\Debug\QLBanHang.exe
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\bin\Debug\QLBanHang.pdb
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\bin\Debug\aa\QLBanHang.resources.dll
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.csprojResolveAssemblyReference.cache
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.Form1.resources
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.Form2.resources
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.Properties.Resources.resources
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.Form2.aa.resources
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.csproj.GenerateResource.Cache
+D:\doanchuyennganhN\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\aa\QLBanHang.resources.dll

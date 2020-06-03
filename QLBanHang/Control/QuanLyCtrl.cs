@@ -29,6 +29,11 @@ namespace QLBanHang.Control
         {
             return qlMod.UpdData(qlObj);
         }
+
+        public bool check(QuanLyObj qlObj)
+        {
+            return qlMod.Check(qlObj);
+        }
         /*
         public void SendMailMob(string makhaumoi)
         {
