@@ -51,6 +51,8 @@ namespace QLBanHang
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            txtThongBaoDangnhap.Text = "";
+
             if (txtTaiKhoan.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập tài khoản ✘"; }
             else if (txtMatKhau.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập mật khẩu ✘"; }
             else
@@ -89,7 +91,7 @@ namespace QLBanHang
             hienMatKhau.Visible = !e;
             txtMatKhau.UseSystemPasswordChar = !e;
             
-
+            
 
         }
 

@@ -2140,6 +2140,7 @@ namespace QLBanHang
 
         private void btnLuuMatKhau_Click(object sender, EventArgs e)
         {
+            txtThongBaoDoiMK.Text = "";
             if (txtMatKhauCu.Text == "") { txtThongBaoDoiMK.Text = "✘ Vui lòng nhập mật khẩu cũ ✘"; }
             else if (txtMatKhauMoi.Text == "") { txtThongBaoDoiMK.Text = "✘ Vui lòng nhập mật khẩu mới ✘"; }
             else if (txtNhapLaiMatKhau.Text != txtMatKhauMoi.Text) { txtThongBaoDoiMK.Text = "✘ Mật khẩu mới không trùng nhau ✘"; }

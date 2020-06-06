@@ -121,7 +121,12 @@ CREATE TABLE CTHD (
 -- bang quan ly
 CREATE TABLE QUANLY (
     taikhoan nchar(20),
-    matkhau nchar(20)
+    matkhau nchar(20),
+	manv nchar(5),
+	phanquyen int
+
+	CONSTRAINT quanly_manv FOREIGN KEY (manv)
+    REFERENCES NHANVIEN(manv),
 );
 
 -- bang thong ke hang hoa
