@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -101,6 +101,20 @@
             this.btnAllSpThang = new System.Windows.Forms.Button();
             this.btnThongKeTheoThang = new System.Windows.Forms.Button();
             this.label50 = new System.Windows.Forms.Label();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hotenuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taikhoanUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matkhauuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phanquyenUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChuUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
             this.tabQuanLy = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -326,20 +340,10 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hotenuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taikhoanUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matkhauuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phanquyenUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChuUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -356,6 +360,11 @@
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.txtTHongKE.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox19.SuspendLayout();
             this.tabQuanLy.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -409,11 +418,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCTHD)).BeginInit();
             this.gbDanhSachCTHD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachcthd)).BeginInit();
-            this.tabPage9.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.groupBox20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage10.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -438,6 +444,7 @@
             this.tabControl3.Controls.Add(this.tabPage1);
             this.tabControl3.Controls.Add(this.tabPage2);
             this.tabControl3.Controls.Add(this.tabPage9);
+            this.tabControl3.Controls.Add(this.tabPage10);
             resources.ApplyResources(this.tabControl3, "tabControl3");
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
@@ -963,6 +970,98 @@
             resources.ApplyResources(this.label50, "label50");
             this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label50.Name = "label50";
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.panel13);
+            resources.ApplyResources(this.tabPage9, "tabPage9");
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.groupBox20);
+            this.panel13.Controls.Add(this.groupBox19);
+            resources.ApplyResources(this.panel13, "panel13");
+            this.panel13.Name = "panel13";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.groupBox20, "groupBox20");
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hotenuser,
+            this.EmailUser,
+            this.taikhoanUser,
+            this.matkhauuser,
+            this.phanquyenUser,
+            this.GhiChuUser});
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.GridColor = System.Drawing.Color.Red;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            // 
+            // hotenuser
+            // 
+            resources.ApplyResources(this.hotenuser, "hotenuser");
+            this.hotenuser.Name = "hotenuser";
+            // 
+            // EmailUser
+            // 
+            resources.ApplyResources(this.EmailUser, "EmailUser");
+            this.EmailUser.Name = "EmailUser";
+            // 
+            // taikhoanUser
+            // 
+            resources.ApplyResources(this.taikhoanUser, "taikhoanUser");
+            this.taikhoanUser.Name = "taikhoanUser";
+            // 
+            // matkhauuser
+            // 
+            resources.ApplyResources(this.matkhauuser, "matkhauuser");
+            this.matkhauuser.Name = "matkhauuser";
+            // 
+            // phanquyenUser
+            // 
+            resources.ApplyResources(this.phanquyenUser, "phanquyenUser");
+            this.phanquyenUser.Name = "phanquyenUser";
+            // 
+            // GhiChuUser
+            // 
+            resources.ApplyResources(this.GhiChuUser, "GhiChuUser");
+            this.GhiChuUser.Name = "GhiChuUser";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.label71);
+            this.groupBox19.Controls.Add(this.label70);
+            this.groupBox19.Controls.Add(this.label69);
+            resources.ApplyResources(this.groupBox19, "groupBox19");
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.TabStop = false;
+            // 
+            // label71
+            // 
+            resources.ApplyResources(this.label71, "label71");
+            this.label71.Name = "label71";
+            // 
+            // label70
+            // 
+            resources.ApplyResources(this.label70, "label70");
+            this.label70.Name = "label70";
+            // 
+            // label69
+            // 
+            resources.ApplyResources(this.label69, "label69");
+            this.label69.Name = "label69";
             // 
             // tabQuanLy
             // 
@@ -2677,97 +2776,31 @@
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
-            // tabPage9
+            // tabPage10
             // 
-            this.tabPage9.Controls.Add(this.panel13);
-            resources.ApplyResources(this.tabPage9, "tabPage9");
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.tabPage10.Controls.Add(this.panel14);
+            resources.ApplyResources(this.tabPage10, "tabPage10");
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // panel13
+            // panel14
             // 
-            this.panel13.Controls.Add(this.groupBox20);
-            this.panel13.Controls.Add(this.groupBox19);
-            resources.ApplyResources(this.panel13, "panel13");
-            this.panel13.Name = "panel13";
+            this.panel14.Controls.Add(this.groupBox22);
+            this.panel14.Controls.Add(this.groupBox21);
+            resources.ApplyResources(this.panel14, "panel14");
+            this.panel14.Name = "panel14";
             // 
-            // groupBox19
+            // groupBox21
             // 
-            this.groupBox19.Controls.Add(this.label71);
-            this.groupBox19.Controls.Add(this.label70);
-            this.groupBox19.Controls.Add(this.label69);
-            resources.ApplyResources(this.groupBox19, "groupBox19");
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.TabStop = false;
+            resources.ApplyResources(this.groupBox21, "groupBox21");
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.TabStop = false;
             // 
-            // groupBox20
+            // groupBox22
             // 
-            this.groupBox20.Controls.Add(this.dataGridView1);
-            resources.ApplyResources(this.groupBox20, "groupBox20");
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.TabStop = false;
-            // 
-            // label69
-            // 
-            resources.ApplyResources(this.label69, "label69");
-            this.label69.Name = "label69";
-            // 
-            // label70
-            // 
-            resources.ApplyResources(this.label70, "label70");
-            this.label70.Name = "label70";
-            // 
-            // label71
-            // 
-            resources.ApplyResources(this.label71, "label71");
-            this.label71.Name = "label71";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.hotenuser,
-            this.EmailUser,
-            this.taikhoanUser,
-            this.matkhauuser,
-            this.phanquyenUser,
-            this.GhiChuUser});
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.GridColor = System.Drawing.Color.Red;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            // 
-            // hotenuser
-            // 
-            resources.ApplyResources(this.hotenuser, "hotenuser");
-            this.hotenuser.Name = "hotenuser";
-            // 
-            // EmailUser
-            // 
-            resources.ApplyResources(this.EmailUser, "EmailUser");
-            this.EmailUser.Name = "EmailUser";
-            // 
-            // taikhoanUser
-            // 
-            resources.ApplyResources(this.taikhoanUser, "taikhoanUser");
-            this.taikhoanUser.Name = "taikhoanUser";
-            // 
-            // matkhauuser
-            // 
-            resources.ApplyResources(this.matkhauuser, "matkhauuser");
-            this.matkhauuser.Name = "matkhauuser";
-            // 
-            // phanquyenUser
-            // 
-            resources.ApplyResources(this.phanquyenUser, "phanquyenUser");
-            this.phanquyenUser.Name = "phanquyenUser";
-            // 
-            // GhiChuUser
-            // 
-            resources.ApplyResources(this.GhiChuUser, "GhiChuUser");
-            this.GhiChuUser.Name = "GhiChuUser";
+            resources.ApplyResources(this.groupBox22, "groupBox22");
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.TabStop = false;
             // 
             // Form2
             // 
@@ -2801,6 +2834,12 @@
             this.groupBox17.PerformLayout();
             this.txtTHongKE.ResumeLayout(false);
             this.txtTHongKE.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.tabQuanLy.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
@@ -2875,12 +2914,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCTHD)).EndInit();
             this.gbDanhSachCTHD.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachcthd)).EndInit();
-            this.tabPage9.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage10.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3196,5 +3231,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn matkhauuser;
         private System.Windows.Forms.DataGridViewTextBoxColumn phanquyenUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChuUser;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.GroupBox groupBox21;
     }
 }
