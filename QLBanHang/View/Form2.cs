@@ -169,7 +169,7 @@ namespace QLBanHang
             bingdingHD();
             // bingdingThongKe();
             loadTKTraCuu();
-            btnXoaTKSP.Enabled = false;
+            btnXoaTKSP.Enabled = false; // xóa thống kê sản phẩm
 
             // load quanly
             loadQuanLy();
@@ -1217,6 +1217,19 @@ namespace QLBanHang
             txtMatKhauMoi.Text = "";
             txtNhapLaiMatKhau.Text = "";
             txtThongBaoDoiMK.Text = "";
+            txtmailsaoluu.Text = "";
+
+            txtNoteInternet.Text = "";
+            if (InternetConnection.IsConnectedToInternet())
+            {
+                txtNoteInternet.ForeColor = System.Drawing.Color.Green;
+                txtNoteInternet.Text = " Đã kết nối internet, bạn có thể đổi mật khẩu !.";
+            }
+            else
+            {
+                txtNoteInternet.ForeColor = System.Drawing.Color.Red;
+                txtNoteInternet.Text = " Đã mất kết nối internet, bạn không thể đổi mật khẩu !.";
+            }
 
         }
 
@@ -2164,6 +2177,21 @@ namespace QLBanHang
         private void btnLuuMatKhau_Click(object sender, EventArgs e)
         {
             txtThongBaoDoiMK.Text = "";
+
+            // kiểm tra kết nối internet
+            txtNoteInternet.Text = "";
+            if (InternetConnection.IsConnectedToInternet())
+            {
+                txtNoteInternet.ForeColor = System.Drawing.Color.Green;
+                txtNoteInternet.Text = " Đã kết nối internet, bạn có thể đổi mật khẩu !.";
+            }
+            else
+            {
+                txtNoteInternet.ForeColor = System.Drawing.Color.Red;
+                txtNoteInternet.Text = " Đã mất kết nối internet, bạn không thể đổi mật khẩu !.";
+            }
+            // end kiểm tra kết nối internet
+
             if (txtMatKhauCu.Text == "") { txtThongBaoDoiMK.Text = "✘ Vui lòng nhập mật khẩu cũ ✘"; }
             else if (txtMatKhauMoi.Text == "") { txtThongBaoDoiMK.Text = "✘ Vui lòng nhập mật khẩu mới ✘"; }
             else if (txtmailsaoluu.Text == ""){ txtThongBaoDoiMK.Text = "✘ Vui lòng nhập Email ✘"; }

@@ -50,6 +50,7 @@
     <Compile Include="Control\CTHDCtrl.cs" />
     <Compile Include="Control\HangHoaCtrl.cs" />
     <Compile Include="Control\HoaDonCtrl.cs" />
+    <Compile Include="Control\InternetConnection.cs" />
     <Compile Include="Control\KhachHangCtrl.cs" />
     <Compile Include="Control\KhuyenMaiCtrl.cs" />
     <Compile Include="Control\LoaiHangHoaCtrl.cs" />

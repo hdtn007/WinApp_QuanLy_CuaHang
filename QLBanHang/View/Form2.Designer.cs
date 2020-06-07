@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.txtmailsaoluu = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
+            this.txtNoteInternet = new System.Windows.Forms.Label();
             this.hidepassmoi2 = new System.Windows.Forms.PictureBox();
             this.showpassmoi2 = new System.Windows.Forms.PictureBox();
             this.hidepassmoi1 = new System.Windows.Forms.PictureBox();
@@ -473,7 +473,7 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.txtmailsaoluu);
-            this.groupBox13.Controls.Add(this.label67);
+            this.groupBox13.Controls.Add(this.txtNoteInternet);
             this.groupBox13.Controls.Add(this.hidepassmoi2);
             this.groupBox13.Controls.Add(this.showpassmoi2);
             this.groupBox13.Controls.Add(this.hidepassmoi1);
@@ -500,11 +500,11 @@
             resources.ApplyResources(this.txtmailsaoluu, "txtmailsaoluu");
             this.txtmailsaoluu.Name = "txtmailsaoluu";
             // 
-            // label67
+            // txtNoteInternet
             // 
-            resources.ApplyResources(this.label67, "label67");
-            this.label67.ForeColor = System.Drawing.Color.Red;
-            this.label67.Name = "label67";
+            resources.ApplyResources(this.txtNoteInternet, "txtNoteInternet");
+            this.txtNoteInternet.ForeColor = System.Drawing.Color.Red;
+            this.txtNoteInternet.Name = "txtNoteInternet";
             // 
             // hidepassmoi2
             // 
@@ -1263,8 +1263,8 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1281,8 +1281,8 @@
             resources.ApplyResources(this.dtDanhSachNhanVien, "dtDanhSachNhanVien");
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
             // 
             // manv
@@ -3339,7 +3339,7 @@
         private System.Windows.Forms.PictureBox showpassmoi1;
         private System.Windows.Forms.PictureBox hidepasscu;
         private System.Windows.Forms.PictureBox showpasscu;
-        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label txtNoteInternet;
         private System.Windows.Forms.TextBox txtmailsaoluu;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.TabPage tabPage9;
