@@ -81,7 +81,6 @@ CREATE TABLE NHANVIEN (
 	cmnd nvarchar(50),
 	email nvarchar(50),
 	ghichu nvarchar(255),
-	idpq nchar(5)
 
 	PRIMARY KEY (manv),
 );
@@ -121,19 +120,27 @@ CREATE TABLE CTHD (
 
 -- bang quan ly
 CREATE TABLE QUANLY (
+	id nchar(5),
     taikhoan nchar(5),
     matkhau nchar(20),
+	ten nvarchar(50)
+
+	CONSTRAINT pk_quanly PRIMARY KEY (id),
+	CONSTRAINT tk_quanly UNIQUE (taikhoan)
 );
 
 -- bang phan quyen
 CREATE TABLE PHANQUYEN (
-    idpq nchar(5),
+    id nchar(5),
 	taikhoan nchar(5),
 	matkhau nchar(20),
     phanquyen int,
+	manv nchar(5),
 	ghichu nchar(255)
 
-	CONSTRAINT quanly_manv FOREIGN KEY (manv)
+	CONSTRAINT pk_phanquyen PRIMARY KEY (id),
+	CONSTRAINT tk_phanquyen UNIQUE (taikhoan),
+	CONSTRAINT phanquyen_manv FOREIGN KEY (manv)
     REFERENCES NHANVIEN(manv),
 );
 

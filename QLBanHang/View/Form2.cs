@@ -61,10 +61,10 @@ namespace QLBanHang
 
         SendMailMob mailMob = new SendMailMob();
 
-        
+
         // -----------------------------------------------
 
-
+          PhanQuyenMod pqmod = new PhanQuyenMod();
 
 
         // -----------------------------------------------
@@ -107,6 +107,8 @@ namespace QLBanHang
         // Load CSDL vào form và các tab
         private void Form2_Load(object sender, EventArgs e)
         {
+            phanquyen();
+
             //**************************************************************
             DataTable dtNhanVien = new DataTable();
             dtNhanVien = nvctr.getData();
@@ -200,6 +202,27 @@ namespace QLBanHang
 
         //**************************************************************//*****************************************************************************************************************************************************************
 
+        // PHÂN QUYỀN
+        private void phanquyen()
+        {
+            if(PhanQuyenMod.QUYEN_USER == 2)
+            {
+                //  this.tabControl1.Visible=false;
+                tabControl1.TabPages.Remove(tabAdmin);
+            }
+            else if (PhanQuyenMod.QUYEN_USER == 3)
+            {
+                
+                tabControl1.TabPages.Remove(tabAdmin);
+                tabControl1.TabPages.Remove(tabQuanLy);
+            }
+            else if (PhanQuyenMod.QUYEN_USER == 1)
+            {
+                this.tabControl1.Visible = true;
+                this.tabControl2.Visible = true;
+                this.tabControl3.Visible = true;
+            }
+        }
 
 
 
@@ -1242,14 +1265,14 @@ namespace QLBanHang
 
         private void mnXoaNv_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn XÓA thông tin nhân viên này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Xóa 𝗡𝗵â𝗻 𝗩𝗶ê𝗻 và 𝗧à𝗶 𝗞𝗵𝗼ả𝗻 của nhân viên này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 // Xóa
                 if (nvctr.delDate(txtMaNv.Text.Trim()))
-                    MessageBox.Show("Bạn đã XÓA thông tin nhân viên thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(" 𝐗𝐨á thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("𝐗𝐨á thất bại !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 return;
@@ -1266,7 +1289,7 @@ namespace QLBanHang
                 // TH Thêm nv mới
                 if (nvctr.addData(nvObj))
                 {
-                    MessageBox.Show("Bạn đã THÊM một nhân viên mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn đã thêm một nhân viên mới thành công !"+" Bạn cần phải tạo một tài khoản đăng nhập mới cho nhân viên này !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Form2_Load(sender, e);
                     dis_enNV(false);
@@ -2143,6 +2166,7 @@ namespace QLBanHang
             txtThongBaoDoiMK.Text = "";
             if (txtMatKhauCu.Text == "") { txtThongBaoDoiMK.Text = "✘ Vui lòng nhập mật khẩu cũ ✘"; }
             else if (txtMatKhauMoi.Text == "") { txtThongBaoDoiMK.Text = "✘ Vui lòng nhập mật khẩu mới ✘"; }
+            else if (txtmailsaoluu.Text == ""){ txtThongBaoDoiMK.Text = "✘ Vui lòng nhập Email ✘"; }
             else if (txtNhapLaiMatKhau.Text != txtMatKhauMoi.Text) { txtThongBaoDoiMK.Text = "✘ Mật khẩu mới không trùng nhau ✘"; }
             else
             {

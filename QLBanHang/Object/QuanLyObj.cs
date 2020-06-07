@@ -8,7 +8,19 @@ namespace QLBanHang.Object
 {
     class QuanLyObj
     {
-        string taikhoan, matkhau;
+        string id,taikhoan, matkhau,ten;
+
+        public string ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string Ten
+        {
+            get { return ten; }
+            set { ten = value; }
+        }
 
         public string Taikhoan
         {
@@ -23,10 +35,12 @@ namespace QLBanHang.Object
         }
 
         public QuanLyObj() { }
-        public QuanLyObj(string taikhoan, string matkhau)
+        public QuanLyObj(string taikhoan, string matkhau, string id, string ten)
         {
             this.taikhoan = taikhoan;
             this.matkhau = matkhau;
+            this.id = id;
+            this.ten = ten;
 
         }
     }

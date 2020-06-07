@@ -39,8 +39,8 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.hienMatKhau = new System.Windows.Forms.PictureBox();
             this.AnMatKhau = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbntAdmin = new System.Windows.Forms.RadioButton();
+            this.rbntNhanVien = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.hienMatKhau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AnMatKhau)).BeginInit();
             this.SuspendLayout();
@@ -145,7 +145,7 @@
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMatKhau.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtMatKhau.Location = new System.Drawing.Point(161, 161);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '●';
@@ -158,7 +158,7 @@
             this.hienMatKhau.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hienMatKhau.BackgroundImage")));
             this.hienMatKhau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.hienMatKhau.Location = new System.Drawing.Point(339, 164);
-            this.hienMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hienMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.hienMatKhau.Name = "hienMatKhau";
             this.hienMatKhau.Size = new System.Drawing.Size(33, 22);
             this.hienMatKhau.TabIndex = 10;
@@ -171,34 +171,34 @@
             this.AnMatKhau.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AnMatKhau.BackgroundImage")));
             this.AnMatKhau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AnMatKhau.Location = new System.Drawing.Point(340, 164);
-            this.AnMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AnMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.AnMatKhau.Name = "AnMatKhau";
             this.AnMatKhau.Size = new System.Drawing.Size(33, 22);
             this.AnMatKhau.TabIndex = 11;
             this.AnMatKhau.TabStop = false;
             this.AnMatKhau.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // radioButton1
+            // rbntAdmin
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(167, 80);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(68, 21);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Admin";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbntAdmin.AutoSize = true;
+            this.rbntAdmin.Location = new System.Drawing.Point(167, 80);
+            this.rbntAdmin.Name = "rbntAdmin";
+            this.rbntAdmin.Size = new System.Drawing.Size(68, 21);
+            this.rbntAdmin.TabIndex = 12;
+            this.rbntAdmin.TabStop = true;
+            this.rbntAdmin.Text = "Admin";
+            this.rbntAdmin.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbntNhanVien
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(263, 80);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 21);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "User";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbntNhanVien.AutoSize = true;
+            this.rbntNhanVien.Location = new System.Drawing.Point(263, 80);
+            this.rbntNhanVien.Name = "rbntNhanVien";
+            this.rbntNhanVien.Size = new System.Drawing.Size(95, 21);
+            this.rbntNhanVien.TabIndex = 13;
+            this.rbntNhanVien.TabStop = true;
+            this.rbntNhanVien.Text = "Nhân Viên";
+            this.rbntNhanVien.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -207,8 +207,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(469, 361);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbntNhanVien);
+            this.Controls.Add(this.rbntAdmin);
             this.Controls.Add(this.AnMatKhau);
             this.Controls.Add(this.hienMatKhau);
             this.Controls.Add(this.txtMatKhau);
@@ -249,8 +249,8 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.PictureBox hienMatKhau;
         private System.Windows.Forms.PictureBox AnMatKhau;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbntAdmin;
+        private System.Windows.Forms.RadioButton rbntNhanVien;
     }
 }
 

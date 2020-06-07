@@ -16,9 +16,14 @@ namespace QLBanHang
 {
     public partial class Form1 : Form
     {
+        
         QuanLyCtrl qlcrt = new QuanLyCtrl();
         QuanLyMod qlmod = new QuanLyMod();
         QuanLyObj qlObj = new QuanLyObj();
+
+        PhanQuyenMod pqmod = new PhanQuyenMod();
+        PhanQuyenCtrl pqctr = new PhanQuyenCtrl();
+        PhanQuyenObj pqObj = new PhanQuyenObj();
         public Form1()
         {
             InitializeComponent();
@@ -43,39 +48,91 @@ namespace QLBanHang
 
         }
 
-        void ganDulieuQL(QuanLyObj nvObj)
+        void ganDulieuQL(QuanLyObj qlObj)
         {
-            nvObj.Taikhoan = txtTaiKhoan.Text.Trim();
-            nvObj.MatKhau = txtMatKhau.Text.Trim();
+            qlObj.Taikhoan = txtTaiKhoan.Text.Trim();
+            qlObj.MatKhau = txtMatKhau.Text.Trim();
+        }
+
+        void ganDulieuPQ(PhanQuyenObj pqObj)
+        {
+            pqObj.Taikhoan = txtTaiKhoan.Text.Trim();
+            pqObj.MatKhau = txtMatKhau.Text.Trim();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            int phanquyen;
             txtThongBaoDangnhap.Text = "";
 
-            if (txtTaiKhoan.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập tài khoản ✘"; }
-            else if (txtMatKhau.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập mật khẩu ✘"; }
-            else
+            if (rbntAdmin.Checked==true) // TK_USER = 1 thì đăng nhập kiểm tra bảng dữ liệu admin (QUANLY)
             {
-                ganDulieuQL(qlObj);
-                if(qlcrt.check(qlObj))
+                phanquyen = 1;  // biến phần quyền 1 | quyền admin
+                TK_USER(phanquyen);
+                // ---------------------
+                if (txtTaiKhoan.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập tài khoản ✘"; }
+                else if (txtMatKhau.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập mật khẩu ✘"; }
+                else
                 {
-                    Form2 f = new Form2();
+                    ganDulieuQL(qlObj);
+                    if (qlcrt.check(qlObj))
+                    {
+                        Form2 f = new Form2();
 
-                    this.Hide();
-                    f.ShowDialog();
-                    this.Show();
-                    txtTaiKhoan.Text = "";
-                    txtMatKhau.Text = "";
-                    txtThongBaoDangnhap.Text = "";
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Show();
+                        txtTaiKhoan.Text = "";
+                        txtMatKhau.Text = "";
+                        txtThongBaoDangnhap.Text = "";
+                    }
+                    else txtThongBaoDangnhap.Text = "✘ Sai tài khoản/ mật khẩu ✘";
                 }
-                else txtThongBaoDangnhap.Text = "✘ Sai tài khoản/ mật khẩu ✘";  
             }
+            else if(rbntNhanVien.Checked==true)
+            {
+                // kiểm tra từ bản PHANQUYEN |
+                
+
+                // ----------------------------------
+
+                if (txtTaiKhoan.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập tài khoản ✘"; }
+                else if (txtMatKhau.Text == "") { txtThongBaoDangnhap.Text = "✘ Vui lòng nhập mật khẩu ✘"; }
+                else
+                {
+                    ganDulieuPQ(pqObj);
+                    
+
+                    phanquyen = pqctr.checkPQ(txtTaiKhoan.Text.Trim());  // kiểm tra quyền ở dòng code kiểm tra với nhập tài khoản |  2 hoặc 3
+                    TK_USER(phanquyen);
+
+                    if (pqctr.checkNV(pqObj))
+                    {
+                        Form2 f = new Form2();
+
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Show();
+                        txtTaiKhoan.Text = "";
+                        txtMatKhau.Text = "";
+                        txtThongBaoDangnhap.Text = "";
+                    }
+                    else txtThongBaoDangnhap.Text = "✘ Sai tài khoản/ mật khẩu ✘";
+                }
+
+
+            }
+            else if((rbntAdmin.Checked==false) & (rbntNhanVien.Checked == false))
+            {
+                txtThongBaoDangnhap.Text = "✘ Bạn chưa chọn loại tài khoản ! ✘";
+            }
+            
         }
         
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            rbntNhanVien.Checked = true;
             txtThongBaoDangnhap.Text = "";
             LoadShowEyeF1(true);
            // txtMatKhau.PasswordChar = '*';
@@ -84,6 +141,12 @@ namespace QLBanHang
 
             // txtMatKhau.UseSystemPasswordChar = false;
         }
+
+        
+        public void TK_USER(int phanquyen) // tham số phân quyền getdata từ table phân quyền
+        {
+                PhanQuyenMod.QUYEN_USER = phanquyen;  // luôn luôn = 1
+        } 
 
         void LoadShowEyeF1(bool e) // e = hiện  ; !e = ẩn
         {

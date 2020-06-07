@@ -11,6 +11,7 @@ namespace QLBanHang.Model
 {
     class QuanLyMod
     {
+        
 
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -340,10 +340,24 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.txtAddTaiKhoan = new System.Windows.Forms.TextBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
+            this.txtReNewPass = new System.Windows.Forms.TextBox();
+            this.menuStrip7 = new System.Windows.Forms.MenuStrip();
+            this.mndangkymoi = new System.Windows.Forms.ToolStripMenuItem();
+            this.mndoimatkhau = new System.Windows.Forms.ToolStripMenuItem();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.txtNameUser = new System.Windows.Forms.ComboBox();
+            this.txtAddPhanQuyen = new System.Windows.Forms.ComboBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.mnphanquyen = new System.Windows.Forms.ToolStripMenuItem();
+            this.LuuTKmoi = new System.Windows.Forms.ToolStripMenuItem();
+            this.HuyTKmoi = new System.Windows.Forms.ToolStripMenuItem();
+            this.rbntTKAdmin = new System.Windows.Forms.RadioButton();
+            this.rbntTKNhanVien = new System.Windows.Forms.RadioButton();
+            this.grLoaiTaiKhoan = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -418,8 +432,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCTHD)).BeginInit();
             this.gbDanhSachCTHD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachcthd)).BeginInit();
-            this.tabPage10.SuspendLayout();
-            this.panel14.SuspendLayout();
+            this.menuStrip7.SuspendLayout();
+            this.grLoaiTaiKhoan.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -444,7 +458,6 @@
             this.tabControl3.Controls.Add(this.tabPage1);
             this.tabControl3.Controls.Add(this.tabPage2);
             this.tabControl3.Controls.Add(this.tabPage9);
-            this.tabControl3.Controls.Add(this.tabPage10);
             resources.ApplyResources(this.tabControl3, "tabControl3");
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
@@ -980,8 +993,11 @@
             // 
             // panel13
             // 
+            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel13.Controls.Add(this.grLoaiTaiKhoan);
             this.panel13.Controls.Add(this.groupBox20);
             this.panel13.Controls.Add(this.groupBox19);
+            this.panel13.Controls.Add(this.menuStrip7);
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
@@ -1005,7 +1021,7 @@
             this.phanquyenUser,
             this.GhiChuUser});
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.GridColor = System.Drawing.Color.Red;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             // 
@@ -1041,8 +1057,17 @@
             // 
             // groupBox19
             // 
+            this.groupBox19.Controls.Add(this.listBox1);
+            this.groupBox19.Controls.Add(this.txtAddPhanQuyen);
+            this.groupBox19.Controls.Add(this.txtNameUser);
+            this.groupBox19.Controls.Add(this.txtReNewPass);
+            this.groupBox19.Controls.Add(this.txtNewPass);
+            this.groupBox19.Controls.Add(this.txtAddTaiKhoan);
             this.groupBox19.Controls.Add(this.label71);
             this.groupBox19.Controls.Add(this.label70);
+            this.groupBox19.Controls.Add(this.label74);
+            this.groupBox19.Controls.Add(this.label73);
+            this.groupBox19.Controls.Add(this.label72);
             this.groupBox19.Controls.Add(this.label69);
             resources.ApplyResources(this.groupBox19, "groupBox19");
             this.groupBox19.Name = "groupBox19";
@@ -2776,31 +2801,128 @@
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
-            // tabPage10
+            // txtAddTaiKhoan
             // 
-            this.tabPage10.Controls.Add(this.panel14);
-            resources.ApplyResources(this.tabPage10, "tabPage10");
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.txtAddTaiKhoan, "txtAddTaiKhoan");
+            this.txtAddTaiKhoan.Name = "txtAddTaiKhoan";
             // 
-            // panel14
+            // txtNewPass
             // 
-            this.panel14.Controls.Add(this.groupBox22);
-            this.panel14.Controls.Add(this.groupBox21);
-            resources.ApplyResources(this.panel14, "panel14");
-            this.panel14.Name = "panel14";
+            resources.ApplyResources(this.txtNewPass, "txtNewPass");
+            this.txtNewPass.Name = "txtNewPass";
             // 
-            // groupBox21
+            // txtReNewPass
             // 
-            resources.ApplyResources(this.groupBox21, "groupBox21");
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.TabStop = false;
+            resources.ApplyResources(this.txtReNewPass, "txtReNewPass");
+            this.txtReNewPass.Name = "txtReNewPass";
             // 
-            // groupBox22
+            // menuStrip7
             // 
-            resources.ApplyResources(this.groupBox22, "groupBox22");
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.TabStop = false;
+            this.menuStrip7.BackColor = System.Drawing.Color.Gray;
+            this.menuStrip7.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip7.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mndangkymoi,
+            this.mndoimatkhau,
+            this.mnphanquyen,
+            this.LuuTKmoi,
+            this.HuyTKmoi});
+            resources.ApplyResources(this.menuStrip7, "menuStrip7");
+            this.menuStrip7.Name = "menuStrip7";
+            // 
+            // mndangkymoi
+            // 
+            this.mndangkymoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mndangkymoi.Name = "mndangkymoi";
+            resources.ApplyResources(this.mndangkymoi, "mndangkymoi");
+            // 
+            // mndoimatkhau
+            // 
+            this.mndoimatkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.mndoimatkhau.Name = "mndoimatkhau";
+            resources.ApplyResources(this.mndoimatkhau, "mndoimatkhau");
+            // 
+            // label72
+            // 
+            resources.ApplyResources(this.label72, "label72");
+            this.label72.Name = "label72";
+            // 
+            // label73
+            // 
+            resources.ApplyResources(this.label73, "label73");
+            this.label73.Name = "label73";
+            // 
+            // label74
+            // 
+            resources.ApplyResources(this.label74, "label74");
+            this.label74.Name = "label74";
+            // 
+            // txtNameUser
+            // 
+            this.txtNameUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.txtNameUser, "txtNameUser");
+            this.txtNameUser.FormattingEnabled = true;
+            this.txtNameUser.Name = "txtNameUser";
+            // 
+            // txtAddPhanQuyen
+            // 
+            this.txtAddPhanQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.txtAddPhanQuyen, "txtAddPhanQuyen");
+            this.txtAddPhanQuyen.FormattingEnabled = true;
+            this.txtAddPhanQuyen.Name = "txtAddPhanQuyen";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.ForeColor = System.Drawing.Color.Gray;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            resources.GetString("listBox1.Items"),
+            resources.GetString("listBox1.Items1"),
+            resources.GetString("listBox1.Items2")});
+            this.listBox1.Name = "listBox1";
+            // 
+            // mnphanquyen
+            // 
+            this.mnphanquyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.mnphanquyen.Name = "mnphanquyen";
+            resources.ApplyResources(this.mnphanquyen, "mnphanquyen");
+            // 
+            // LuuTKmoi
+            // 
+            this.LuuTKmoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.LuuTKmoi, "LuuTKmoi");
+            this.LuuTKmoi.Name = "LuuTKmoi";
+            // 
+            // HuyTKmoi
+            // 
+            this.HuyTKmoi.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.HuyTKmoi, "HuyTKmoi");
+            this.HuyTKmoi.Name = "HuyTKmoi";
+            // 
+            // rbntTKAdmin
+            // 
+            resources.ApplyResources(this.rbntTKAdmin, "rbntTKAdmin");
+            this.rbntTKAdmin.Name = "rbntTKAdmin";
+            this.rbntTKAdmin.TabStop = true;
+            this.rbntTKAdmin.UseVisualStyleBackColor = true;
+            // 
+            // rbntTKNhanVien
+            // 
+            resources.ApplyResources(this.rbntTKNhanVien, "rbntTKNhanVien");
+            this.rbntTKNhanVien.Name = "rbntTKNhanVien";
+            this.rbntTKNhanVien.TabStop = true;
+            this.rbntTKNhanVien.UseVisualStyleBackColor = true;
+            // 
+            // grLoaiTaiKhoan
+            // 
+            this.grLoaiTaiKhoan.Controls.Add(this.rbntTKNhanVien);
+            this.grLoaiTaiKhoan.Controls.Add(this.rbntTKAdmin);
+            resources.ApplyResources(this.grLoaiTaiKhoan, "grLoaiTaiKhoan");
+            this.grLoaiTaiKhoan.Name = "grLoaiTaiKhoan";
+            this.grLoaiTaiKhoan.TabStop = false;
             // 
             // Form2
             // 
@@ -2836,6 +2958,7 @@
             this.txtTHongKE.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.groupBox20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox19.ResumeLayout(false);
@@ -2914,8 +3037,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCTHD)).EndInit();
             this.gbDanhSachCTHD.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachcthd)).EndInit();
-            this.tabPage10.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
+            this.menuStrip7.ResumeLayout(false);
+            this.menuStrip7.PerformLayout();
+            this.grLoaiTaiKhoan.ResumeLayout(false);
+            this.grLoaiTaiKhoan.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3231,9 +3356,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn matkhauuser;
         private System.Windows.Forms.DataGridViewTextBoxColumn phanquyenUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChuUser;
-        private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox txtAddPhanQuyen;
+        private System.Windows.Forms.ComboBox txtNameUser;
+        private System.Windows.Forms.TextBox txtReNewPass;
+        private System.Windows.Forms.TextBox txtNewPass;
+        private System.Windows.Forms.TextBox txtAddTaiKhoan;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.MenuStrip menuStrip7;
+        private System.Windows.Forms.ToolStripMenuItem mndangkymoi;
+        private System.Windows.Forms.ToolStripMenuItem mndoimatkhau;
+        private System.Windows.Forms.ToolStripMenuItem mnphanquyen;
+        private System.Windows.Forms.ToolStripMenuItem LuuTKmoi;
+        private System.Windows.Forms.ToolStripMenuItem HuyTKmoi;
+        private System.Windows.Forms.GroupBox grLoaiTaiKhoan;
+        private System.Windows.Forms.RadioButton rbntTKNhanVien;
+        private System.Windows.Forms.RadioButton rbntTKAdmin;
     }
 }

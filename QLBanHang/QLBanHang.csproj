@@ -55,6 +55,7 @@
     <Compile Include="Control\LoaiHangHoaCtrl.cs" />
     <Compile Include="Control\NhaCungCapCtrl.cs" />
     <Compile Include="Control\NhanVienCtrl.cs" />
+    <Compile Include="Control\PhanQuyenCtrl.cs" />
     <Compile Include="Control\QuanLyCtrl.cs" />
     <Compile Include="Control\ThongKeCtrl.cs" />
     <Compile Include="Model\ConnectToSQL.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Model\LoaiHangHoaMod.cs" />
     <Compile Include="Model\NhaCungCapMod.cs" />
     <Compile Include="Model\NhanVienMod.cs" />
+    <Compile Include="Model\PhanQuyenMod.cs" />
     <Compile Include="Model\QuanLyMod.cs" />
     <Compile Include="Model\SendMailMob.cs" />
     <Compile Include="Model\ThongKeMob.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Object\LoaiHangHoaObj.cs" />
     <Compile Include="Object\NhaCungCapObj.cs" />
     <Compile Include="Object\NhanVienObj.cs" />
+    <Compile Include="Object\PhanQuyenObj.cs" />
     <Compile Include="Object\QuanLyObj.cs" />
     <Compile Include="Object\ThongKeObj.cs" />
     <Compile Include="View\Form1.cs">
