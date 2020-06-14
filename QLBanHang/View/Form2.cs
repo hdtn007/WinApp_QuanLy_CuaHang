@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using QLBanHang.Control;
 using QLBanHang.Object;
 using QLBanHang.Model;
+using System.Net.Mail;
 
 namespace QLBanHang
 {
@@ -1296,35 +1297,36 @@ namespace QLBanHang
 
         private void mnLuuNv_Click(object sender, EventArgs e)
         {
-            ganDuLieuNV(nvObj);
-            if(flag==0)
+            if(fixNhanVien())
             {
-                // TH Thêm nv mới
-                if (nvctr.addData(nvObj))
+                ganDuLieuNV(nvObj);
+                if (flag == 0)
                 {
-                    MessageBox.Show("Bạn đã thêm một nhân viên mới thành công !"+" Bạn cần phải tạo một tài khoản đăng nhập mới cho nhân viên này !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Thêm nv mới
+                    if (nvctr.addData(nvObj))
+                    {
+                        MessageBox.Show("Bạn đã thêm một nhân viên mới thành công !" + " Bạn cần phải tạo một tài khoản đăng nhập mới cho nhân viên này !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enNV(false);
+                        Form2_Load(sender, e);
+                        dis_enNV(false);
+                    }
+                    else
+                        MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // TH Sửa tt nhân viên
-                if (nvctr.updDate(nvObj))
                 {
-                    MessageBox.Show("Bạn đã CẬP NHẬT thông tin Nhân Viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Sửa tt nhân viên
+                    if (nvctr.updDate(nvObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thông tin Nhân Viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enNV(false);
+                        Form2_Load(sender, e);
+                        dis_enNV(false);
+                    }
+ 
                 }
-                else
-                    MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            
+            //else MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -2329,18 +2331,67 @@ namespace QLBanHang
         /* ********************************************************************************************************** */
         // START  KHU VỰC DÀNH CHO TAB FIX LỖI ********************************************************* //
 
-        private void fixNhanVien()
+        private bool fixNhanVien()
         {
             thongbaoloinhanvien.Text = "";
-            
-                // fix lỗi đễ trống các trường bắt buộc txt
+            DateTime now = DateTime.Now;
+            int s = dtNgaySinhNv.Value.Year;
+            // fix lỗi đễ trống các trường bắt buộc txt
+            if (txtMaNv.Text=="")
+            {
+                thongbaoloinhanvien.Text = "✘Không được bỏ trống MaNV ✘"; return false;
+            }
+            else if (txtTenNv.Text == "")
+            {
+                thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên NV✘"; return false;
+            }
+            else if(txtDiaChiNv.Text=="")
+            {
+                thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên DiaChi✘"; return false;
+            }
 
-                // fix lỗi sai cấu trúc email
-
-                // fix lỗi ngày tháng năm bắt buộc +18 trở lên
-           
-
-            
+            else if (txtCmndNv.Text == "")
+            {
+                thongbaoloinhanvien.Text = "✘Không được bỏ trống CMND ✘"; return false;
+            }
+            else if (txtSdtNv.Text == "")
+            {
+                thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên SĐT ✘"; return false;
+            }
+            else if (txtSdtNv.Text == "")
+            {
+                thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên SĐT ✘"; return false;
+            }
+            else if(txtGioiTinhNv.SelectedItem == null)
+            {
+                thongbaoloinhanvien.Text = "✘ Vui lòng chọn giới tính Nhân Viên ✘"; return false;
+            }
+            else if ((now.Year - s) <18)
+            {
+                thongbaoloinhanvien.Text = "✘ Ngày Sinh Không Hợp Lệ ✘"; return false; return false;
+            }
+            else
+            {
+                try
+                {
+                    String mail = txtEmailNv.Text;
+                    var test = new MailAddress(mail);
+                    thongbaoloinhanvien.Text = "";
+                    return true;
+                }
+                catch (FormatException)
+                {
+                    thongbaoloinhanvien.Text = "Vui lòng kiểm tra lại Email";
+                    return false;
+                }
+                catch (ArgumentException)
+                {
+                    thongbaoloinhanvien.Text = "Vui lòng kiểm tra lại Email";
+                    return false;
+                }
+            }
+            // fix lỗi sai cấu trúc email
+            // fix lỗi ngày tháng năm bắt buộc +18 trở lên
         }
 
         void fixSanPham()

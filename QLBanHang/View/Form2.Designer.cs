@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -115,6 +115,7 @@
             this.phanquyenUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChuUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtAddPhanQuyen = new System.Windows.Forms.ComboBox();
             this.txtNameUser = new System.Windows.Forms.ComboBox();
@@ -123,6 +124,7 @@
             this.txtAddTaiKhoan = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
@@ -137,6 +139,7 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.thongbaoloinhanvien = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtNgaySinhNv = new System.Windows.Forms.DateTimePicker();
             this.txtGioiTinhNv = new System.Windows.Forms.ComboBox();
@@ -176,6 +179,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.thongbaoloisanpham = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtDaBanHH = new System.Windows.Forms.TextBox();
             this.txtTonKhoHH = new System.Windows.Forms.NumericUpDown();
@@ -225,6 +229,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.thongbaoloincc = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtGhiChuNCC = new System.Windows.Forms.TextBox();
             this.txtSoDtNCC = new System.Windows.Forms.TextBox();
@@ -252,6 +257,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.thongbaoloikm = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtGiamKm = new System.Windows.Forms.NumericUpDown();
@@ -277,6 +283,7 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.thongbaoloikhachhang = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.txtGioiTinhKhachHang = new System.Windows.Forms.ComboBox();
             this.txtGhiChuKhachHang = new System.Windows.Forms.TextBox();
@@ -307,6 +314,7 @@
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.thongbaoloiloaisanpham = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.txtTenLoaiSanPham = new System.Windows.Forms.TextBox();
             this.txtMaLoaiSanPham = new System.Windows.Forms.TextBox();
@@ -339,6 +347,7 @@
             this.txtMaHD = new System.Windows.Forms.Label();
             this.txtDonGiaCTHD = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label75 = new System.Windows.Forms.Label();
             this.btnKhuyenMaiHD = new System.Windows.Forms.Label();
             this.btnGioHangHD = new System.Windows.Forms.Button();
             this.txtSanPhamHD = new System.Windows.Forms.ComboBox();
@@ -358,15 +367,36 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
-            this.thongbaoloinhanvien = new System.Windows.Forms.Label();
-            this.thongbaoloisanpham = new System.Windows.Forms.Label();
-            this.thongbaoloincc = new System.Windows.Forms.Label();
-            this.thongbaoloikm = new System.Windows.Forms.Label();
-            this.thongbaoloikhachhang = new System.Windows.Forms.Label();
-            this.thongbaoloiloaisanpham = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -1108,6 +1138,11 @@
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.TabStop = false;
             // 
+            // textBox5
+            // 
+            resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.Name = "textBox5";
+            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1159,6 +1194,11 @@
             // 
             resources.ApplyResources(this.label70, "label70");
             this.label70.Name = "label70";
+            // 
+            // label67
+            // 
+            resources.ApplyResources(this.label67, "label67");
+            this.label67.Name = "label67";
             // 
             // label74
             // 
@@ -1269,9 +1309,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // thongbaoloinhanvien
+            // 
+            resources.ApplyResources(this.thongbaoloinhanvien, "thongbaoloinhanvien");
+            this.thongbaoloinhanvien.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloinhanvien.Name = "thongbaoloinhanvien";
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.Controls.Add(this.label83);
+            this.groupBox2.Controls.Add(this.label82);
+            this.groupBox2.Controls.Add(this.label81);
+            this.groupBox2.Controls.Add(this.label80);
+            this.groupBox2.Controls.Add(this.label79);
+            this.groupBox2.Controls.Add(this.label78);
+            this.groupBox2.Controls.Add(this.label77);
+            this.groupBox2.Controls.Add(this.label76);
             this.groupBox2.Controls.Add(this.dtNgaySinhNv);
             this.groupBox2.Controls.Add(this.txtGioiTinhNv);
             this.groupBox2.Controls.Add(this.txtGhiChuNv);
@@ -1405,8 +1459,8 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1423,8 +1477,8 @@
             resources.ApplyResources(this.dtDanhSachNhanVien, "dtDanhSachNhanVien");
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
             // 
             // manv
@@ -1560,8 +1614,22 @@
             resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
+            // thongbaoloisanpham
+            // 
+            resources.ApplyResources(this.thongbaoloisanpham, "thongbaoloisanpham");
+            this.thongbaoloisanpham.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloisanpham.Name = "thongbaoloisanpham";
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label91);
+            this.groupBox3.Controls.Add(this.label90);
+            this.groupBox3.Controls.Add(this.label89);
+            this.groupBox3.Controls.Add(this.label88);
+            this.groupBox3.Controls.Add(this.label87);
+            this.groupBox3.Controls.Add(this.label86);
+            this.groupBox3.Controls.Add(this.label85);
+            this.groupBox3.Controls.Add(this.label84);
             this.groupBox3.Controls.Add(this.txtDaBanHH);
             this.groupBox3.Controls.Add(this.txtTonKhoHH);
             this.groupBox3.Controls.Add(this.label51);
@@ -1920,8 +1988,18 @@
             resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
+            // thongbaoloincc
+            // 
+            resources.ApplyResources(this.thongbaoloincc, "thongbaoloincc");
+            this.thongbaoloincc.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloincc.Name = "thongbaoloincc";
+            // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label95);
+            this.groupBox5.Controls.Add(this.label94);
+            this.groupBox5.Controls.Add(this.label93);
+            this.groupBox5.Controls.Add(this.label92);
             this.groupBox5.Controls.Add(this.txtGhiChuNCC);
             this.groupBox5.Controls.Add(this.txtSoDtNCC);
             this.groupBox5.Controls.Add(this.txtDiaChiNCC);
@@ -2122,8 +2200,17 @@
             resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             // 
+            // thongbaoloikm
+            // 
+            resources.ApplyResources(this.thongbaoloikm, "thongbaoloikm");
+            this.thongbaoloikm.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloikm.Name = "thongbaoloikm";
+            // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.label98);
+            this.groupBox7.Controls.Add(this.label97);
+            this.groupBox7.Controls.Add(this.label96);
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Controls.Add(this.txtGiamKm);
             this.groupBox7.Controls.Add(this.txtNoiDungKm);
@@ -2311,8 +2398,19 @@
             resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
+            // thongbaoloikhachhang
+            // 
+            resources.ApplyResources(this.thongbaoloikhachhang, "thongbaoloikhachhang");
+            this.thongbaoloikhachhang.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloikhachhang.Name = "thongbaoloikhachhang";
+            // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.label103);
+            this.groupBox9.Controls.Add(this.label102);
+            this.groupBox9.Controls.Add(this.label101);
+            this.groupBox9.Controls.Add(this.label100);
+            this.groupBox9.Controls.Add(this.label99);
             this.groupBox9.Controls.Add(this.txtGioiTinhKhachHang);
             this.groupBox9.Controls.Add(this.txtGhiChuKhachHang);
             this.groupBox9.Controls.Add(this.txtSDTKhachHang);
@@ -2534,8 +2632,16 @@
             resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
+            // thongbaoloiloaisanpham
+            // 
+            resources.ApplyResources(this.thongbaoloiloaisanpham, "thongbaoloiloaisanpham");
+            this.thongbaoloiloaisanpham.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloiloaisanpham.Name = "thongbaoloiloaisanpham";
+            // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.label105);
+            this.groupBox11.Controls.Add(this.label104);
             this.groupBox11.Controls.Add(this.txtTenLoaiSanPham);
             this.groupBox11.Controls.Add(this.txtMaLoaiSanPham);
             this.groupBox11.Controls.Add(this.label54);
@@ -2807,6 +2913,12 @@
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.TabStop = false;
             // 
+            // label75
+            // 
+            resources.ApplyResources(this.label75, "label75");
+            this.label75.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label75.Name = "label75";
+            // 
             // btnKhuyenMaiHD
             // 
             resources.ApplyResources(this.btnKhuyenMaiHD, "btnKhuyenMaiHD");
@@ -2949,57 +3061,185 @@
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
-            // textBox5
+            // label76
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.label76, "label76");
+            this.label76.ForeColor = System.Drawing.Color.Red;
+            this.label76.Name = "label76";
             // 
-            // label67
+            // label77
             // 
-            resources.ApplyResources(this.label67, "label67");
-            this.label67.Name = "label67";
+            resources.ApplyResources(this.label77, "label77");
+            this.label77.ForeColor = System.Drawing.Color.Red;
+            this.label77.Name = "label77";
             // 
-            // thongbaoloinhanvien
+            // label78
             // 
-            resources.ApplyResources(this.thongbaoloinhanvien, "thongbaoloinhanvien");
-            this.thongbaoloinhanvien.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloinhanvien.Name = "thongbaoloinhanvien";
+            resources.ApplyResources(this.label78, "label78");
+            this.label78.ForeColor = System.Drawing.Color.Red;
+            this.label78.Name = "label78";
             // 
-            // thongbaoloisanpham
+            // label79
             // 
-            resources.ApplyResources(this.thongbaoloisanpham, "thongbaoloisanpham");
-            this.thongbaoloisanpham.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloisanpham.Name = "thongbaoloisanpham";
+            resources.ApplyResources(this.label79, "label79");
+            this.label79.ForeColor = System.Drawing.Color.Red;
+            this.label79.Name = "label79";
             // 
-            // thongbaoloincc
+            // label80
             // 
-            resources.ApplyResources(this.thongbaoloincc, "thongbaoloincc");
-            this.thongbaoloincc.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloincc.Name = "thongbaoloincc";
+            resources.ApplyResources(this.label80, "label80");
+            this.label80.ForeColor = System.Drawing.Color.Red;
+            this.label80.Name = "label80";
             // 
-            // thongbaoloikm
+            // label81
             // 
-            resources.ApplyResources(this.thongbaoloikm, "thongbaoloikm");
-            this.thongbaoloikm.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloikm.Name = "thongbaoloikm";
+            resources.ApplyResources(this.label81, "label81");
+            this.label81.ForeColor = System.Drawing.Color.Red;
+            this.label81.Name = "label81";
             // 
-            // thongbaoloikhachhang
+            // label82
             // 
-            resources.ApplyResources(this.thongbaoloikhachhang, "thongbaoloikhachhang");
-            this.thongbaoloikhachhang.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloikhachhang.Name = "thongbaoloikhachhang";
+            resources.ApplyResources(this.label82, "label82");
+            this.label82.ForeColor = System.Drawing.Color.Red;
+            this.label82.Name = "label82";
             // 
-            // thongbaoloiloaisanpham
+            // label83
             // 
-            resources.ApplyResources(this.thongbaoloiloaisanpham, "thongbaoloiloaisanpham");
-            this.thongbaoloiloaisanpham.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloiloaisanpham.Name = "thongbaoloiloaisanpham";
+            resources.ApplyResources(this.label83, "label83");
+            this.label83.ForeColor = System.Drawing.Color.Red;
+            this.label83.Name = "label83";
             // 
-            // label75
+            // label84
             // 
-            resources.ApplyResources(this.label75, "label75");
-            this.label75.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label75.Name = "label75";
+            resources.ApplyResources(this.label84, "label84");
+            this.label84.ForeColor = System.Drawing.Color.Red;
+            this.label84.Name = "label84";
+            // 
+            // label85
+            // 
+            resources.ApplyResources(this.label85, "label85");
+            this.label85.ForeColor = System.Drawing.Color.Red;
+            this.label85.Name = "label85";
+            // 
+            // label86
+            // 
+            resources.ApplyResources(this.label86, "label86");
+            this.label86.ForeColor = System.Drawing.Color.Red;
+            this.label86.Name = "label86";
+            // 
+            // label87
+            // 
+            resources.ApplyResources(this.label87, "label87");
+            this.label87.ForeColor = System.Drawing.Color.Red;
+            this.label87.Name = "label87";
+            // 
+            // label88
+            // 
+            resources.ApplyResources(this.label88, "label88");
+            this.label88.ForeColor = System.Drawing.Color.Red;
+            this.label88.Name = "label88";
+            // 
+            // label89
+            // 
+            resources.ApplyResources(this.label89, "label89");
+            this.label89.ForeColor = System.Drawing.Color.Red;
+            this.label89.Name = "label89";
+            // 
+            // label90
+            // 
+            resources.ApplyResources(this.label90, "label90");
+            this.label90.ForeColor = System.Drawing.Color.Red;
+            this.label90.Name = "label90";
+            // 
+            // label91
+            // 
+            resources.ApplyResources(this.label91, "label91");
+            this.label91.ForeColor = System.Drawing.Color.Red;
+            this.label91.Name = "label91";
+            // 
+            // label92
+            // 
+            resources.ApplyResources(this.label92, "label92");
+            this.label92.ForeColor = System.Drawing.Color.Red;
+            this.label92.Name = "label92";
+            // 
+            // label93
+            // 
+            resources.ApplyResources(this.label93, "label93");
+            this.label93.ForeColor = System.Drawing.Color.Red;
+            this.label93.Name = "label93";
+            // 
+            // label94
+            // 
+            resources.ApplyResources(this.label94, "label94");
+            this.label94.ForeColor = System.Drawing.Color.Red;
+            this.label94.Name = "label94";
+            // 
+            // label95
+            // 
+            resources.ApplyResources(this.label95, "label95");
+            this.label95.ForeColor = System.Drawing.Color.Red;
+            this.label95.Name = "label95";
+            // 
+            // label96
+            // 
+            resources.ApplyResources(this.label96, "label96");
+            this.label96.ForeColor = System.Drawing.Color.Red;
+            this.label96.Name = "label96";
+            // 
+            // label97
+            // 
+            resources.ApplyResources(this.label97, "label97");
+            this.label97.ForeColor = System.Drawing.Color.Red;
+            this.label97.Name = "label97";
+            // 
+            // label98
+            // 
+            resources.ApplyResources(this.label98, "label98");
+            this.label98.ForeColor = System.Drawing.Color.Red;
+            this.label98.Name = "label98";
+            // 
+            // label99
+            // 
+            resources.ApplyResources(this.label99, "label99");
+            this.label99.ForeColor = System.Drawing.Color.Red;
+            this.label99.Name = "label99";
+            // 
+            // label100
+            // 
+            resources.ApplyResources(this.label100, "label100");
+            this.label100.ForeColor = System.Drawing.Color.Red;
+            this.label100.Name = "label100";
+            // 
+            // label101
+            // 
+            resources.ApplyResources(this.label101, "label101");
+            this.label101.ForeColor = System.Drawing.Color.Red;
+            this.label101.Name = "label101";
+            // 
+            // label102
+            // 
+            resources.ApplyResources(this.label102, "label102");
+            this.label102.ForeColor = System.Drawing.Color.Red;
+            this.label102.Name = "label102";
+            // 
+            // label103
+            // 
+            resources.ApplyResources(this.label103, "label103");
+            this.label103.ForeColor = System.Drawing.Color.Red;
+            this.label103.Name = "label103";
+            // 
+            // label104
+            // 
+            resources.ApplyResources(this.label104, "label104");
+            this.label104.ForeColor = System.Drawing.Color.Red;
+            this.label104.Name = "label104";
+            // 
+            // label105
+            // 
+            resources.ApplyResources(this.label105, "label105");
+            this.label105.ForeColor = System.Drawing.Color.Red;
+            this.label105.Name = "label105";
             // 
             // Form2
             // 
@@ -3460,5 +3700,35 @@
         private System.Windows.Forms.Label thongbaoloikhachhang;
         private System.Windows.Forms.Label thongbaoloiloaisanpham;
         private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label104;
     }
 }
