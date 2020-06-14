@@ -2,7 +2,7 @@
 use QL_CUAHANG;
 
 
----------------------- by Ngoãn Royal --------------------------------
+---------------------- by Ngoãn Royal & Admin An --------------------------------
 
 ------------------------------- TAO BANG ---------------------------------
 -- bang loai hang hoa
@@ -140,6 +140,7 @@ CREATE TABLE PHANQUYEN (
 
 	CONSTRAINT pk_phanquyen PRIMARY KEY (id),
 	CONSTRAINT tk_phanquyen UNIQUE (taikhoan),
+	CONSTRAINT nv_phanquyen UNIQUE (manv),
 	CONSTRAINT phanquyen_manv FOREIGN KEY (manv)
     REFERENCES NHANVIEN(manv),
 );
@@ -159,12 +160,11 @@ CREATE TABLE THONGKE (   -- thống kê số lượng từng sản phẩm bán t
 );
 
 
-
 select mahh, ngayban, soluongban, tongthu, loinhuan from THONGKE
 
 ------------------ cập nhật xử lý --------------------
 
--- by Ngoãn Royal
+-- start Ngoãn + An --------------------------------------------------------------
 
 select ct.mahd, hh.tenhh, ct.dongia, ct.soluong, hh.donvi, ct.khuyenmai, ct.thanhtien from  CTHD ct, HANGHOA hh where ct.mahh = hh.mahh
 
@@ -244,6 +244,5 @@ select * from HANGHOA
 select * from CTHD
 select * from QUANLY
 
----------------------- by Ngô Thành An --------------------------------
 
-
+-- end Ngoãn + An --------------------------------------------------------------
