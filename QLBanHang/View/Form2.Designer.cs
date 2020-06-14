@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -358,7 +358,7 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.emailsaoluunhanvienmoi = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
             this.thongbaoloinhanvien = new System.Windows.Forms.Label();
             this.thongbaoloisanpham = new System.Windows.Forms.Label();
@@ -1003,7 +1003,6 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel13.Controls.Add(this.grLoaiTaiKhoan);
             this.panel13.Controls.Add(this.groupBox20);
             this.panel13.Controls.Add(this.groupBox19);
             this.panel13.Controls.Add(this.menuStrip7);
@@ -1090,7 +1089,8 @@
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.textBox5);
+            this.groupBox19.Controls.Add(this.grLoaiTaiKhoan);
+            this.groupBox19.Controls.Add(this.emailsaoluunhanvienmoi);
             this.groupBox19.Controls.Add(this.listBox1);
             this.groupBox19.Controls.Add(this.txtAddPhanQuyen);
             this.groupBox19.Controls.Add(this.txtNameUser);
@@ -1107,6 +1107,7 @@
             resources.ApplyResources(this.groupBox19, "groupBox19");
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.TabStop = false;
+            this.groupBox19.Enter += new System.EventHandler(this.groupBox19_Enter);
             // 
             // listBox1
             // 
@@ -1130,7 +1131,6 @@
             // 
             // txtNameUser
             // 
-            this.txtNameUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtNameUser, "txtNameUser");
             this.txtNameUser.FormattingEnabled = true;
             this.txtNameUser.Name = "txtNameUser";
@@ -1405,8 +1405,8 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1423,8 +1423,8 @@
             resources.ApplyResources(this.dtDanhSachNhanVien, "dtDanhSachNhanVien");
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
             // 
             // manv
@@ -2949,10 +2949,10 @@
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
-            // textBox5
+            // emailsaoluunhanvienmoi
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.emailsaoluunhanvienmoi, "emailsaoluunhanvienmoi");
+            this.emailsaoluunhanvienmoi.Name = "emailsaoluunhanvienmoi";
             // 
             // label67
             // 
@@ -3451,7 +3451,7 @@
         private System.Windows.Forms.GroupBox grLoaiTaiKhoan;
         private System.Windows.Forms.RadioButton rbntTKNhanVien;
         private System.Windows.Forms.RadioButton rbntTKAdmin;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox emailsaoluunhanvienmoi;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label thongbaoloinhanvien;
         private System.Windows.Forms.Label thongbaoloisanpham;
