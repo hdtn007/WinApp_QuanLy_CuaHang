@@ -2167,6 +2167,12 @@ namespace QLBanHang
             Form2_Load(sender, e);
             dis_enTKTraCuu(false);
         }
+
+        // END  KHU VỰC DÀNH CHO TAB THỐNG KÊ ********************************************************* //
+
+        /* ********************************************************************************************************** */
+        // START  KHU VỰC DÀNH CHO TAB ĐỔI mk ADMIN ********************************************************* //
+
         QuanLyObj thdObj = new QuanLyObj();
         QuanLyCtrl thdcrt = new QuanLyCtrl();
         void ganDulieuQL1(QuanLyObj nvObj)
@@ -2278,13 +2284,110 @@ namespace QLBanHang
             txtNhapLaiMatKhau.UseSystemPasswordChar = false;
         }
 
-
-        // END  KHU VỰC DÀNH CHO TAB THỐNG KÊ ********************************************************* //
-
-        /* ********************************************************************************************************** */
-        // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ ADMIN ********************************************************* //
-        // END  KHU VỰC DÀNH CHO TAB QUẢN LÝ ADMIN ********************************************************* //
+        // END  KHU VỰC DÀNH CHO TAB ĐỔI mk ADMIN ********************************************************* //
 
         /* ********************************************************************************************************** */
+        // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ USER ********************************************************* //
+
+        private void mndangkymoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mndoimatkhau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnphanquyen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LuuTKmoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HuyTKmoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbntTKNhanVien_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbntTKAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // END  KHU VỰC DÀNH CHO TAB QUẢN LÝ USER ********************************************************* //
+
+        /* ********************************************************************************************************** */
+        // START  KHU VỰC DÀNH CHO TAB FIX LỖI ********************************************************* //
+
+        private void fixNhanVien()
+        {
+            thongbaoloinhanvien.Text = "";
+            
+                // fix lỗi đễ trống các trường bắt buộc txt
+
+                // fix lỗi sai cấu trúc email
+
+                // fix lỗi ngày tháng năm bắt buộc +18 trở lên
+           
+
+            
+        }
+
+        void fixSanPham()
+        {
+            thongbaoloiloaisanpham.Text = "";
+            // fix lỗi đễ trống các trường bắt buộc txt
+
+            // fix lỗi giá bán, tồn kho, giá nhập. phải lớn hơn hoặc bằng 0
+
+            // fix lỗi trống nhà cc, khuyến mãi, loại hàng hóa. trống thì thông báo nhập trước
+        }
+
+        void fixNCC()
+        {
+            thongbaoloincc.Text = "";
+            // fix lỗi đễ trống các trường bắt buộc txt
+        }
+
+        void fixKM()
+        {
+            thongbaoloikm.Text = "";
+            // fix lỗi đễ trống các trường bắt buộc txt
+        }
+
+        void fixKhachHang()
+        {
+            thongbaoloikhachhang.Text = "";
+            // fix lỗi đễ trống các trường bắt buộc txt
+        }
+
+        void fixLoaiSP()
+        {
+            thongbaoloiloaisanpham.Text = "";
+            // fix lỗi đễ trống các trường bắt buộc txt
+        }
+
+        void fixXuLyHoaDon() // hàm này xử lý sau. bỏ qua
+        {
+            // kiểm tra nếu loại sản phẩm tồn kho nhỏ hơn số lượng bán ra thì thông báo lổi ra messagebox
+            // thêm hiển thị số lượng còn lại 
+        }
+
+        // END  KHU VỰC DÀNH CHO TAB FIX LỖI ********************************************************* //
+
+        /* ********************************************************************************************************** */
+
+
+
     }
 }
