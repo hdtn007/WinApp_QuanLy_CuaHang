@@ -3653,6 +3653,33 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="thongbaoloiadmin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="thongbaoloiadmin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 50</value>
+  </data>
+  <data name="thongbaoloiadmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 19</value>
+  </data>
+  <data name="thongbaoloiadmin.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="thongbaoloiadmin.Text" xml:space="preserve">
+    <value>Thông báo lỗi !</value>
+  </data>
+  <data name="&gt;&gt;thongbaoloiadmin.Name" xml:space="preserve">
+    <value>thongbaoloiadmin</value>
+  </data>
+  <data name="&gt;&gt;thongbaoloiadmin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;thongbaoloiadmin.Parent" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="&gt;&gt;thongbaoloiadmin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="hotenuser.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3711,40 +3738,40 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>groupBox20</value>
+    <value>gbDanhSachUser</value>
   </data>
   <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="groupBox20.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="gbDanhSachUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 335</value>
   </data>
-  <data name="groupBox20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="gbDanhSachUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="groupBox20.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="gbDanhSachUser.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="groupBox20.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="gbDanhSachUser.Size" type="System.Drawing.Size, System.Drawing">
     <value>1484, 584</value>
   </data>
-  <data name="groupBox20.TabIndex" type="System.Int32, mscorlib">
+  <data name="gbDanhSachUser.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="groupBox20.Text" xml:space="preserve">
+  <data name="gbDanhSachUser.Text" xml:space="preserve">
     <value>Danh Sách User</value>
   </data>
-  <data name="&gt;&gt;groupBox20.Name" xml:space="preserve">
-    <value>groupBox20</value>
+  <data name="&gt;&gt;gbDanhSachUser.Name" xml:space="preserve">
+    <value>gbDanhSachUser</value>
   </data>
-  <data name="&gt;&gt;groupBox20.Type" xml:space="preserve">
+  <data name="&gt;&gt;gbDanhSachUser.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox20.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gbDanhSachUser.Parent" xml:space="preserve">
     <value>panel13</value>
   </data>
-  <data name="&gt;&gt;groupBox20.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;gbDanhSachUser.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="rbntTKNhanVien.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4245,7 +4272,7 @@
     <value>panel13</value>
   </data>
   <data name="&gt;&gt;groupBox19.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="menuStrip7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>827, 17</value>
@@ -4308,7 +4335,7 @@
     <value>panel13</value>
   </data>
   <data name="&gt;&gt;menuStrip7.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="panel13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -5216,8 +5243,11 @@
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 2, 0, 2</value>
+  </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1540, 28</value>
+    <value>1570, 28</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -5238,13 +5268,13 @@
     <value>3</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>0, 0</value>
   </data>
   <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1540, 1210</value>
+    <value>1570, 1210</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>

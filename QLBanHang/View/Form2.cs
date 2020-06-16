@@ -180,6 +180,9 @@ namespace QLBanHang
             dis_enLoadUSer(true);
             loadUser();
 
+            //clear thong bao loi
+            LoadLoi();
+
 
             // bingdingKHClear();
             // bingdingNVClear();
@@ -196,10 +199,16 @@ namespace QLBanHang
         //**************************************************************//*****************************************************************************************************************************************************************
 
 
-            int LoiNhap ( int e) // e= 0 (không lỗi) ; e = ! 0 (lỗi)
+         void LoadLoi() // 
         {
 
-            return e;
+            thongbaoloinhanvien.Text = "";
+            thongbaoloikhachhang.Text = "";
+            thongbaoloiloaisanpham.Text = "";
+            thongbaoloikm.Text = "";
+            thongbaoloincc.Text = "";
+            thongbaoloisanpham.Text = "";
+            thongbaoloiadmin.Text = "";
         }
 
 
@@ -2305,7 +2314,10 @@ namespace QLBanHang
                 txtNewPass.Text = "";
                 txtReNewPass.Text = "";
                 emailsaoluunhanvienmoi.Text = "";
-        
+
+                gbDanhSachUser.Text = "Danh sách tài khoản User";
+                mnphanquyen.Text = "Phân quyền nhân viên";
+
                 NhanVienCtrl nv = new NhanVienCtrl();
                 txtNameUser.DataSource = nv.getData();
                 txtNameUser.DisplayMember = "tennv";
@@ -2314,7 +2326,7 @@ namespace QLBanHang
                 txtAddPhanQuyen.Items.Clear();
                 txtAddPhanQuyen.Items.Add("2");
                 txtAddPhanQuyen.Items.Add("3");
-                txtAddPhanQuyen.SelectedItem = 1;
+              //  txtAddPhanQuyen.SelectedItem = 0;
              }
 
         void loadAdmin()
@@ -2325,10 +2337,13 @@ namespace QLBanHang
             emailsaoluunhanvienmoi.Text = "";
             txtNameUser.Text = "";
 
+            gbDanhSachUser.Text = "Danh sách tài khoản Admin";
+            mnphanquyen.Text = "Đổi tên admin";
+
             //txtAddPhanQuyen.Items.Clear();
             txtAddPhanQuyen.Items.Clear();
             txtAddPhanQuyen.Items.Add("1");
-            txtAddPhanQuyen.SelectedItem = 0;
+           // txtAddPhanQuyen.SelectedItem = 0;
         }
 
         void dis_enNhanVien(bool e) // e = mở ; !e = đóng
@@ -2397,6 +2412,58 @@ namespace QLBanHang
             txtNameUser.Enabled = e;
             txtAddPhanQuyen.Enabled = e;
         }
+        void doimknhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = e;
+            txtReNewPass.Enabled = e;
+            emailsaoluunhanvienmoi.Enabled = e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = !e;
+
+        }
+
+        void phanquyennhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = e;
+
+        }
+        void phanquyenadmin(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = e;
+            txtAddPhanQuyen.Enabled = !e;
+
+        }
 
         private void mndangkymoi_Click(object sender, EventArgs e)
         {
@@ -2414,12 +2481,22 @@ namespace QLBanHang
 
         private void mndoimatkhau_Click(object sender, EventArgs e)
         {
-
+            doimknhanvien(true);
+          //  loadUser();
         }
 
         private void mnphanquyen_Click(object sender, EventArgs e)
         {
-
+            if (rbntTKNhanVien.Checked)
+            {
+                phanquyennhanvien(true);
+                loadUser();
+            }
+            else if (rbntTKAdmin.Checked)
+            {
+                phanquyenadmin(true);
+                loadAdmin();
+            }
         }
 
         private void LuuTKmoi_Click(object sender, EventArgs e)
