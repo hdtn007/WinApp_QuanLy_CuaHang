@@ -2381,12 +2381,12 @@ namespace QLBanHang
                 }
                 catch (FormatException)
                 {
-                    thongbaoloinhanvien.Text = "Vui lòng kiểm tra lại Email";
+                    thongbaoloinhanvien.Text = "✘ Vui lòng kiểm tra lại Email ✘";
                     return false;
                 }
                 catch (ArgumentException)
                 {
-                    thongbaoloinhanvien.Text = "Vui lòng kiểm tra lại Email";
+                    thongbaoloinhanvien.Text = "✘ Vui lòng kiểm tra lại Email✘";
                     return false;
                 }
             }
@@ -2398,6 +2398,7 @@ namespace QLBanHang
         {
             thongbaoloiloaisanpham.Text = "";
             // fix lỗi đễ trống các trường bắt buộc txt
+
 
             // fix lỗi giá bán, tồn kho, giá nhập. phải lớn hơn hoặc bằng 0
 
