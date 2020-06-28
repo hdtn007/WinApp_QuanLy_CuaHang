@@ -477,10 +477,21 @@ namespace QLBanHang
 
             txtsoluongspdamua.DataBindings.Clear();
             txtsoluongspdamua.DataBindings.Add("Text", dtdanhsachcthd.DataSource, "soluong");
-            
 
-            
+            /*int tonkho;
 
+            HangHoaCtrl hh = new HangHoaCtrl();
+            txtSanPhamHD.DataSource = hh.getDataHH();
+            txtSanPhamHD.DisplayMember = "tenhh";
+            txtSanPhamHD.ValueMember = "mahh";
+
+            txtsltonkho.DataBindings.Clear();
+            txtsltonkho.DataBindings.Add("Text", txtSanPhamHD.DataSource, "tonkho");
+
+            tonkho = int.Parse(txtsltonkho.Text.Trim());
+
+
+            txttonkho.Text = "( Còn lại " + tonkho + " Sản phẩm này )";*/
 
         }
 
@@ -1870,57 +1881,60 @@ namespace QLBanHang
 
         private void btnThemCTHD_Click(object sender, EventArgs e)
         {
-            /*
+            if (fixXuLyHoaDon())
+            {
+                /*
              *  tạo mới và Lưu sản phẩm đã chọn vào danh sách CTHD với mỗi sản phẩm cùng một mã hóa đơn đã tạo trước đó
              *  mỗi lần thêm phải load lại tổng tiền
              */
-            
-            ganDulieuCTHDsub();
-            ganDuLieuCTHD(cthdObj);
-            gandulieuThongKe(tkObj);
-            
 
-            string mahd = txtMaHD.Text;
-            int soluong = int.Parse(txtSoLuongCTHD.Value.ToString());
-            string mahh = txtMaSpAdd.Text;
-
-            
-            // insert thống kê
-            tkctr.addData(tkObj);
+                ganDulieuCTHDsub();
+                ganDuLieuCTHD(cthdObj);
+                gandulieuThongKe(tkObj);
 
 
+                string mahd = txtMaHD.Text;
+                int soluong = int.Parse(txtSoLuongCTHD.Value.ToString());
+                string mahh = txtMaSpAdd.Text;
 
-            if (flagCTHD == 0)
-            {
-                // TH Thêm sp mới
-                if (cthdctr.addDataCTHD(cthdObj))
+
+                // insert thống kê
+                tkctr.addData(tkObj);
+
+
+
+                if (flagCTHD == 0)
                 {
-                    MessageBox.Show("Bạn đã THÊM một sản phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Thêm sp mới
+                    if (cthdctr.addDataCTHD(cthdObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM một sản phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
-                    // cập nhật đã bán
-                    TonKho_DaBan(mahh,soluong);
-                    //
 
-                    ganTongTienHD(mahd);
-                    bingdingCTHD(mahd);
-                    dis_enCTHD(false);
-                    
+                        // cập nhật đã bán
+                        TonKho_DaBan(mahh, soluong);
+                        //
+
+                        ganTongTienHD(mahd);
+                        bingdingCTHD(mahd);
+                        dis_enCTHD(false);
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("THÊM THẤT BẠI ", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        ganTongTienHD(mahd);
+                        bingdingCTHD(mahd);
+                        dis_enCTHD(false);
+                    }
+
                 }
-                else
-                {
-                    
-                    MessageBox.Show("THÊM THẤT BẠI ", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    ganTongTienHD(mahd);
-                    bingdingCTHD(mahd);
-                    dis_enCTHD(false);
-                }
-
-            }
-
-          //  bingdingHH();
-           // dis_enHH(false);
+                //  bingdingHH();
+                // dis_enHH(false)
+            };
 
         }
 
@@ -2519,17 +2533,17 @@ namespace QLBanHang
 
         private void LuuTKmoi_Click(object sender, EventArgs e)
         {
-            if(rbntTKNhanVien.Checked)
-            {
-                // lưu nhân viên
-            }
-            else if(rbntTKAdmin.Checked)
-            {
-                // lưu admin
-            }
-            Form2_Load(sender, e);
-            dis_enNhanVien(true);
-            grLoaiTaiKhoan.Enabled = true;
+                if (rbntTKNhanVien.Checked)
+                {
+                    // lưu nhân viên
+                }
+                else if (rbntTKAdmin.Checked)
+                {
+                    // lưu admin
+                }
+                Form2_Load(sender, e);
+                dis_enNhanVien(true);
+                grLoaiTaiKhoan.Enabled = true;
         }
 
         private void HuyTKmoi_Click(object sender, EventArgs e)
@@ -2748,10 +2762,46 @@ namespace QLBanHang
             else return true;
         }
 
-        void fixXuLyHoaDon() // hàm này xử lý sau. bỏ qua
+        private bool fixXuLyHoaDon() // hàm này xử lý sau. bỏ qua
         {
+            if (txtSanPhamHD.SelectedItem == null)
+            {
+                lbloiBH.Text = "✘Vui lòng chọn San Pham ✘"; return false;
+            }
+            else return true;
             // kiểm tra nếu loại sản phẩm tồn kho nhỏ hơn số lượng bán ra thì thông báo lổi ra messagebox
             // thêm hiển thị số lượng còn lại 
+
+
+        }
+        private bool phanquyentk()
+        {
+            if (txtAddTaiKhoan.Text == "")
+            {
+                thongbaoloiadmin.Text = "✘Không được bỏ trống Tai Khoang✘"; return false;
+            }
+            else if (txtNewPass.Text == "")
+            {
+                thongbaoloiadmin.Text = "✘Không được bỏ trống Mat Khau Moi✘"; return false;
+            }
+            else if (txtNewPass.Text == txtReNewPass.Text)
+            {
+                thongbaoloiadmin.Text = "✘Mat Khau Khong Trung Nhau✘"; return false;
+            }
+            else if (emailsaoluunhanvienmoi.Text == "")
+            {
+                thongbaoloiadmin.Text = "✘Không được bỏ trống Email✘"; return false;
+            }
+            else if (txtNameUser.SelectedItem == null)
+            {
+                thongbaoloiadmin.Text = "✘Vui long chon Ten Nhan Vien✘"; return false;
+            }
+            else if (txtAddPhanQuyen.SelectedItem == null)
+            {
+                thongbaoloiadmin.Text = "✘Vui long chon Phan Quyen✘"; return false;
+            }
+            else return true;
+
         }
 
         private void groupBox19_Enter(object sender, EventArgs e)

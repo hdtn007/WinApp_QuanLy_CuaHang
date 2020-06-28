@@ -5243,9 +5243,6 @@
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 2, 0, 2</value>
-  </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1570, 28</value>
   </data>
@@ -8781,7 +8778,7 @@
     <value>Microsoft Tai Le, 11.25pt</value>
   </data>
   <data name="btnDonateHD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 721</value>
+    <value>-3, 723</value>
   </data>
   <data name="btnDonateHD.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -9092,6 +9089,42 @@
   <data name="&gt;&gt;txtMaSpAdd.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="txtsltonkho.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtsltonkho.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtsltonkho.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 7.8pt, style=Italic</value>
+  </data>
+  <data name="txtsltonkho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="txtsltonkho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 734</value>
+  </data>
+  <data name="txtsltonkho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 16</value>
+  </data>
+  <data name="txtsltonkho.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="txtsltonkho.Text" xml:space="preserve">
+    <value>sltonkho</value>
+  </data>
+  <data name="&gt;&gt;txtsltonkho.Name" xml:space="preserve">
+    <value>txtsltonkho</value>
+  </data>
+  <data name="&gt;&gt;txtsltonkho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtsltonkho.Parent" xml:space="preserve">
+    <value>groupBox15</value>
+  </data>
+  <data name="&gt;&gt;txtsltonkho.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="txtgianhapspadd.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -9105,7 +9138,7 @@
     <value>NoControl</value>
   </data>
   <data name="txtgianhapspadd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 734</value>
+    <value>84, 734</value>
   </data>
   <data name="txtgianhapspadd.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 16</value>
@@ -9126,7 +9159,7 @@
     <value>groupBox15</value>
   </data>
   <data name="&gt;&gt;txtgianhapspadd.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="txtMaHD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9159,7 +9192,7 @@
     <value>groupBox15</value>
   </data>
   <data name="&gt;&gt;txtMaHD.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="txtDonGiaCTHD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9192,7 +9225,7 @@
     <value>groupBox15</value>
   </data>
   <data name="&gt;&gt;txtDonGiaCTHD.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="groupBox15.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.2pt, style=Strikeout</value>
@@ -9227,35 +9260,65 @@
   <data name="&gt;&gt;groupBox15.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label75.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbloiBH.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label75.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt, style=Bold</value>
+  <data name="lbloiBH.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="label75.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 168</value>
+  <data name="lbloiBH.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 31</value>
   </data>
-  <data name="label75.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 19</value>
+  <data name="lbloiBH.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 19</value>
   </data>
-  <data name="label75.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="lbloiBH.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="label75.Text" xml:space="preserve">
-    <value>( Còn lại 75 Sản phẩm này )</value>
+  <data name="lbloiBH.Text" xml:space="preserve">
+    <value>Thông báo lỗi !</value>
   </data>
-  <data name="&gt;&gt;label75.Name" xml:space="preserve">
-    <value>label75</value>
+  <data name="&gt;&gt;lbloiBH.Name" xml:space="preserve">
+    <value>lbloiBH</value>
   </data>
-  <data name="&gt;&gt;label75.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbloiBH.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label75.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbloiBH.Parent" xml:space="preserve">
     <value>groupBox14</value>
   </data>
-  <data name="&gt;&gt;label75.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbloiBH.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="txttonkho.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txttonkho.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.2pt, style=Bold</value>
+  </data>
+  <data name="txttonkho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 168</value>
+  </data>
+  <data name="txttonkho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 19</value>
+  </data>
+  <data name="txttonkho.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="txttonkho.Text" xml:space="preserve">
+    <value>( Còn lại 75 Sản phẩm này )</value>
+  </data>
+  <data name="&gt;&gt;txttonkho.Name" xml:space="preserve">
+    <value>txttonkho</value>
+  </data>
+  <data name="&gt;&gt;txttonkho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txttonkho.Parent" xml:space="preserve">
+    <value>groupBox14</value>
+  </data>
+  <data name="&gt;&gt;txttonkho.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnKhuyenMaiHD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9285,7 +9348,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;btnKhuyenMaiHD.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnGioHangHD.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 265</value>
@@ -9312,7 +9375,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;btnGioHangHD.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="txtSanPhamHD.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -9342,7 +9405,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;txtSanPhamHD.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtSoLuongCTHD.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -9372,7 +9435,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;txtSoLuongCTHD.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txtDonViSp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9399,7 +9462,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;txtDonViSp.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9429,7 +9492,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9459,7 +9522,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnXoaHD.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.2pt</value>
@@ -9489,7 +9552,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;btnXoaHD.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnThemHD.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.2pt</value>
@@ -9519,7 +9582,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;btnThemHD.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnHuyCHTD.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -9552,7 +9615,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;btnHuyCHTD.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btnXoaSpCTHD.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -9585,7 +9648,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;btnXoaSpCTHD.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9615,7 +9678,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label33.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9645,7 +9708,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="label32.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9675,7 +9738,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="txtTTKhuyenMai.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9702,7 +9765,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;txtTTKhuyenMai.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="btnThemCTHD.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -10406,7 +10469,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;btnThemCTHD.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="txtKhachHangHD.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -10433,7 +10496,7 @@
     <value>groupBox14</value>
   </data>
   <data name="&gt;&gt;txtKhachHangHD.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="groupBox14.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 8</value>
