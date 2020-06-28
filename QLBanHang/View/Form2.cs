@@ -176,6 +176,13 @@ namespace QLBanHang
             loadQuanLy();
             LoadShowEye(true);
 
+            // load tài khoản nhân viên + admin
+            dis_enLoadUSer(true);
+            loadUser();
+
+            //clear thong bao loi
+            LoadLoi();
+
 
             // bingdingKHClear();
             // bingdingNVClear();
@@ -192,10 +199,16 @@ namespace QLBanHang
         //**************************************************************//*****************************************************************************************************************************************************************
 
 
-            int LoiNhap ( int e) // e= 0 (không lỗi) ; e = ! 0 (lỗi)
+         void LoadLoi() // 
         {
 
-            return e;
+            thongbaoloinhanvien.Text = "";
+            thongbaoloikhachhang.Text = "";
+            thongbaoloiloaisanpham.Text = "";
+            thongbaoloikm.Text = "";
+            thongbaoloincc.Text = "";
+            thongbaoloisanpham.Text = "";
+            thongbaoloiadmin.Text = "";
         }
 
 
@@ -585,8 +598,7 @@ namespace QLBanHang
             txtGioiTinhNv.Items.Add("Khác");
             txtGioiTinhNv.Items.Add("Nam");
             txtGioiTinhNv.Items.Add("Nữ");
-
-           // txtGioiTinhNv.SelectedItem = 0;
+            txtGioiTinhNv.SelectedItem = 0;
         }
 
         void clearDataNV()
@@ -655,8 +667,7 @@ namespace QLBanHang
             txtGioiTinhKhachHang.Items.Add("Khác");
             txtGioiTinhKhachHang.Items.Add("Nam");
             txtGioiTinhKhachHang.Items.Add("Nữ");
-            
-          //  txtGioiTinhKhachHang.SelectedItem = 0;
+            txtGioiTinhKhachHang.SelectedItem = 0;
         }
 
         void clearDataKH()
@@ -2291,38 +2302,237 @@ namespace QLBanHang
         /* ********************************************************************************************************** */
         // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ USER ********************************************************* //
 
+           
+            void dis_enLoadUSer(bool e) // e = mở ; !e = đóng
+            {
+                rbntTKNhanVien.Checked = e;
+            
+            }
+            void loadUser()
+            {
+                txtAddTaiKhoan.Text = "";
+                txtNewPass.Text = "";
+                txtReNewPass.Text = "";
+                emailsaoluunhanvienmoi.Text = "";
+
+                gbDanhSachUser.Text = "Danh sách tài khoản User";
+                mnphanquyen.Text = "Phân quyền nhân viên";
+
+                NhanVienCtrl nv = new NhanVienCtrl();
+                txtNameUser.DataSource = nv.getData();
+                txtNameUser.DisplayMember = "tennv";
+                txtNameUser.ValueMember = "manv";
+
+                txtAddPhanQuyen.Items.Clear();
+                txtAddPhanQuyen.Items.Add("2");
+                txtAddPhanQuyen.Items.Add("3");
+              //  txtAddPhanQuyen.SelectedItem = 0;
+             }
+
+        void loadAdmin()
+        {
+            txtAddTaiKhoan.Text = "admin";
+            txtNewPass.Text = "";
+            txtReNewPass.Text = "";
+            emailsaoluunhanvienmoi.Text = "";
+            txtNameUser.Text = "";
+
+            gbDanhSachUser.Text = "Danh sách tài khoản Admin";
+            mnphanquyen.Text = "Đổi tên admin";
+
+            //txtAddPhanQuyen.Items.Clear();
+            txtAddPhanQuyen.Items.Clear();
+            txtAddPhanQuyen.Items.Add("1");
+           // txtAddPhanQuyen.SelectedItem = 0;
+        }
+
+        void dis_enNhanVien(bool e) // e = mở ; !e = đóng
+            {
+                mndangkymoi.Enabled = e;
+                mndoimatkhau.Enabled = e;
+                mnphanquyen.Enabled = e;
+                LuuTKmoi.Enabled = !e;
+                HuyTKmoi.Enabled = !e;
+
+                txtAddTaiKhoan.Enabled = !e;
+                txtNewPass.Enabled = !e;
+                txtReNewPass.Enabled = !e;
+                emailsaoluunhanvienmoi.Enabled = !e;
+                txtNameUser.Enabled = !e;
+                txtAddPhanQuyen.Enabled = !e;
+            }
+
+            void dis_enAdmin(bool e) // e = mở ; !e = đóng
+            {
+                mndangkymoi.Enabled = e;
+                mndoimatkhau.Enabled = !e;
+                mnphanquyen.Enabled = e;
+                LuuTKmoi.Enabled = !e;
+                HuyTKmoi.Enabled = !e;
+
+                txtAddTaiKhoan.Enabled = !e;
+                txtNewPass.Enabled = !e;
+                txtReNewPass.Enabled = !e;
+                emailsaoluunhanvienmoi.Enabled = !e;
+                txtNameUser.Enabled = !e;
+                txtAddPhanQuyen.Enabled = !e;
+
+        }
+
+        void dkmoinhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = e;
+            txtNewPass.Enabled = e;
+            txtReNewPass.Enabled = e;
+            emailsaoluunhanvienmoi.Enabled = e;
+            txtNameUser.Enabled = e;
+            txtAddPhanQuyen.Enabled = e;
+
+        }
+        void dkmoiAdmin(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = e;
+            txtReNewPass.Enabled = e;
+            emailsaoluunhanvienmoi.Enabled = e;
+            txtNameUser.Enabled = e;
+            txtAddPhanQuyen.Enabled = e;
+        }
+        void doimknhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = e;
+            txtReNewPass.Enabled = e;
+            emailsaoluunhanvienmoi.Enabled = e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = !e;
+
+        }
+
+        void phanquyennhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = e;
+
+        }
+        void phanquyenadmin(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = e;
+            txtAddPhanQuyen.Enabled = !e;
+
+        }
+
         private void mndangkymoi_Click(object sender, EventArgs e)
         {
-
+            if(rbntTKNhanVien.Checked)
+            {
+                dkmoinhanvien(true);
+                loadUser();
+            }
+            else if (rbntTKAdmin.Checked)
+            {
+                dkmoiAdmin(true);
+                loadAdmin();
+            }
         }
 
         private void mndoimatkhau_Click(object sender, EventArgs e)
         {
-
+            doimknhanvien(true);
+          //  loadUser();
         }
 
         private void mnphanquyen_Click(object sender, EventArgs e)
         {
-
+            if (rbntTKNhanVien.Checked)
+            {
+                phanquyennhanvien(true);
+                loadUser();
+            }
+            else if (rbntTKAdmin.Checked)
+            {
+                phanquyenadmin(true);
+                loadAdmin();
+            }
         }
 
         private void LuuTKmoi_Click(object sender, EventArgs e)
         {
-
+            if(rbntTKNhanVien.Checked)
+            {
+                // lưu nhân viên
+            }
+            else if(rbntTKAdmin.Checked)
+            {
+                // lưu admin
+            }
+            Form2_Load(sender, e);
+            dis_enNhanVien(true);
+            grLoaiTaiKhoan.Enabled = true;
         }
 
         private void HuyTKmoi_Click(object sender, EventArgs e)
         {
-
+            Form2_Load(sender, e);
+            dis_enNhanVien(true);
+            grLoaiTaiKhoan.Enabled = true;
         }
 
         private void rbntTKNhanVien_CheckedChanged(object sender, EventArgs e)
         {
+                dis_enNhanVien(true);
+                loadUser();
 
         }
 
         private void rbntTKAdmin_CheckedChanged(object sender, EventArgs e)
         {
+                dis_enAdmin(true);
+                loadAdmin();
+
 
         }
 
@@ -2433,6 +2643,11 @@ namespace QLBanHang
         {
             // kiểm tra nếu loại sản phẩm tồn kho nhỏ hơn số lượng bán ra thì thông báo lổi ra messagebox
             // thêm hiển thị số lượng còn lại 
+        }
+
+        private void groupBox19_Enter(object sender, EventArgs e)
+        {
+
         }
 
         // END  KHU VỰC DÀNH CHO TAB FIX LỖI ********************************************************* //

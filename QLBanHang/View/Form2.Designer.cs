@@ -103,10 +103,7 @@
             this.label50 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.grLoaiTaiKhoan = new System.Windows.Forms.GroupBox();
-            this.rbntTKNhanVien = new System.Windows.Forms.RadioButton();
-            this.rbntTKAdmin = new System.Windows.Forms.RadioButton();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.gbDanhSachUser = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.hotenuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,7 +112,10 @@
             this.phanquyenUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChuUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.grLoaiTaiKhoan = new System.Windows.Forms.GroupBox();
+            this.rbntTKNhanVien = new System.Windows.Forms.RadioButton();
+            this.rbntTKAdmin = new System.Windows.Forms.RadioButton();
+            this.emailsaoluunhanvienmoi = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtAddPhanQuyen = new System.Windows.Forms.ComboBox();
             this.txtNameUser = new System.Windows.Forms.ComboBox();
@@ -367,36 +367,7 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.label98 = new System.Windows.Forms.Label();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
+            this.thongbaoloiadmin = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -415,10 +386,10 @@
             this.txtTHongKE.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.grLoaiTaiKhoan.SuspendLayout();
-            this.groupBox20.SuspendLayout();
+            this.gbDanhSachUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox19.SuspendLayout();
+            this.grLoaiTaiKhoan.SuspendLayout();
             this.menuStrip7.SuspendLayout();
             this.tabQuanLy.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -1033,43 +1004,19 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel13.Controls.Add(this.grLoaiTaiKhoan);
-            this.panel13.Controls.Add(this.groupBox20);
+            this.panel13.Controls.Add(this.thongbaoloiadmin);
+            this.panel13.Controls.Add(this.gbDanhSachUser);
             this.panel13.Controls.Add(this.groupBox19);
             this.panel13.Controls.Add(this.menuStrip7);
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
-            // grLoaiTaiKhoan
+            // gbDanhSachUser
             // 
-            this.grLoaiTaiKhoan.Controls.Add(this.rbntTKNhanVien);
-            this.grLoaiTaiKhoan.Controls.Add(this.rbntTKAdmin);
-            resources.ApplyResources(this.grLoaiTaiKhoan, "grLoaiTaiKhoan");
-            this.grLoaiTaiKhoan.Name = "grLoaiTaiKhoan";
-            this.grLoaiTaiKhoan.TabStop = false;
-            // 
-            // rbntTKNhanVien
-            // 
-            resources.ApplyResources(this.rbntTKNhanVien, "rbntTKNhanVien");
-            this.rbntTKNhanVien.Name = "rbntTKNhanVien";
-            this.rbntTKNhanVien.TabStop = true;
-            this.rbntTKNhanVien.UseVisualStyleBackColor = true;
-            this.rbntTKNhanVien.CheckedChanged += new System.EventHandler(this.rbntTKNhanVien_CheckedChanged);
-            // 
-            // rbntTKAdmin
-            // 
-            resources.ApplyResources(this.rbntTKAdmin, "rbntTKAdmin");
-            this.rbntTKAdmin.Name = "rbntTKAdmin";
-            this.rbntTKAdmin.TabStop = true;
-            this.rbntTKAdmin.UseVisualStyleBackColor = true;
-            this.rbntTKAdmin.CheckedChanged += new System.EventHandler(this.rbntTKAdmin_CheckedChanged);
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.dataGridView1);
-            resources.ApplyResources(this.groupBox20, "groupBox20");
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.TabStop = false;
+            this.gbDanhSachUser.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.gbDanhSachUser, "gbDanhSachUser");
+            this.gbDanhSachUser.Name = "gbDanhSachUser";
+            this.gbDanhSachUser.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -1120,7 +1067,8 @@
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.textBox5);
+            this.groupBox19.Controls.Add(this.grLoaiTaiKhoan);
+            this.groupBox19.Controls.Add(this.emailsaoluunhanvienmoi);
             this.groupBox19.Controls.Add(this.listBox1);
             this.groupBox19.Controls.Add(this.txtAddPhanQuyen);
             this.groupBox19.Controls.Add(this.txtNameUser);
@@ -1137,11 +1085,36 @@
             resources.ApplyResources(this.groupBox19, "groupBox19");
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.TabStop = false;
+            this.groupBox19.Enter += new System.EventHandler(this.groupBox19_Enter);
             // 
-            // textBox5
+            // grLoaiTaiKhoan
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            this.grLoaiTaiKhoan.Controls.Add(this.rbntTKNhanVien);
+            this.grLoaiTaiKhoan.Controls.Add(this.rbntTKAdmin);
+            resources.ApplyResources(this.grLoaiTaiKhoan, "grLoaiTaiKhoan");
+            this.grLoaiTaiKhoan.Name = "grLoaiTaiKhoan";
+            this.grLoaiTaiKhoan.TabStop = false;
+            // 
+            // rbntTKNhanVien
+            // 
+            resources.ApplyResources(this.rbntTKNhanVien, "rbntTKNhanVien");
+            this.rbntTKNhanVien.Name = "rbntTKNhanVien";
+            this.rbntTKNhanVien.TabStop = true;
+            this.rbntTKNhanVien.UseVisualStyleBackColor = true;
+            this.rbntTKNhanVien.CheckedChanged += new System.EventHandler(this.rbntTKNhanVien_CheckedChanged);
+            // 
+            // rbntTKAdmin
+            // 
+            resources.ApplyResources(this.rbntTKAdmin, "rbntTKAdmin");
+            this.rbntTKAdmin.Name = "rbntTKAdmin";
+            this.rbntTKAdmin.TabStop = true;
+            this.rbntTKAdmin.UseVisualStyleBackColor = true;
+            this.rbntTKAdmin.CheckedChanged += new System.EventHandler(this.rbntTKAdmin_CheckedChanged);
+            // 
+            // emailsaoluunhanvienmoi
+            // 
+            resources.ApplyResources(this.emailsaoluunhanvienmoi, "emailsaoluunhanvienmoi");
+            this.emailsaoluunhanvienmoi.Name = "emailsaoluunhanvienmoi";
             // 
             // listBox1
             // 
@@ -1165,7 +1138,6 @@
             // 
             // txtNameUser
             // 
-            this.txtNameUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtNameUser, "txtNameUser");
             this.txtNameUser.FormattingEnabled = true;
             this.txtNameUser.Name = "txtNameUser";
@@ -1318,14 +1290,6 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Controls.Add(this.label83);
-            this.groupBox2.Controls.Add(this.label82);
-            this.groupBox2.Controls.Add(this.label81);
-            this.groupBox2.Controls.Add(this.label80);
-            this.groupBox2.Controls.Add(this.label79);
-            this.groupBox2.Controls.Add(this.label78);
-            this.groupBox2.Controls.Add(this.label77);
-            this.groupBox2.Controls.Add(this.label76);
             this.groupBox2.Controls.Add(this.dtNgaySinhNv);
             this.groupBox2.Controls.Add(this.txtGioiTinhNv);
             this.groupBox2.Controls.Add(this.txtGhiChuNv);
@@ -1622,14 +1586,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label91);
-            this.groupBox3.Controls.Add(this.label90);
-            this.groupBox3.Controls.Add(this.label89);
-            this.groupBox3.Controls.Add(this.label88);
-            this.groupBox3.Controls.Add(this.label87);
-            this.groupBox3.Controls.Add(this.label86);
-            this.groupBox3.Controls.Add(this.label85);
-            this.groupBox3.Controls.Add(this.label84);
             this.groupBox3.Controls.Add(this.txtDaBanHH);
             this.groupBox3.Controls.Add(this.txtTonKhoHH);
             this.groupBox3.Controls.Add(this.label51);
@@ -1996,10 +1952,6 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label95);
-            this.groupBox5.Controls.Add(this.label94);
-            this.groupBox5.Controls.Add(this.label93);
-            this.groupBox5.Controls.Add(this.label92);
             this.groupBox5.Controls.Add(this.txtGhiChuNCC);
             this.groupBox5.Controls.Add(this.txtSoDtNCC);
             this.groupBox5.Controls.Add(this.txtDiaChiNCC);
@@ -2208,9 +2160,6 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.label98);
-            this.groupBox7.Controls.Add(this.label97);
-            this.groupBox7.Controls.Add(this.label96);
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Controls.Add(this.txtGiamKm);
             this.groupBox7.Controls.Add(this.txtNoiDungKm);
@@ -2406,11 +2355,6 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.label103);
-            this.groupBox9.Controls.Add(this.label102);
-            this.groupBox9.Controls.Add(this.label101);
-            this.groupBox9.Controls.Add(this.label100);
-            this.groupBox9.Controls.Add(this.label99);
             this.groupBox9.Controls.Add(this.txtGioiTinhKhachHang);
             this.groupBox9.Controls.Add(this.txtGhiChuKhachHang);
             this.groupBox9.Controls.Add(this.txtSDTKhachHang);
@@ -2640,8 +2584,6 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.label105);
-            this.groupBox11.Controls.Add(this.label104);
             this.groupBox11.Controls.Add(this.txtTenLoaiSanPham);
             this.groupBox11.Controls.Add(this.txtMaLoaiSanPham);
             this.groupBox11.Controls.Add(this.label54);
@@ -3061,185 +3003,11 @@
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
-            // label76
+            // thongbaoloiadmin
             // 
-            resources.ApplyResources(this.label76, "label76");
-            this.label76.ForeColor = System.Drawing.Color.Red;
-            this.label76.Name = "label76";
-            // 
-            // label77
-            // 
-            resources.ApplyResources(this.label77, "label77");
-            this.label77.ForeColor = System.Drawing.Color.Red;
-            this.label77.Name = "label77";
-            // 
-            // label78
-            // 
-            resources.ApplyResources(this.label78, "label78");
-            this.label78.ForeColor = System.Drawing.Color.Red;
-            this.label78.Name = "label78";
-            // 
-            // label79
-            // 
-            resources.ApplyResources(this.label79, "label79");
-            this.label79.ForeColor = System.Drawing.Color.Red;
-            this.label79.Name = "label79";
-            // 
-            // label80
-            // 
-            resources.ApplyResources(this.label80, "label80");
-            this.label80.ForeColor = System.Drawing.Color.Red;
-            this.label80.Name = "label80";
-            // 
-            // label81
-            // 
-            resources.ApplyResources(this.label81, "label81");
-            this.label81.ForeColor = System.Drawing.Color.Red;
-            this.label81.Name = "label81";
-            // 
-            // label82
-            // 
-            resources.ApplyResources(this.label82, "label82");
-            this.label82.ForeColor = System.Drawing.Color.Red;
-            this.label82.Name = "label82";
-            // 
-            // label83
-            // 
-            resources.ApplyResources(this.label83, "label83");
-            this.label83.ForeColor = System.Drawing.Color.Red;
-            this.label83.Name = "label83";
-            // 
-            // label84
-            // 
-            resources.ApplyResources(this.label84, "label84");
-            this.label84.ForeColor = System.Drawing.Color.Red;
-            this.label84.Name = "label84";
-            // 
-            // label85
-            // 
-            resources.ApplyResources(this.label85, "label85");
-            this.label85.ForeColor = System.Drawing.Color.Red;
-            this.label85.Name = "label85";
-            // 
-            // label86
-            // 
-            resources.ApplyResources(this.label86, "label86");
-            this.label86.ForeColor = System.Drawing.Color.Red;
-            this.label86.Name = "label86";
-            // 
-            // label87
-            // 
-            resources.ApplyResources(this.label87, "label87");
-            this.label87.ForeColor = System.Drawing.Color.Red;
-            this.label87.Name = "label87";
-            // 
-            // label88
-            // 
-            resources.ApplyResources(this.label88, "label88");
-            this.label88.ForeColor = System.Drawing.Color.Red;
-            this.label88.Name = "label88";
-            // 
-            // label89
-            // 
-            resources.ApplyResources(this.label89, "label89");
-            this.label89.ForeColor = System.Drawing.Color.Red;
-            this.label89.Name = "label89";
-            // 
-            // label90
-            // 
-            resources.ApplyResources(this.label90, "label90");
-            this.label90.ForeColor = System.Drawing.Color.Red;
-            this.label90.Name = "label90";
-            // 
-            // label91
-            // 
-            resources.ApplyResources(this.label91, "label91");
-            this.label91.ForeColor = System.Drawing.Color.Red;
-            this.label91.Name = "label91";
-            // 
-            // label92
-            // 
-            resources.ApplyResources(this.label92, "label92");
-            this.label92.ForeColor = System.Drawing.Color.Red;
-            this.label92.Name = "label92";
-            // 
-            // label93
-            // 
-            resources.ApplyResources(this.label93, "label93");
-            this.label93.ForeColor = System.Drawing.Color.Red;
-            this.label93.Name = "label93";
-            // 
-            // label94
-            // 
-            resources.ApplyResources(this.label94, "label94");
-            this.label94.ForeColor = System.Drawing.Color.Red;
-            this.label94.Name = "label94";
-            // 
-            // label95
-            // 
-            resources.ApplyResources(this.label95, "label95");
-            this.label95.ForeColor = System.Drawing.Color.Red;
-            this.label95.Name = "label95";
-            // 
-            // label96
-            // 
-            resources.ApplyResources(this.label96, "label96");
-            this.label96.ForeColor = System.Drawing.Color.Red;
-            this.label96.Name = "label96";
-            // 
-            // label97
-            // 
-            resources.ApplyResources(this.label97, "label97");
-            this.label97.ForeColor = System.Drawing.Color.Red;
-            this.label97.Name = "label97";
-            // 
-            // label98
-            // 
-            resources.ApplyResources(this.label98, "label98");
-            this.label98.ForeColor = System.Drawing.Color.Red;
-            this.label98.Name = "label98";
-            // 
-            // label99
-            // 
-            resources.ApplyResources(this.label99, "label99");
-            this.label99.ForeColor = System.Drawing.Color.Red;
-            this.label99.Name = "label99";
-            // 
-            // label100
-            // 
-            resources.ApplyResources(this.label100, "label100");
-            this.label100.ForeColor = System.Drawing.Color.Red;
-            this.label100.Name = "label100";
-            // 
-            // label101
-            // 
-            resources.ApplyResources(this.label101, "label101");
-            this.label101.ForeColor = System.Drawing.Color.Red;
-            this.label101.Name = "label101";
-            // 
-            // label102
-            // 
-            resources.ApplyResources(this.label102, "label102");
-            this.label102.ForeColor = System.Drawing.Color.Red;
-            this.label102.Name = "label102";
-            // 
-            // label103
-            // 
-            resources.ApplyResources(this.label103, "label103");
-            this.label103.ForeColor = System.Drawing.Color.Red;
-            this.label103.Name = "label103";
-            // 
-            // label104
-            // 
-            resources.ApplyResources(this.label104, "label104");
-            this.label104.ForeColor = System.Drawing.Color.Red;
-            this.label104.Name = "label104";
-            // 
-            // label105
-            // 
-            resources.ApplyResources(this.label105, "label105");
-            this.label105.ForeColor = System.Drawing.Color.Red;
-            this.label105.Name = "label105";
+            resources.ApplyResources(this.thongbaoloiadmin, "thongbaoloiadmin");
+            this.thongbaoloiadmin.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloiadmin.Name = "thongbaoloiadmin";
             // 
             // Form2
             // 
@@ -3276,12 +3044,12 @@
             this.tabPage9.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            this.grLoaiTaiKhoan.ResumeLayout(false);
-            this.grLoaiTaiKhoan.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
+            this.gbDanhSachUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
+            this.grLoaiTaiKhoan.ResumeLayout(false);
+            this.grLoaiTaiKhoan.PerformLayout();
             this.menuStrip7.ResumeLayout(false);
             this.menuStrip7.PerformLayout();
             this.tabQuanLy.ResumeLayout(false);
@@ -3661,7 +3429,7 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.GroupBox gbDanhSachUser;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label70;
@@ -3691,7 +3459,7 @@
         private System.Windows.Forms.GroupBox grLoaiTaiKhoan;
         private System.Windows.Forms.RadioButton rbntTKNhanVien;
         private System.Windows.Forms.RadioButton rbntTKAdmin;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox emailsaoluunhanvienmoi;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label thongbaoloinhanvien;
         private System.Windows.Forms.Label thongbaoloisanpham;
@@ -3700,35 +3468,6 @@
         private System.Windows.Forms.Label thongbaoloikhachhang;
         private System.Windows.Forms.Label thongbaoloiloaisanpham;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Label label91;
-        private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.Label label89;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.Label label103;
-        private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.Label label100;
-        private System.Windows.Forms.Label label99;
-        private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label thongbaoloiadmin;
     }
 }
