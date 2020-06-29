@@ -342,7 +342,8 @@
             this.txtMaHD = new System.Windows.Forms.Label();
             this.txtDonGiaCTHD = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label75 = new System.Windows.Forms.Label();
+            this.lbloiBH = new System.Windows.Forms.Label();
+            this.txttonkho = new System.Windows.Forms.Label();
             this.btnKhuyenMaiHD = new System.Windows.Forms.Label();
             this.btnGioHangHD = new System.Windows.Forms.Button();
             this.txtSanPhamHD = new System.Windows.Forms.ComboBox();
@@ -362,6 +363,10 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+=======
+            this.txtsltonkho = new System.Windows.Forms.Label();
+>>>>>>> cb1b48899536394e81213b22a1357cafd1d0273e
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -2742,6 +2747,7 @@
             this.groupBox15.Controls.Add(this.btnInHoaDon);
             this.groupBox15.Controls.Add(this.txtMaSpCTHD);
             this.groupBox15.Controls.Add(this.txtMaSpAdd);
+            this.groupBox15.Controls.Add(this.txtsltonkho);
             this.groupBox15.Controls.Add(this.txtgianhapspadd);
             this.groupBox15.Controls.Add(this.txtMaHD);
             this.groupBox15.Controls.Add(this.txtDonGiaCTHD);
@@ -2847,7 +2853,8 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.label75);
+            this.groupBox14.Controls.Add(this.lbloiBH);
+            this.groupBox14.Controls.Add(this.txttonkho);
             this.groupBox14.Controls.Add(this.btnKhuyenMaiHD);
             this.groupBox14.Controls.Add(this.btnGioHangHD);
             this.groupBox14.Controls.Add(this.txtSanPhamHD);
@@ -2870,11 +2877,17 @@
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.TabStop = false;
             // 
-            // label75
+            // lbloiBH
             // 
-            resources.ApplyResources(this.label75, "label75");
-            this.label75.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label75.Name = "label75";
+            resources.ApplyResources(this.lbloiBH, "lbloiBH");
+            this.lbloiBH.ForeColor = System.Drawing.Color.Red;
+            this.lbloiBH.Name = "lbloiBH";
+            // 
+            // txttonkho
+            // 
+            resources.ApplyResources(this.txttonkho, "txttonkho");
+            this.txttonkho.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txttonkho.Name = "txttonkho";
             // 
             // btnKhuyenMaiHD
             // 
@@ -3020,6 +3033,17 @@
             this.dtdanhsachcthd.ReadOnly = true;
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
+<<<<<<< HEAD
+=======
+            // txtsltonkho
+            // 
+            resources.ApplyResources(this.txtsltonkho, "txtsltonkho");
+            this.txtsltonkho.ForeColor = System.Drawing.Color.Black;
+            this.txtsltonkho.Name = "txtsltonkho";
+            this.txtsltonkho.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
+            this.txtsltonkho.Click += new System.EventHandler(this.txtMaHD_Click);
+            // 
+>>>>>>> cb1b48899536394e81213b22a1357cafd1d0273e
             // Form2
             // 
             resources.ApplyResources(this, "$this");
@@ -3472,7 +3496,9 @@
         private System.Windows.Forms.Label thongbaoloikm;
         private System.Windows.Forms.Label thongbaoloikhachhang;
         private System.Windows.Forms.Label thongbaoloiloaisanpham;
-        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label txttonkho;
         private System.Windows.Forms.Label thongbaoloiadmin;
+        private System.Windows.Forms.Label lbloiBH;
+        private System.Windows.Forms.Label txtsltonkho;
     }
 }

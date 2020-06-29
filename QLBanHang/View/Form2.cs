@@ -482,10 +482,21 @@ namespace QLBanHang
 
             txtsoluongspdamua.DataBindings.Clear();
             txtsoluongspdamua.DataBindings.Add("Text", dtdanhsachcthd.DataSource, "soluong");
-            
 
-            
+            /*int tonkho;
 
+            HangHoaCtrl hh = new HangHoaCtrl();
+            txtSanPhamHD.DataSource = hh.getDataHH();
+            txtSanPhamHD.DisplayMember = "tenhh";
+            txtSanPhamHD.ValueMember = "mahh";
+
+            txtsltonkho.DataBindings.Clear();
+            txtsltonkho.DataBindings.Add("Text", txtSanPhamHD.DataSource, "tonkho");
+
+            tonkho = int.Parse(txtsltonkho.Text.Trim());
+
+
+            txttonkho.Text = "( Còn lại " + tonkho + " Sản phẩm này )";*/
 
         }
 
@@ -1433,34 +1444,36 @@ namespace QLBanHang
 
         private void mnLuuKh_Click(object sender, EventArgs e)
         {
-            ganDuLieuKH(khObj);
-            if (flagKH == 0)
+            if(fixKhachHang())
             {
-                // TH Thêm mới
-                if (khctr.addDataKH(khObj))
+                ganDuLieuKH(khObj);
+                if (flagKH == 0)
                 {
-                    MessageBox.Show("Bạn đã THÊM một khách hàng mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Thêm mới
+                    if (khctr.addDataKH(khObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM một khách hàng mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enKH(false);
+                        Form2_Load(sender, e);
+                        dis_enKH(false);
+                    }
+                    else
+                        MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // TH Sửa tt 
-                if (khctr.updDateKH(khObj))
                 {
-                    MessageBox.Show("Bạn đã CẬP NHẬT thông tin khách hàng thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Sửa tt 
+                    if (khctr.updDateKH(khObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thông tin khách hàng thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enKH(false);
+                        Form2_Load(sender, e);
+                        dis_enKH(false);
+                    }
+                    else
+                        MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
 
         }
 
@@ -1514,34 +1527,38 @@ namespace QLBanHang
 
         private void mnLuuLoai_Click(object sender, EventArgs e)
         {
-            ganDuLieuLHH(lhhObj);
-            if (flagLHH == 0)
+            if(fixLoaiSP())
             {
-                // TH Thêm mới
-                if (lhhctr.addDataLHH(lhhObj))
+                ganDuLieuLHH(lhhObj);
+                if (flagLHH == 0)
                 {
-                    MessageBox.Show("Bạn đã THÊM một Loại Sản Phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Thêm mới
+                    if (lhhctr.addDataLHH(lhhObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM một Loại Sản Phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enLHH(false);
+                        Form2_Load(sender, e);
+                        dis_enLHH(false);
+                    }
+                    else
+                        MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // TH Sửa tt
-                if (lhhctr.updDateLHH(lhhObj))
                 {
-                    MessageBox.Show("Bạn đã CẬP NHẬT thông tin Loại Sản Phẩm thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Sửa tt
+                    if (lhhctr.updDateLHH(lhhObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thông tin Loại Sản Phẩm thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enLHH(false);
+                        Form2_Load(sender, e);
+                        dis_enLHH(false);
+                    }
+                    else
+                        MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             }
-            
 
         }
 
@@ -1590,33 +1607,37 @@ namespace QLBanHang
 
         private void mnLuuNcc_Click(object sender, EventArgs e)
         {
-            ganDuLieuNCC(nccObj);
-            if (flagNCC == 0)
+            if(fixNCC())
             {
-                // TH Thêm mới
-                if (nccctr.addDataNCC(nccObj))
+                ganDuLieuNCC(nccObj);
+                if (flagNCC == 0)
                 {
-                    MessageBox.Show("Bạn đã THÊM một NCC mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Thêm mới
+                    if (nccctr.addDataNCC(nccObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM một NCC mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enNCC(false);
+                        Form2_Load(sender, e);
+                        dis_enNCC(false);
+                    }
+                    else
+                        MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (nccctr.updDateNCC(nccObj))
                 {
-                    MessageBox.Show("Bạn đã CẬP NHẬT thông tin NCC thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (nccctr.updDateNCC(nccObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thông tin NCC thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enNCC(false);
+                        Form2_Load(sender, e);
+                        dis_enNCC(false);
+                    }
+                    else
+                        MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            
+
         }
 
         private void mnHuyNcc_Click(object sender, EventArgs e)
@@ -1663,32 +1684,36 @@ namespace QLBanHang
 
         private void mnLuuKm_Click(object sender, EventArgs e)
         {
-            ganDuLieuKm(kmObj);
-            if (flagKM == 0)
+            if(fixKM())
             {
-                // TH Thêm mới
-                if (kmctr.addDataKm(kmObj))
+                ganDuLieuKm(kmObj);
+                if (flagKM == 0)
                 {
-                    MessageBox.Show("Bạn đã THÊM một khuyến mãi mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Thêm mới
+                    if (kmctr.addDataKm(kmObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM một khuyến mãi mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enKm(false);
+                        Form2_Load(sender, e);
+                        dis_enKm(false);
+                    }
+                    else
+                        MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (kmctr.updDateKm(kmObj))
                 {
-                    MessageBox.Show("Bạn đã CẬP NHẬT thông tin khuyến mãi thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (kmctr.updDateKm(kmObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thông tin khuyến mãi thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enKm(false);
+                        Form2_Load(sender, e);
+                        dis_enKm(false);
+                    }
+                    else
+                        MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void mnHuyKm_Click(object sender, EventArgs e)
@@ -1738,36 +1763,40 @@ namespace QLBanHang
 
         private void mnLuuSp_Click(object sender, EventArgs e)
         {
-            ganDulieuHHsub();
-            ganDuLieuHH(hhObj);
-            
-            if (flagHH == 0)
+            if(fixSanPham())
             {
-                // TH Thêm nv mới
-                if (hhctr.addDataHH(hhObj))
-                {
-                    MessageBox.Show("Bạn đã THÊM một sản phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ganDulieuHHsub();
+                ganDuLieuHH(hhObj);
 
-                    Form2_Load(sender, e);
-                    dis_enHH(false);
+                if (flagHH == 0)
+                {
+                    // TH Thêm nv mới
+                    if (hhctr.addDataHH(hhObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM một sản phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Form2_Load(sender, e);
+                        dis_enHH(false);
+                    }
+                    else
+                        MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // TH Sửa tt nhân viên
-                if (hhctr.updDateHH(hhObj))
                 {
-                    MessageBox.Show("Bạn đã CẬP NHẬT thông tin sản phẩm thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Sửa tt nhân viên
+                    if (hhctr.updDateHH(hhObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thông tin sản phẩm thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Form2_Load(sender, e);
-                    dis_enHH(false);
+                        Form2_Load(sender, e);
+                        dis_enHH(false);
+                    }
+                    else
+                        MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+            
 
         private void mnHuySp_Click(object sender, EventArgs e)
         {
@@ -1892,57 +1921,60 @@ namespace QLBanHang
 
         private void btnThemCTHD_Click(object sender, EventArgs e)
         {
-            /*
+            if (fixXuLyHoaDon())
+            {
+                /*
              *  tạo mới và Lưu sản phẩm đã chọn vào danh sách CTHD với mỗi sản phẩm cùng một mã hóa đơn đã tạo trước đó
              *  mỗi lần thêm phải load lại tổng tiền
              */
-            
-            ganDulieuCTHDsub();
-            ganDuLieuCTHD(cthdObj);
-            gandulieuThongKe(tkObj);
-            
 
-            string mahd = txtMaHD.Text;
-            int soluong = int.Parse(txtSoLuongCTHD.Value.ToString());
-            string mahh = txtMaSpAdd.Text;
-
-            
-            // insert thống kê
-            tkctr.addData(tkObj);
+                ganDulieuCTHDsub();
+                ganDuLieuCTHD(cthdObj);
+                gandulieuThongKe(tkObj);
 
 
+                string mahd = txtMaHD.Text;
+                int soluong = int.Parse(txtSoLuongCTHD.Value.ToString());
+                string mahh = txtMaSpAdd.Text;
 
-            if (flagCTHD == 0)
-            {
-                // TH Thêm sp mới
-                if (cthdctr.addDataCTHD(cthdObj))
+
+                // insert thống kê
+                tkctr.addData(tkObj);
+
+
+
+                if (flagCTHD == 0)
                 {
-                    MessageBox.Show("Bạn đã THÊM một sản phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // TH Thêm sp mới
+                    if (cthdctr.addDataCTHD(cthdObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM một sản phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
-                    // cập nhật đã bán
-                    TonKho_DaBan(mahh,soluong);
-                    //
 
-                    ganTongTienHD(mahd);
-                    bingdingCTHD(mahd);
-                    dis_enCTHD(false);
-                    
+                        // cập nhật đã bán
+                        TonKho_DaBan(mahh, soluong);
+                        //
+
+                        ganTongTienHD(mahd);
+                        bingdingCTHD(mahd);
+                        dis_enCTHD(false);
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("THÊM THẤT BẠI ", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        ganTongTienHD(mahd);
+                        bingdingCTHD(mahd);
+                        dis_enCTHD(false);
+                    }
+
                 }
-                else
-                {
-                    
-                    MessageBox.Show("THÊM THẤT BẠI ", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    ganTongTienHD(mahd);
-                    bingdingCTHD(mahd);
-                    dis_enCTHD(false);
-                }
-
-            }
-
-          //  bingdingHH();
-           // dis_enHH(false);
+                //  bingdingHH();
+                // dis_enHH(false)
+            };
 
         }
 
@@ -2580,6 +2612,7 @@ namespace QLBanHang
 
         private void LuuTKmoi_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if(rbntTKNhanVien.Checked)
             {
                 // lưu nhân viên
@@ -2630,6 +2663,19 @@ namespace QLBanHang
             }
 
             
+=======
+                if (rbntTKNhanVien.Checked)
+                {
+                    // lưu nhân viên
+                }
+                else if (rbntTKAdmin.Checked)
+                {
+                    // lưu admin
+                }
+                Form2_Load(sender, e);
+                dis_enNhanVien(true);
+                grLoaiTaiKhoan.Enabled = true;
+>>>>>>> cb1b48899536394e81213b22a1357cafd1d0273e
         }
 
         private void HuyTKmoi_Click(object sender, EventArgs e)
@@ -2716,7 +2762,7 @@ namespace QLBanHang
             }
             else if ((now.Year - s) <18)
             {
-                thongbaoloinhanvien.Text = "✘ Ngày Sinh Không Hợp Lệ ✘"; return false; return false;
+                thongbaoloinhanvien.Text = "✘ Ngày Sinh Không Hợp Lệ ✘"; return false;
             }
             else
             {
@@ -2729,12 +2775,12 @@ namespace QLBanHang
                 }
                 catch (FormatException)
                 {
-                    thongbaoloinhanvien.Text = "Vui lòng kiểm tra lại Email";
+                    thongbaoloinhanvien.Text = "✘ Vui lòng kiểm tra lại Email ✘";
                     return false;
                 }
                 catch (ArgumentException)
                 {
-                    thongbaoloinhanvien.Text = "Vui lòng kiểm tra lại Email";
+                    thongbaoloinhanvien.Text = "✘ Vui lòng kiểm tra lại Email✘";
                     return false;
                 }
             }
@@ -2742,44 +2788,172 @@ namespace QLBanHang
             // fix lỗi ngày tháng năm bắt buộc +18 trở lên
         }
 
-        void fixSanPham()
+        private bool fixSanPham()
         {
             thongbaoloiloaisanpham.Text = "";
-            // fix lỗi đễ trống các trường bắt buộc txt
-
-            // fix lỗi giá bán, tồn kho, giá nhập. phải lớn hơn hoặc bằng 0
-
-            // fix lỗi trống nhà cc, khuyến mãi, loại hàng hóa. trống thì thông báo nhập trước
+            if (txtMaHH.Text == "")
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống MaHH ✘"; return false;
+            }
+            else if (txtTonKhoHH.Text == "")
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Ton Kho ✘"; return false;
+            }
+            else if (txtNhaCungCapHH.SelectedItem == null)
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Nha Cung Cap ✘"; return false;
+            }
+            else if (txtTenHH.Text == "")
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Ten Hang Hoa ✘"; return false;
+            }
+            else if (txtDonViHH.SelectedItem == null)
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Don Vi Tinh ✘"; return false;
+            }
+            else if (txtKhuyenMaiHH.SelectedItem == null)
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Khuyen Mai ✘"; return false;
+            }
+            else if (txtDonGiaHH.Text == "")
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Don Gia ✘"; return false;
+            }
+            else if (txtLoaiHangHH.SelectedItem == null)
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Loai Hang Hoa ✘"; return false;
+            }
+            else if (txtGiaNhapSp.Text == "")
+            {
+                thongbaoloisanpham.Text = "✘Không được bỏ trống Gia Nhap SP ✘"; return false;
+            }
+            else  return true;
         }
 
-        void fixNCC()
+        private bool fixNCC()
         {
             thongbaoloincc.Text = "";
-            // fix lỗi đễ trống các trường bắt buộc txt
+            if (txtMaNCC.Text == "")
+            {
+                thongbaoloincc.Text = "✘Không được bỏ trống Ma NCC ✘"; return false;
+            }
+            else if (txtSoDtNCC.Text == "")
+            {
+                thongbaoloincc.Text = "✘Không được bỏ trống So DT NCC ✘"; return false;
+            }
+            else if (txtTenNCC.Text == "")
+            {
+                thongbaoloincc.Text = "✘Không được bỏ trống Ten NCC ✘"; return false;
+            }
+            else if (txtDiaChiNCC.Text == "")
+            {
+                thongbaoloincc.Text = "✘Không được bỏ trống DiaChiNCC ✘"; return false;
+            }
+            else return true;
         }
 
-        void fixKM()
+        private bool fixKM()
         {
             thongbaoloikm.Text = "";
-            // fix lỗi đễ trống các trường bắt buộc txt
+            if (txtMaKm.Text == "")
+            {
+                thongbaoloikm.Text = "✘Không được bỏ trống Ma KM ✘"; return false;
+            }
+            else if (txtGiamKm.Text == "")
+            {
+                thongbaoloikm.Text = "✘Không được bỏ trống Giam Gia ✘"; return false;
+            }
+            else if (txtTenKm.Text == "")
+            {
+                thongbaoloikm.Text = "✘Không được bỏ trống Ten Km ✘"; return false;
+            }
+            else if (txtNoiDungKm.Text == "")
+            {
+                thongbaoloikm.Text = "✘Không được bỏ trống Noi Dung Km ✘"; return false;
+            }
+            else return true;
         }
 
-        void fixKhachHang()
+        private bool fixKhachHang()
         {
             thongbaoloikhachhang.Text = "";
-            // fix lỗi đễ trống các trường bắt buộc txt
+            if (txtMaKhachHang.Text == "")
+            {
+                thongbaoloikhachhang.Text = "✘Không được bỏ trống Ma KH ✘"; return false;
+            }
+            else if (txtDiaChiKhachHang.Text == "")
+            {
+                thongbaoloikhachhang.Text = "✘Không được bỏ trống Dia Chi KH✘"; return false;
+            }
+            else if (txtTenKhachHang.Text == "")
+            {
+                thongbaoloikhachhang.Text = "✘Không được bỏ trống Ten KH✘"; return false;
+            }
+            else if (txtSDTKhachHang.Text == "")
+            {
+                thongbaoloikhachhang.Text = "✘Không được bỏ trống SDT KH✘"; return false;
+            }
+            else if (txtGioiTinhKhachHang.SelectedItem == null)
+            {
+                thongbaoloikhachhang.Text = "✘Không được bỏ trống Gioi Tinh Khach Hang✘"; return false;
+            }
+            else return true;
         }
 
-        void fixLoaiSP()
+        private bool fixLoaiSP()
         {
             thongbaoloiloaisanpham.Text = "";
-            // fix lỗi đễ trống các trường bắt buộc txt
+            if (txtMaLoaiSanPham.Text == "")
+            {
+                txtMaLoaiSanPham.Text = "✘Không được bỏ trống Ma Loai SP ✘"; return false;
+            }
+            else if (txtTenLoaiSanPham.Text == "")
+            {
+                txtMaLoaiSanPham.Text = "✘Không được bỏ trống TenLoaiSanPham✘"; return false;
+            }
+            else return true;
         }
 
-        void fixXuLyHoaDon() // hàm này xử lý sau. bỏ qua
+        private bool fixXuLyHoaDon() // hàm này xử lý sau. bỏ qua
         {
+            if (txtSanPhamHD.SelectedItem == null)
+            {
+                lbloiBH.Text = "✘Vui lòng chọn San Pham ✘"; return false;
+            }
+            else return true;
             // kiểm tra nếu loại sản phẩm tồn kho nhỏ hơn số lượng bán ra thì thông báo lổi ra messagebox
             // thêm hiển thị số lượng còn lại 
+
+
+        }
+        private bool phanquyentk()
+        {
+            if (txtAddTaiKhoan.Text == "")
+            {
+                thongbaoloiadmin.Text = "✘Không được bỏ trống Tai Khoang✘"; return false;
+            }
+            else if (txtNewPass.Text == "")
+            {
+                thongbaoloiadmin.Text = "✘Không được bỏ trống Mat Khau Moi✘"; return false;
+            }
+            else if (txtNewPass.Text == txtReNewPass.Text)
+            {
+                thongbaoloiadmin.Text = "✘Mat Khau Khong Trung Nhau✘"; return false;
+            }
+            else if (emailsaoluunhanvienmoi.Text == "")
+            {
+                thongbaoloiadmin.Text = "✘Không được bỏ trống Email✘"; return false;
+            }
+            else if (txtNameUser.SelectedItem == null)
+            {
+                thongbaoloiadmin.Text = "✘Vui long chon Ten Nhan Vien✘"; return false;
+            }
+            else if (txtAddPhanQuyen.SelectedItem == null)
+            {
+                thongbaoloiadmin.Text = "✘Vui long chon Phan Quyen✘"; return false;
+            }
+            else return true;
+
         }
 
         private void groupBox19_Enter(object sender, EventArgs e)
