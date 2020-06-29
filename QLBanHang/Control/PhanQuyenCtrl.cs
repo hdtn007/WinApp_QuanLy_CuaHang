@@ -22,5 +22,20 @@ namespace QLBanHang.Control
         {
             return pqMod.CheckPQ(taikhoan);
         }
+
+        public DataTable GetDataPQ()
+        {
+            return pqMod.GetData();
+        }
+
+        public bool AddDataPQ(PhanQuyenObj pqObj)
+        {
+            return pqMod.AddDataPQ(pqObj);
+        }
+
+        public bool UpdDataPQ(PhanQuyenObj pqObj)
+        {
+            return pqMod.UpdDataPQ(pqObj);
+        }
     }
 }

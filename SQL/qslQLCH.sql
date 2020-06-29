@@ -132,7 +132,7 @@ CREATE TABLE QUANLY (
 -- bang phan quyen
 CREATE TABLE PHANQUYEN (
     id nchar(5),
-	taikhoan nchar(5),
+	taikhoan nchar(20),
 	matkhau nchar(20),
     phanquyen int,
 	manv nchar(5),
@@ -217,6 +217,8 @@ Update THONGKE set soluongban = soluongban + 11 where mahh = 'SP001'
 Update THONGKE set tongthu = giaban*soluongban, loinhuan = giaban*soluongban - gianhap*soluongban 
 
 Insert into THONGKE values ('SP002','01/01/2020','465464','65654','65654','454554','454545')
+
+select nv.tennv, nv.email, pq.taikhoan, pq.matkhau, pq.phanquyen, pq.ghichu from PHANQUYEN pq, NHANVIEN nv where pq.manv = nv.manv
 
 
 

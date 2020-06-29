@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -103,14 +103,9 @@
             this.label50 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.thongbaoloiadmin = new System.Windows.Forms.Label();
             this.gbDanhSachUser = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hotenuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taikhoanUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matkhauuser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phanquyenUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChuUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtdanhsachuser = new System.Windows.Forms.DataGridView();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.grLoaiTaiKhoan = new System.Windows.Forms.GroupBox();
             this.rbntTKNhanVien = new System.Windows.Forms.RadioButton();
@@ -367,7 +362,6 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.thongbaoloiadmin = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -387,7 +381,7 @@
             this.tabPage9.SuspendLayout();
             this.panel13.SuspendLayout();
             this.gbDanhSachUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachuser)).BeginInit();
             this.groupBox19.SuspendLayout();
             this.grLoaiTaiKhoan.SuspendLayout();
             this.menuStrip7.SuspendLayout();
@@ -1011,59 +1005,30 @@
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
+            // thongbaoloiadmin
+            // 
+            resources.ApplyResources(this.thongbaoloiadmin, "thongbaoloiadmin");
+            this.thongbaoloiadmin.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloiadmin.Name = "thongbaoloiadmin";
+            // 
             // gbDanhSachUser
             // 
-            this.gbDanhSachUser.Controls.Add(this.dataGridView1);
+            this.gbDanhSachUser.Controls.Add(this.dtdanhsachuser);
             resources.ApplyResources(this.gbDanhSachUser, "gbDanhSachUser");
             this.gbDanhSachUser.Name = "gbDanhSachUser";
             this.gbDanhSachUser.TabStop = false;
             // 
-            // dataGridView1
+            // dtdanhsachuser
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.hotenuser,
-            this.EmailUser,
-            this.taikhoanUser,
-            this.matkhauuser,
-            this.phanquyenUser,
-            this.GhiChuUser});
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            // 
-            // hotenuser
-            // 
-            resources.ApplyResources(this.hotenuser, "hotenuser");
-            this.hotenuser.Name = "hotenuser";
-            // 
-            // EmailUser
-            // 
-            resources.ApplyResources(this.EmailUser, "EmailUser");
-            this.EmailUser.Name = "EmailUser";
-            // 
-            // taikhoanUser
-            // 
-            resources.ApplyResources(this.taikhoanUser, "taikhoanUser");
-            this.taikhoanUser.Name = "taikhoanUser";
-            // 
-            // matkhauuser
-            // 
-            resources.ApplyResources(this.matkhauuser, "matkhauuser");
-            this.matkhauuser.Name = "matkhauuser";
-            // 
-            // phanquyenUser
-            // 
-            resources.ApplyResources(this.phanquyenUser, "phanquyenUser");
-            this.phanquyenUser.Name = "phanquyenUser";
-            // 
-            // GhiChuUser
-            // 
-            resources.ApplyResources(this.GhiChuUser, "GhiChuUser");
-            this.GhiChuUser.Name = "GhiChuUser";
+            this.dtdanhsachuser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtdanhsachuser.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtdanhsachuser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtdanhsachuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dtdanhsachuser, "dtdanhsachuser");
+            this.dtdanhsachuser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dtdanhsachuser.Name = "dtdanhsachuser";
+            this.dtdanhsachuser.ReadOnly = true;
+            this.dtdanhsachuser.RowTemplate.Height = 24;
             // 
             // groupBox19
             // 
@@ -1423,10 +1388,11 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.manv,
@@ -1441,8 +1407,9 @@
             resources.ApplyResources(this.dtDanhSachNhanVien, "dtDanhSachNhanVien");
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtDanhSachNhanVien.ReadOnly = true;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
             // 
             // manv
@@ -1450,54 +1417,63 @@
             this.manv.DataPropertyName = "manv";
             resources.ApplyResources(this.manv, "manv");
             this.manv.Name = "manv";
+            this.manv.ReadOnly = true;
             // 
             // tennv
             // 
             this.tennv.DataPropertyName = "tennv";
             resources.ApplyResources(this.tennv, "tennv");
             this.tennv.Name = "tennv";
+            this.tennv.ReadOnly = true;
             // 
             // gioitinh
             // 
             this.gioitinh.DataPropertyName = "gioitinh";
             resources.ApplyResources(this.gioitinh, "gioitinh");
             this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
             // 
             // ngaysinh
             // 
             this.ngaysinh.DataPropertyName = "ngaysinh";
             resources.ApplyResources(this.ngaysinh, "ngaysinh");
             this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
             // 
             // diachi
             // 
             this.diachi.DataPropertyName = "diachi";
             resources.ApplyResources(this.diachi, "diachi");
             this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
             // 
             // sdt
             // 
             this.sdt.DataPropertyName = "sdt";
             resources.ApplyResources(this.sdt, "sdt");
             this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
             // 
             // cmnd
             // 
             this.cmnd.DataPropertyName = "cmnd";
             resources.ApplyResources(this.cmnd, "cmnd");
             this.cmnd.Name = "cmnd";
+            this.cmnd.ReadOnly = true;
             // 
             // email
             // 
             this.email.DataPropertyName = "email";
             resources.ApplyResources(this.email, "email");
             this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // ghichu
             // 
             this.ghichu.DataPropertyName = "ghichu";
             resources.ApplyResources(this.ghichu, "ghichu");
             this.ghichu.Name = "ghichu";
+            this.ghichu.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -1774,6 +1750,7 @@
             // 
             this.dtDanhSachHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachHangHoa.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachHangHoa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mahh,
@@ -1791,6 +1768,7 @@
             resources.ApplyResources(this.dtDanhSachHangHoa, "dtDanhSachHangHoa");
             this.dtDanhSachHangHoa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachHangHoa.Name = "dtDanhSachHangHoa";
+            this.dtDanhSachHangHoa.ReadOnly = true;
             this.dtDanhSachHangHoa.RowTemplate.Height = 24;
             // 
             // mahh
@@ -1798,72 +1776,84 @@
             this.mahh.DataPropertyName = "mahh";
             resources.ApplyResources(this.mahh, "mahh");
             this.mahh.Name = "mahh";
+            this.mahh.ReadOnly = true;
             // 
             // tenhh
             // 
             this.tenhh.DataPropertyName = "tenhh";
             resources.ApplyResources(this.tenhh, "tenhh");
             this.tenhh.Name = "tenhh";
+            this.tenhh.ReadOnly = true;
             // 
             // gianhap
             // 
             this.gianhap.DataPropertyName = "gianhap";
             resources.ApplyResources(this.gianhap, "gianhap");
             this.gianhap.Name = "gianhap";
+            this.gianhap.ReadOnly = true;
             // 
             // dongia
             // 
             this.dongia.DataPropertyName = "dongia";
             resources.ApplyResources(this.dongia, "dongia");
             this.dongia.Name = "dongia";
+            this.dongia.ReadOnly = true;
             // 
             // tonkho
             // 
             this.tonkho.DataPropertyName = "tonkho";
             resources.ApplyResources(this.tonkho, "tonkho");
             this.tonkho.Name = "tonkho";
+            this.tonkho.ReadOnly = true;
             // 
             // donvi
             // 
             this.donvi.DataPropertyName = "donvi";
             resources.ApplyResources(this.donvi, "donvi");
             this.donvi.Name = "donvi";
+            this.donvi.ReadOnly = true;
             // 
             // daban
             // 
             this.daban.DataPropertyName = "daban";
             resources.ApplyResources(this.daban, "daban");
             this.daban.Name = "daban";
+            this.daban.ReadOnly = true;
             // 
             // tenncc
             // 
             this.tenncc.DataPropertyName = "tenncc";
             resources.ApplyResources(this.tenncc, "tenncc");
             this.tenncc.Name = "tenncc";
+            this.tenncc.ReadOnly = true;
             // 
             // tenloai
             // 
             this.tenloai.DataPropertyName = "tenloai";
             resources.ApplyResources(this.tenloai, "tenloai");
             this.tenloai.Name = "tenloai";
+            this.tenloai.ReadOnly = true;
             // 
             // tensk
             // 
             this.tensk.DataPropertyName = "tensk";
             resources.ApplyResources(this.tensk, "tensk");
             this.tensk.Name = "tensk";
+            this.tensk.ReadOnly = true;
             // 
             // giam
             // 
             this.giam.DataPropertyName = "giam";
             resources.ApplyResources(this.giam, "giam");
             this.giam.Name = "giam";
+            this.giam.ReadOnly = true;
             // 
             // ghichusp
             // 
             this.ghichusp.DataPropertyName = "ghichu";
             resources.ApplyResources(this.ghichusp, "ghichusp");
             this.ghichusp.Name = "ghichusp";
+            this.ghichusp.ReadOnly = true;
             // 
             // menuStrip2
             // 
@@ -2032,6 +2022,7 @@
             // 
             this.dtDanhSachNhaCungCap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhaCungCap.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachNhaCungCap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mancc,
@@ -2042,6 +2033,7 @@
             resources.ApplyResources(this.dtDanhSachNhaCungCap, "dtDanhSachNhaCungCap");
             this.dtDanhSachNhaCungCap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhaCungCap.Name = "dtDanhSachNhaCungCap";
+            this.dtDanhSachNhaCungCap.ReadOnly = true;
             this.dtDanhSachNhaCungCap.RowTemplate.Height = 24;
             // 
             // mancc
@@ -2049,30 +2041,35 @@
             this.mancc.DataPropertyName = "mancc";
             resources.ApplyResources(this.mancc, "mancc");
             this.mancc.Name = "mancc";
+            this.mancc.ReadOnly = true;
             // 
             // tennccNCC
             // 
             this.tennccNCC.DataPropertyName = "tenncc";
             resources.ApplyResources(this.tennccNCC, "tennccNCC");
             this.tennccNCC.Name = "tennccNCC";
+            this.tennccNCC.ReadOnly = true;
             // 
             // diachiNCC
             // 
             this.diachiNCC.DataPropertyName = "diachi";
             resources.ApplyResources(this.diachiNCC, "diachiNCC");
             this.diachiNCC.Name = "diachiNCC";
+            this.diachiNCC.ReadOnly = true;
             // 
             // sdtNCC
             // 
             this.sdtNCC.DataPropertyName = "sdt";
             resources.ApplyResources(this.sdtNCC, "sdtNCC");
             this.sdtNCC.Name = "sdtNCC";
+            this.sdtNCC.ReadOnly = true;
             // 
             // ghichuNCC
             // 
             this.ghichuNCC.DataPropertyName = "ghichu";
             resources.ApplyResources(this.ghichuNCC, "ghichuNCC");
             this.ghichuNCC.Name = "ghichuNCC";
+            this.ghichuNCC.ReadOnly = true;
             // 
             // menuStrip3
             // 
@@ -2234,6 +2231,7 @@
             // 
             this.dtDanhSachKhuyenmai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachKhuyenmai.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachKhuyenmai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachKhuyenmai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachKhuyenmai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mask,
@@ -2243,6 +2241,7 @@
             resources.ApplyResources(this.dtDanhSachKhuyenmai, "dtDanhSachKhuyenmai");
             this.dtDanhSachKhuyenmai.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachKhuyenmai.Name = "dtDanhSachKhuyenmai";
+            this.dtDanhSachKhuyenmai.ReadOnly = true;
             this.dtDanhSachKhuyenmai.RowTemplate.Height = 24;
             // 
             // mask
@@ -2250,24 +2249,28 @@
             this.mask.DataPropertyName = "mask";
             resources.ApplyResources(this.mask, "mask");
             this.mask.Name = "mask";
+            this.mask.ReadOnly = true;
             // 
             // tenskSK
             // 
             this.tenskSK.DataPropertyName = "tensk";
             resources.ApplyResources(this.tenskSK, "tenskSK");
             this.tenskSK.Name = "tenskSK";
+            this.tenskSK.ReadOnly = true;
             // 
             // noidung
             // 
             this.noidung.DataPropertyName = "noidung";
             resources.ApplyResources(this.noidung, "noidung");
             this.noidung.Name = "noidung";
+            this.noidung.ReadOnly = true;
             // 
             // giamSK
             // 
             this.giamSK.DataPropertyName = "giam";
             resources.ApplyResources(this.giamSK, "giamSK");
             this.giamSK.Name = "giamSK";
+            this.giamSK.ReadOnly = true;
             // 
             // menuStrip4
             // 
@@ -2449,6 +2452,7 @@
             // 
             this.dtDanhSachKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachKhachHang.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.makh,
@@ -2460,6 +2464,7 @@
             resources.ApplyResources(this.dtDanhSachKhachHang, "dtDanhSachKhachHang");
             this.dtDanhSachKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachKhachHang.Name = "dtDanhSachKhachHang";
+            this.dtDanhSachKhachHang.ReadOnly = true;
             this.dtDanhSachKhachHang.RowTemplate.Height = 24;
             // 
             // makh
@@ -2467,36 +2472,42 @@
             this.makh.DataPropertyName = "makh";
             resources.ApplyResources(this.makh, "makh");
             this.makh.Name = "makh";
+            this.makh.ReadOnly = true;
             // 
             // tenkh
             // 
             this.tenkh.DataPropertyName = "tenkh";
             resources.ApplyResources(this.tenkh, "tenkh");
             this.tenkh.Name = "tenkh";
+            this.tenkh.ReadOnly = true;
             // 
             // gioitinhKH
             // 
             this.gioitinhKH.DataPropertyName = "gioitinh";
             resources.ApplyResources(this.gioitinhKH, "gioitinhKH");
             this.gioitinhKH.Name = "gioitinhKH";
+            this.gioitinhKH.ReadOnly = true;
             // 
             // diachiKH
             // 
             this.diachiKH.DataPropertyName = "diachi";
             resources.ApplyResources(this.diachiKH, "diachiKH");
             this.diachiKH.Name = "diachiKH";
+            this.diachiKH.ReadOnly = true;
             // 
             // sdtKH
             // 
             this.sdtKH.DataPropertyName = "sdt";
             resources.ApplyResources(this.sdtKH, "sdtKH");
             this.sdtKH.Name = "sdtKH";
+            this.sdtKH.ReadOnly = true;
             // 
             // ghichuKH
             // 
             this.ghichuKH.DataPropertyName = "ghichu";
             resources.ApplyResources(this.ghichuKH, "ghichuKH");
             this.ghichuKH.Name = "ghichuKH";
+            this.ghichuKH.ReadOnly = true;
             // 
             // menuStrip5
             // 
@@ -2625,6 +2636,7 @@
             // 
             this.dtDanhSachLoaiSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachLoaiSanPham.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachLoaiSanPham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachLoaiSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachLoaiSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maloai,
@@ -2632,6 +2644,7 @@
             resources.ApplyResources(this.dtDanhSachLoaiSanPham, "dtDanhSachLoaiSanPham");
             this.dtDanhSachLoaiSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachLoaiSanPham.Name = "dtDanhSachLoaiSanPham";
+            this.dtDanhSachLoaiSanPham.ReadOnly = true;
             this.dtDanhSachLoaiSanPham.RowTemplate.Height = 24;
             // 
             // maloai
@@ -2639,12 +2652,14 @@
             this.maloai.DataPropertyName = "maloai";
             resources.ApplyResources(this.maloai, "maloai");
             this.maloai.Name = "maloai";
+            this.maloai.ReadOnly = true;
             // 
             // tenloaiHH
             // 
             this.tenloaiHH.DataPropertyName = "tenloai";
             resources.ApplyResources(this.tenloaiHH, "tenloaiHH");
             this.tenloaiHH.Name = "tenloaiHH";
+            this.tenloaiHH.ReadOnly = true;
             // 
             // menuStrip6
             // 
@@ -2997,17 +3012,13 @@
             // 
             this.dtdanhsachcthd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtdanhsachcthd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dtdanhsachcthd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtdanhsachcthd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtdanhsachcthd.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtdanhsachcthd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtdanhsachcthd, "dtdanhsachcthd");
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
+            this.dtdanhsachcthd.ReadOnly = true;
             this.dtdanhsachcthd.RowTemplate.Height = 24;
-            // 
-            // thongbaoloiadmin
-            // 
-            resources.ApplyResources(this.thongbaoloiadmin, "thongbaoloiadmin");
-            this.thongbaoloiadmin.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloiadmin.Name = "thongbaoloiadmin";
             // 
             // Form2
             // 
@@ -3045,7 +3056,7 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.gbDanhSachUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtdanhsachuser)).EndInit();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
             this.grLoaiTaiKhoan.ResumeLayout(false);
@@ -3434,13 +3445,7 @@
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hotenuser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taikhoanUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matkhauuser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phanquyenUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChuUser;
+        private System.Windows.Forms.DataGridView dtdanhsachuser;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox txtAddPhanQuyen;
         private System.Windows.Forms.ComboBox txtNameUser;

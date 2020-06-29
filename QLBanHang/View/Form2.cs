@@ -67,6 +67,9 @@ namespace QLBanHang
 
           PhanQuyenMod pqmod = new PhanQuyenMod();
 
+          PhanQuyenCtrl pqctr = new PhanQuyenCtrl();
+          PhanQuyenObj pqObj = new PhanQuyenObj();
+
 
         // -----------------------------------------------
 
@@ -79,6 +82,8 @@ namespace QLBanHang
         int flagHH = 0;
         int flagHD = 0;
         int flagCTHD = 0;
+        int flagAdmin = 0;
+        int flagPQ = 0;
         // -----------------------------------------------
         public Form2()
         {
@@ -522,6 +527,41 @@ namespace QLBanHang
 
         /* ********************************************************************************************************** */
         // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ ADMIN ********************************************************* //
+
+        void bingdingPhanQuyen()
+        {
+            DataTable dt = new System.Data.DataTable();
+            dt = pqctr.GetDataPQ();
+            dtdanhsachuser.DataSource = dt;
+
+            txtAddTaiKhoan.DataBindings.Clear();
+            txtAddTaiKhoan.DataBindings.Add("Text", dtdanhsachuser.DataSource, "taikhoan");
+
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+            emailsaoluunhanvienmoi.DataBindings.Add("Text", dtdanhsachuser.DataSource, "email");
+
+            txtNewPass.DataBindings.Clear();
+            txtNewPass.DataBindings.Add("Text", dtdanhsachuser.DataSource, "matkhau");
+
+            txtReNewPass.DataBindings.Clear();
+            txtReNewPass.DataBindings.Add("Text", dtdanhsachuser.DataSource, "matkhau");
+
+            txtNameUser.DataBindings.Clear();
+            txtNameUser.DataBindings.Add("Text", dtdanhsachuser.DataSource, "tennv");
+
+            txtAddPhanQuyen.DataBindings.Clear();
+            txtAddPhanQuyen.DataBindings.Add("Text", dtdanhsachuser.DataSource, "phanquyen");
+        }
+
+        void bingdingAdmin()
+        {
+            DataTable dt = new System.Data.DataTable();
+            dt = qlctr.getData();
+            dtdanhsachuser.DataSource = dt;
+
+            txtNameUser.DataBindings.Clear();
+            txtNameUser.DataBindings.Add("Text", dtdanhsachuser.DataSource, "ten");
+        }
         // END  KHU VỰC DÀNH CHO TAB QUẢN LÝ ADMIN ********************************************************* //
 
         /* ********************************************************************************************************** */
@@ -2326,11 +2366,14 @@ namespace QLBanHang
                 txtAddPhanQuyen.Items.Clear();
                 txtAddPhanQuyen.Items.Add("2");
                 txtAddPhanQuyen.Items.Add("3");
-              //  txtAddPhanQuyen.SelectedItem = 0;
-             }
+            //  txtAddPhanQuyen.SelectedItem = 0;
+
+
+        }
 
         void loadAdmin()
         {
+            
             txtAddTaiKhoan.Text = "admin";
             txtNewPass.Text = "";
             txtReNewPass.Text = "";
@@ -2343,7 +2386,10 @@ namespace QLBanHang
             //txtAddPhanQuyen.Items.Clear();
             txtAddPhanQuyen.Items.Clear();
             txtAddPhanQuyen.Items.Add("1");
-           // txtAddPhanQuyen.SelectedItem = 0;
+            txtAddPhanQuyen.SelectedItem = 1;
+
+            dtdanhsachuser.DataBindings.Clear();
+            bingdingAdmin(); // load bảng dữ liệu 
         }
 
         void dis_enNhanVien(bool e) // e = mở ; !e = đóng
@@ -2395,6 +2441,38 @@ namespace QLBanHang
             txtNameUser.Enabled = e;
             txtAddPhanQuyen.Enabled = e;
 
+            txtAddTaiKhoan.Text = "";
+            txtNewPass.Text = "";
+            txtReNewPass.Text = "";
+            emailsaoluunhanvienmoi.Text = "";
+
+        }
+
+        void gandulieuthemmoiuser()
+        {
+            txtNameUser.DisplayMember = "manv";
+            txtNameUser.ValueMember = "tennv";
+
+            int quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
+            pqObj.ID = "US003";
+            pqObj.Taikhoan = txtAddTaiKhoan.Text.Trim();
+            pqObj.MatKhau = txtReNewPass.Text.Trim();
+            pqObj.Quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
+            pqObj.maNhanVien = txtNameUser.Text.Trim();
+
+            if(quyen==2)
+            {
+                pqObj.GhiChu = "2. Quyền Quản Lý ( tab Bán Hàng và tab Quản Lý)";
+            }
+            else if (quyen == 3)
+            {
+                pqObj.GhiChu = "3. Quyền Nhân Viên ( tab Bán Hàng )";
+            }
+            else
+            {
+                thongbaoloiadmin.Text = "Vui lòng chọn phân quyền là : 2 hoặc 3 !";
+            }
+            
         }
         void dkmoiAdmin(bool e)
         {
@@ -2467,7 +2545,8 @@ namespace QLBanHang
 
         private void mndangkymoi_Click(object sender, EventArgs e)
         {
-            if(rbntTKNhanVien.Checked)
+            flagPQ = 0;
+            if (rbntTKNhanVien.Checked)
             {
                 dkmoinhanvien(true);
                 loadUser();
@@ -2481,21 +2560,21 @@ namespace QLBanHang
 
         private void mndoimatkhau_Click(object sender, EventArgs e)
         {
+            flagPQ = 1;
             doimknhanvien(true);
-          //  loadUser();
         }
 
         private void mnphanquyen_Click(object sender, EventArgs e)
         {
+            flagPQ = 1;
+
             if (rbntTKNhanVien.Checked)
             {
                 phanquyennhanvien(true);
-                loadUser();
             }
             else if (rbntTKAdmin.Checked)
             {
                 phanquyenadmin(true);
-                loadAdmin();
             }
         }
 
@@ -2504,20 +2583,75 @@ namespace QLBanHang
             if(rbntTKNhanVien.Checked)
             {
                 // lưu nhân viên
+                gandulieuthemmoiuser();
+
+                if (flagPQ == 0)
+                {
+                    //  Thêm
+                    if (pqctr.AddDataPQ(pqObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Form2_Load(sender, e);
+                        dis_enNhanVien(true);
+                        dtdanhsachuser.DataBindings.Clear();
+                        bingdingPhanQuyen(); // load bảng dữ liệu
+                        grLoaiTaiKhoan.Enabled = true;
+
+                    }
+                    else
+                        MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    // Sửa
+                    if (pqctr.UpdDataPQ(pqObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Form2_Load(sender, e);
+                        dis_enNhanVien(true);
+                        dtdanhsachuser.DataBindings.Clear();
+                        bingdingPhanQuyen(); // load bảng dữ liệu
+                        grLoaiTaiKhoan.Enabled = true;
+                    }
+                    else
+                        MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else if(rbntTKAdmin.Checked)
             {
                 // lưu admin
+                loadAdmin();
+                dis_enAdmin(true);
+                dtdanhsachuser.DataBindings.Clear();
+                bingdingPhanQuyen(); // load bảng dữ liệu
+                grLoaiTaiKhoan.Enabled = true;
             }
-            Form2_Load(sender, e);
-            dis_enNhanVien(true);
-            grLoaiTaiKhoan.Enabled = true;
+
+            
         }
 
         private void HuyTKmoi_Click(object sender, EventArgs e)
         {
             Form2_Load(sender, e);
-            dis_enNhanVien(true);
+            if (rbntTKNhanVien.Checked)
+            {
+                loadUser();
+                dis_enNhanVien(true);
+                dtdanhsachuser.DataBindings.Clear();
+                bingdingPhanQuyen(); // load bảng dữ liệu
+                grLoaiTaiKhoan.Enabled = true;
+            }
+            else if (rbntTKAdmin.Checked)
+            {
+                loadAdmin();
+                dis_enAdmin(true);
+                dtdanhsachuser.DataBindings.Clear();
+                bingdingPhanQuyen(); // load bảng dữ liệu
+                grLoaiTaiKhoan.Enabled = true;
+            }
+
             grLoaiTaiKhoan.Enabled = true;
         }
 
@@ -2525,6 +2659,8 @@ namespace QLBanHang
         {
                 dis_enNhanVien(true);
                 loadUser();
+                dtdanhsachuser.DataBindings.Clear();
+                bingdingPhanQuyen(); // load bảng dữ liệu 
 
         }
 
@@ -2532,6 +2668,8 @@ namespace QLBanHang
         {
                 dis_enAdmin(true);
                 loadAdmin();
+                dtdanhsachuser.DataBindings.Clear();
+                bingdingAdmin(); // load bảng dữ liệu
 
 
         }

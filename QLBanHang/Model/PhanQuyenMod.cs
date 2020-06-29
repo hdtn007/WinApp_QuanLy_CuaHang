@@ -24,7 +24,7 @@ namespace QLBanHang.Model
         {
             DataTable dt = new DataTable();
 
-            cmd.CommandText = "select taikhoan,matkhau,manv from PHANQUYEN";
+            cmd.CommandText = "select nv.tennv, nv.email, pq.taikhoan, pq.matkhau, pq.phanquyen, pq.ghichu from PHANQUYEN pq, NHANVIEN nv where pq.manv = nv.manv ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -43,6 +43,52 @@ namespace QLBanHang.Model
             }
 
             return dt;
+        }
+
+        public bool AddDataPQ(PhanQuyenObj pqObj)
+        {
+
+            cmd.CommandText = "Insert into PHANQUYEN values ('" + pqObj.ID + "','" + pqObj.Taikhoan + "','" + pqObj.MatKhau + "','" + pqObj.Quyen + "','" + pqObj.maNhanVien + "',N'" + pqObj.GhiChu + "')";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.OpenConn();
+                cmd.ExecuteNonQuery();
+                con.CloseConn();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+
+
+            return false;
+        }
+
+        public bool UpdDataPQ(PhanQuyenObj pqObj)
+        {
+
+            cmd.CommandText = "Update PHANQUYEN set matkhau = '" + pqObj.MatKhau + "',phanquyen = '" + pqObj.Quyen + "', ghichu =N'" + pqObj.GhiChu + "' Where taikhoan = '" + pqObj.Taikhoan + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.OpenConn();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+            return false;
         }
 
         public bool CheckNV(PhanQuyenObj pqObj)  // kiểm tra mk tk khi đăng nhập là nhân viên

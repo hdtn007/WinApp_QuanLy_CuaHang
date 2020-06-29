@@ -20,7 +20,7 @@ namespace QLBanHang.Model
         {
             DataTable dt = new DataTable();
 
-            cmd.CommandText = "select taikhoan,matkhau from QUANLY";
+            cmd.CommandText = "select taikhoan,matkhau,ten from QUANLY";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
