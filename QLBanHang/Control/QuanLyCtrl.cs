@@ -19,15 +19,20 @@ namespace QLBanHang.Control
         {
             return qlMod.GetData();
         }
-        /*
-        public bool addData(QuanLyObj qlObj)
+        
+        public bool addDataQL(QuanLyObj qlObj)
         {
-            return qlMod.AddData(qlObj);
+            return qlMod.AddDataQL(qlObj);
         }
-        */
+        
         public bool updDate(QuanLyObj qlObj)
         {
             return qlMod.UpdData(qlObj);
+        }
+
+        public bool updDateTenAdmin(QuanLyObj qlObj)
+        {
+            return qlMod.UpdDataTenAdmin(qlObj);
         }
 
         public bool check(QuanLyObj qlObj)

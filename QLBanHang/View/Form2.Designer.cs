@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -338,6 +338,7 @@
             this.btnInHoaDon = new System.Windows.Forms.Button();
             this.txtMaSpCTHD = new System.Windows.Forms.Label();
             this.txtMaSpAdd = new System.Windows.Forms.Label();
+            this.txtsltonkho = new System.Windows.Forms.Label();
             this.txtgianhapspadd = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.Label();
             this.txtDonGiaCTHD = new System.Windows.Forms.Label();
@@ -363,10 +364,6 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
-=======
-            this.txtsltonkho = new System.Windows.Forms.Label();
->>>>>>> cb1b48899536394e81213b22a1357cafd1d0273e
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -1393,8 +1390,8 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtDanhSachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -1413,8 +1410,8 @@
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
             this.dtDanhSachNhanVien.ReadOnly = true;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
             // 
             // manv
@@ -2827,6 +2824,14 @@
             this.txtMaSpAdd.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
             this.txtMaSpAdd.Click += new System.EventHandler(this.txtMaHD_Click);
             // 
+            // txtsltonkho
+            // 
+            resources.ApplyResources(this.txtsltonkho, "txtsltonkho");
+            this.txtsltonkho.ForeColor = System.Drawing.Color.Black;
+            this.txtsltonkho.Name = "txtsltonkho";
+            this.txtsltonkho.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
+            this.txtsltonkho.Click += new System.EventHandler(this.txtMaHD_Click);
+            // 
             // txtgianhapspadd
             // 
             resources.ApplyResources(this.txtgianhapspadd, "txtgianhapspadd");
@@ -3033,17 +3038,6 @@
             this.dtdanhsachcthd.ReadOnly = true;
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
-<<<<<<< HEAD
-=======
-            // txtsltonkho
-            // 
-            resources.ApplyResources(this.txtsltonkho, "txtsltonkho");
-            this.txtsltonkho.ForeColor = System.Drawing.Color.Black;
-            this.txtsltonkho.Name = "txtsltonkho";
-            this.txtsltonkho.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
-            this.txtsltonkho.Click += new System.EventHandler(this.txtMaHD_Click);
-            // 
->>>>>>> cb1b48899536394e81213b22a1357cafd1d0273e
             // Form2
             // 
             resources.ApplyResources(this, "$this");

@@ -1031,8 +1031,10 @@ namespace QLBanHang
             txtMaSpAdd.Text = "";
             txtDonGiaCTHD.Text = "";
             txtGiamAdd.Text = "";
+            lbloiBH.Text = "";
 
-            
+
+
 
             clearDataHD();
         }
@@ -2387,6 +2389,8 @@ namespace QLBanHang
                 txtReNewPass.Text = "";
                 emailsaoluunhanvienmoi.Text = "";
 
+                emailsaoluunhanvienmoi.DataBindings.Clear();
+
                 gbDanhSachUser.Text = "Danh sách tài khoản User";
                 mnphanquyen.Text = "Phân quyền nhân viên";
 
@@ -2412,6 +2416,8 @@ namespace QLBanHang
             emailsaoluunhanvienmoi.Text = "";
             txtNameUser.Text = "";
 
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+
             gbDanhSachUser.Text = "Danh sách tài khoản Admin";
             mnphanquyen.Text = "Đổi tên admin";
 
@@ -2419,6 +2425,11 @@ namespace QLBanHang
             txtAddPhanQuyen.Items.Clear();
             txtAddPhanQuyen.Items.Add("1");
             txtAddPhanQuyen.SelectedItem = 1;
+
+            NhanVienCtrl nv = new NhanVienCtrl();
+            txtNameUser.DataSource = nv.getData();
+            txtNameUser.DisplayMember = "tennv";
+            txtNameUser.ValueMember = "manv";
 
             dtdanhsachuser.DataBindings.Clear();
             bingdingAdmin(); // load bảng dữ liệu 
@@ -2478,6 +2489,14 @@ namespace QLBanHang
             txtReNewPass.Text = "";
             emailsaoluunhanvienmoi.Text = "";
 
+            NhanVienCtrl nv = new NhanVienCtrl();
+            txtNameUser.DataSource = nv.getData();
+            txtNameUser.DisplayMember = "tennv";
+            txtNameUser.ValueMember = "manv";
+
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+            emailsaoluunhanvienmoi.DataBindings.Add("Text",txtNameUser.DataSource,"email");
+
         }
 
         void gandulieuthemmoiuser()
@@ -2486,7 +2505,7 @@ namespace QLBanHang
             txtNameUser.ValueMember = "tennv";
 
             int quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
-            pqObj.ID = "US003";
+            pqObj.ID = "US003";  // phải tự động tăng
             pqObj.Taikhoan = txtAddTaiKhoan.Text.Trim();
             pqObj.MatKhau = txtReNewPass.Text.Trim();
             pqObj.Quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
@@ -2506,6 +2525,15 @@ namespace QLBanHang
             }
             
         }
+
+        void gandulieuthemmoiadmin()
+        {            
+            qlObj.ID = "admin";
+            qlObj.Taikhoan = "admin";
+            qlObj.MatKhau = txtReNewPass.Text.Trim();
+            qlObj.Ten = txtNameUser.Text.Trim();
+
+        }
         void dkmoiAdmin(bool e)
         {
             mndangkymoi.Enabled = !e;
@@ -2521,6 +2549,14 @@ namespace QLBanHang
             emailsaoluunhanvienmoi.Enabled = e;
             txtNameUser.Enabled = e;
             txtAddPhanQuyen.Enabled = e;
+
+            NhanVienCtrl nv = new NhanVienCtrl();
+            txtNameUser.DataSource = nv.getData();
+            txtNameUser.DisplayMember = "tennv";
+            txtNameUser.ValueMember = "manv";
+
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+            emailsaoluunhanvienmoi.DataBindings.Add("Text", txtNameUser.DataSource, "email");
         }
         void doimknhanvien(bool e)
         {
@@ -2578,27 +2614,32 @@ namespace QLBanHang
         private void mndangkymoi_Click(object sender, EventArgs e)
         {
             flagPQ = 0;
+            flagAdmin = 0;
             if (rbntTKNhanVien.Checked)
             {
-                dkmoinhanvien(true);
                 loadUser();
+                dkmoinhanvien(true);
+                
             }
             else if (rbntTKAdmin.Checked)
             {
-                dkmoiAdmin(true);
                 loadAdmin();
+                dkmoiAdmin(true);
+                
             }
         }
 
         private void mndoimatkhau_Click(object sender, EventArgs e)
         {
             flagPQ = 1;
+            flagAdmin = 1;
             doimknhanvien(true);
         }
 
         private void mnphanquyen_Click(object sender, EventArgs e)
         {
             flagPQ = 1;
+            flagAdmin = 1;
 
             if (rbntTKNhanVien.Checked)
             {
@@ -2612,10 +2653,9 @@ namespace QLBanHang
 
         private void LuuTKmoi_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if(rbntTKNhanVien.Checked)
             {
-                // lưu nhân viên
+                // lưu tài khoản nhân viên
                 gandulieuthemmoiuser();
 
                 if (flagPQ == 0)
@@ -2625,8 +2665,8 @@ namespace QLBanHang
                     {
                         MessageBox.Show("Bạn đã THÊM thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        Form2_Load(sender, e);
                         dis_enNhanVien(true);
+                        loadUser();
                         dtdanhsachuser.DataBindings.Clear();
                         bingdingPhanQuyen(); // load bảng dữ liệu
                         grLoaiTaiKhoan.Enabled = true;
@@ -2637,13 +2677,13 @@ namespace QLBanHang
                 }
                 else
                 {
-                    // Sửa
+                    // Sửa tài khoản nhân viên
                     if (pqctr.UpdDataPQ(pqObj))
                     {
                         MessageBox.Show("Bạn đã CẬP NHẬT thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        Form2_Load(sender, e);
                         dis_enNhanVien(true);
+                        loadUser();
                         dtdanhsachuser.DataBindings.Clear();
                         bingdingPhanQuyen(); // load bảng dữ liệu
                         grLoaiTaiKhoan.Enabled = true;
@@ -2654,28 +2694,43 @@ namespace QLBanHang
             }
             else if(rbntTKAdmin.Checked)
             {
-                // lưu admin
-                loadAdmin();
-                dis_enAdmin(true);
-                dtdanhsachuser.DataBindings.Clear();
-                bingdingPhanQuyen(); // load bảng dữ liệu
-                grLoaiTaiKhoan.Enabled = true;
-            }
+                // lưu tài khoản admin
+                gandulieuthemmoiadmin();
 
-            
-=======
-                if (rbntTKNhanVien.Checked)
+                if (flagAdmin == 0)
                 {
-                    // lưu nhân viên
+                    //  Thêm tài khoản admin
+                    if (qlctr.addDataQL(qlObj))
+                    {
+                        MessageBox.Show("Bạn đã THÊM thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        dis_enAdmin(true);
+                        loadAdmin();
+                        dtdanhsachuser.DataBindings.Clear();
+                        bingdingAdmin(); // load bảng dữ liệu
+                        grLoaiTaiKhoan.Enabled = true;
+
+                    }
+                    else
+                        MessageBox.Show("CHỈ TỒN TẠI 1 TÀI KHOẢN ADMIN DUY NHẤT !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (rbntTKAdmin.Checked)
+                else
                 {
-                    // lưu admin
+                    // Sửa tài khoản admin
+                    if (qlctr.updDateTenAdmin(qlObj))
+                    {
+                        MessageBox.Show("Bạn đã CẬP NHẬT thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        dis_enAdmin(true);
+                        loadAdmin();
+                        dtdanhsachuser.DataBindings.Clear();
+                        bingdingAdmin(); // load bảng dữ liệu
+                        grLoaiTaiKhoan.Enabled = true;
+                    }
+                    else
+                        MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                Form2_Load(sender, e);
-                dis_enNhanVien(true);
-                grLoaiTaiKhoan.Enabled = true;
->>>>>>> cb1b48899536394e81213b22a1357cafd1d0273e
+            }
         }
 
         private void HuyTKmoi_Click(object sender, EventArgs e)
@@ -2683,19 +2738,17 @@ namespace QLBanHang
             Form2_Load(sender, e);
             if (rbntTKNhanVien.Checked)
             {
-                loadUser();
                 dis_enNhanVien(true);
+                loadUser();
                 dtdanhsachuser.DataBindings.Clear();
                 bingdingPhanQuyen(); // load bảng dữ liệu
-                grLoaiTaiKhoan.Enabled = true;
             }
             else if (rbntTKAdmin.Checked)
             {
-                loadAdmin();
                 dis_enAdmin(true);
+                loadAdmin();
                 dtdanhsachuser.DataBindings.Clear();
-                bingdingPhanQuyen(); // load bảng dữ liệu
-                grLoaiTaiKhoan.Enabled = true;
+                bingdingAdmin(); // load bảng dữ liệu
             }
 
             grLoaiTaiKhoan.Enabled = true;

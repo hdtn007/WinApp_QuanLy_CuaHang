@@ -40,11 +40,11 @@ namespace QLBanHang.Model
 
             return dt;
         }
-        /*
-        public bool AddData(QuanLyObj qlObj)
+        
+        public bool AddDataQL(QuanLyObj qlObj)
         {
 
-            cmd.CommandText = "Insert into QUANLY values ('" + qlObj.Taikhoan + "','" + qlObj.MatKhau + "')";
+            cmd.CommandText = "Insert into QUANLY values ('" + qlObj.ID + "','" + qlObj.Taikhoan + "','" + qlObj.MatKhau + "',N'" + qlObj.Ten + "')";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -64,12 +64,33 @@ namespace QLBanHang.Model
 
             return false;
         }
-        */
+        
 
         public bool UpdData(QuanLyObj qlObj)
         {
 
-            cmd.CommandText = "Update QUANLY set matkhau = '" + qlObj.MatKhau + "' Where taikhoan = 'admin'";
+            cmd.CommandText = "Update QUANLY set matkhau = '" + qlObj.MatKhau + "', ten = N'"+qlObj.Ten+"' Where taikhoan = 'admin'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.OpenConn();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+            return false;
+        }
+
+        public bool UpdDataTenAdmin(QuanLyObj qlObj)
+        {
+
+            cmd.CommandText = "Update QUANLY set ten = N'" + qlObj.Ten + "' Where taikhoan = 'admin'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
