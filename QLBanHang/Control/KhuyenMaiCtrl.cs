@@ -18,6 +18,11 @@ namespace QLBanHang.Control
             return kmMod.GetDataKm();
         }
 
+        public DataTable getMaKm()
+        {
+            return kmMod.GetMaKm();
+        }
+
         public bool addDataKm(KhuyenMaiObj kmObj)
         {
             return kmMod.AddDataKm(kmObj);

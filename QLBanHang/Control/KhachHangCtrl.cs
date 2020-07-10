@@ -18,6 +18,11 @@ namespace QLBanHang.Control
             return khMod.GetDataKH();
         }
 
+        public DataTable getMaKH()
+        {
+            return khMod.GetmaKH();
+        }
+
         public bool addDataKH(KhachHangObj khObj)
         {
             return khMod.AddDataKH(khObj);

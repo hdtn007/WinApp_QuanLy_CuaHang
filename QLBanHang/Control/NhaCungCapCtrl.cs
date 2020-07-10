@@ -18,6 +18,11 @@ namespace QLBanHang.Control
             return nccMod.GetDataNCC();
         }
 
+        public DataTable getMaNCC()
+        {
+            return nccMod.GetMaNCC();
+        }
+
         public bool addDataNCC(NhaCungCapObj nccObj)
         {
             return nccMod.AddDataNCC(nccObj);

@@ -14,6 +14,10 @@ namespace QLBanHang.Control
     {
 
         LoaiHangHoaMod lhhMod = new LoaiHangHoaMod();
+        public DataTable getmaLHH()
+        {
+            return lhhMod.GetMaLHH();
+        }
 
         public DataTable getDataLHH()
         {

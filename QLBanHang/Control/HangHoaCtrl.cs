@@ -19,6 +19,11 @@ namespace QLBanHang.Control
             return hhMod.GetDataHH();
         }
 
+        public DataTable getMaHH()
+        {
+            return hhMod.GetMaHH();
+        }
+
         public bool addDataHH(HangHoaObj hhObj)
         {
             return hhMod.AddDataHH(hhObj);

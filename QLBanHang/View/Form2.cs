@@ -654,7 +654,7 @@ namespace QLBanHang
 
         void clearDataNV()
         {
-            txtMaNv.Text = "";
+            //txtMaNv.Text = "";
             txtTenNv.Text = "";
         //    txtGioiTinhNv.Text = "";
             dtNgaySinhNv.Value = DateTime.Now.Date;
@@ -723,7 +723,7 @@ namespace QLBanHang
 
         void clearDataKH()
         {
-            txtMaKhachHang.Text = "";
+            //txtMaKhachHang.Text = "";
             txtTenKhachHang.Text = "";
             txtDiaChiKhachHang.Text = "";
             txtSDTKhachHang.Text = "";
@@ -768,7 +768,7 @@ namespace QLBanHang
         
         void clearDataLHH()
         {
-            txtMaLoaiSanPham.Text = "";
+            //txtMaLoaiSanPham.Text = "";
             txtTenLoaiSanPham.Text = "";
             
         }
@@ -846,7 +846,7 @@ namespace QLBanHang
 
         void clearDataKm()
         {
-            txtMaKm.Text = "";
+            //txtMaKm.Text = "";
             txtTenKm.Text = "";
             txtNoiDungKm.Text = "";
             txtGiamKm.Text = "0";
@@ -932,7 +932,7 @@ namespace QLBanHang
 
         void clearDataHH()
         {
-            txtMaHH.Text = "";
+            //txtMaHH.Text = "";
             txtTenHH.Text = "";
             txtGiaNhapSp.Text = "";
             txtDonGiaHH.Text = "";
@@ -1332,6 +1332,14 @@ namespace QLBanHang
 
             clearDataNV();
 
+            DataTable dtMaNV = new DataTable();
+            dtMaNV = nvctr.getMANV();
+            dtDanhSachNhanVien.DataSource = dtMaNV;
+
+            txtMaNv.DataBindings.Clear();
+            txtMaNv.DataBindings.Add("Text", dtDanhSachNhanVien.DataSource, "manv");
+            int b=int.Parse(txtMaNv.Text.Trim())+1;
+            txtMaNv.Text = b.ToString();
         }
 
         private void mnSuaNv_Click(object sender, EventArgs e)
@@ -1414,7 +1422,15 @@ namespace QLBanHang
             loadcontrolKH();
 
             clearDataKH();
-            
+
+            DataTable dtMaNV = new DataTable();
+            dtMaNV = khctr.getMaKH();
+            dtDanhSachKhachHang.DataSource = dtMaNV;
+
+            txtMaKhachHang.DataBindings.Clear();
+            txtMaKhachHang.DataBindings.Add("Text", dtDanhSachKhachHang.DataSource,"makh");
+            int b = int.Parse(txtMaKhachHang.Text.Trim()) + 1;
+            txtMaKhachHang.Text = b.ToString();
 
         }
 
@@ -1502,6 +1518,15 @@ namespace QLBanHang
             flagLHH = 0;
             dis_enLHH(true);
             clearDataLHH();
+
+            DataTable dtMaNV = new DataTable();
+            dtMaNV = lhhctr.getmaLHH();
+            dtDanhSachLoaiSanPham.DataSource = dtMaNV;
+
+            txtMaLoaiSanPham.DataBindings.Clear();
+            txtMaLoaiSanPham.DataBindings.Add("Text", dtDanhSachLoaiSanPham.DataSource, "maloai");
+            int b = int.Parse(txtMaLoaiSanPham.Text.Trim()) + 1;
+            txtMaLoaiSanPham.Text = b.ToString();
         }
 
         private void mnSuaLoai_Click(object sender, EventArgs e)
@@ -1582,6 +1607,16 @@ namespace QLBanHang
             flagNCC = 0;
             dis_enNCC(true);
             clearDataNCC();
+
+            clearDataHH();
+            DataTable dtMaNV = new DataTable();
+            dtMaNV = nccctr.getMaNCC();
+            dtDanhSachHangHoa.DataSource = dtMaNV;
+
+            txtMaNCC.DataBindings.Clear();
+            txtMaNCC.DataBindings.Add("Text", dtDanhSachNhaCungCap.DataSource, "mancc");
+            int b = int.Parse(txtMaNCC.Text.Trim()) + 1;
+            txtMaNCC.Text = b.ToString();
         }
 
         private void mnSuaNcc_Click(object sender, EventArgs e)
@@ -1659,6 +1694,15 @@ namespace QLBanHang
             flagKM = 0;
             dis_enKm(true);
             clearDataKm();
+            DataTable dtMaNV = new DataTable();
+            dtMaNV = nccctr.getMaNCC();
+            dtDanhSachHangHoa.DataSource = dtMaNV;
+
+
+            txtMaKm.DataBindings.Clear();
+            txtMaKm.DataBindings.Add("Text", dtDanhSachKhuyenmai.DataSource, "mask");
+            int b = int.Parse(txtMaKm.Text.Trim()) + 1;
+            txtMaKm.Text = b.ToString();
         }
 
         private void mnSuaKm_Click(object sender, EventArgs e)
@@ -1737,6 +1781,14 @@ namespace QLBanHang
             loadcontrolHH();
 
             clearDataHH();
+            DataTable dtMaNV = new DataTable();
+            dtMaNV = hhctr.getMaHH();
+            dtDanhSachHangHoa.DataSource = dtMaNV;
+
+            txtMaHH.DataBindings.Clear();
+            txtMaHH.DataBindings.Add("Text", dtDanhSachHangHoa.DataSource, "mahh");
+            int b = int.Parse(txtMaHH.Text.Trim()) + 1;
+            txtMaHH.Text = b.ToString();
         }
 
         private void mnXoaSp_Click(object sender, EventArgs e)

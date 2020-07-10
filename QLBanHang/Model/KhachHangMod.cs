@@ -39,6 +39,31 @@ namespace QLBanHang.Model
             return dt;
         }
 
+        public DataTable GetmaKH()
+        {
+            DataTable dt = new DataTable();
+
+            cmd.CommandText = "select MAX(makh)makh from KHACHHANG";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.OpenConn();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                con.CloseConn();
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+
+            return dt;
+        }
+
         public bool AddDataKH(KhachHangObj khObj)
         {
 

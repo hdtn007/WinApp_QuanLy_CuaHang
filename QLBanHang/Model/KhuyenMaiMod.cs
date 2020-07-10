@@ -15,6 +15,31 @@ namespace QLBanHang.Model
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();
 
+        public DataTable GetMaKm()
+        {
+            DataTable dt = new DataTable();
+
+            cmd.CommandText = "select MAX(mask)from SUKIEN";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.OpenConn();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                con.CloseConn();
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+
+            return dt;
+        }
+
         public DataTable GetDataKm()
         {
             DataTable dt = new DataTable();

@@ -19,6 +19,11 @@ namespace QLBanHang.Control
             return nvMod.GetData();
         }
 
+        public DataTable getMANV()
+        {
+            return nvMod.GetMANV();
+        }
+
         public bool addData(NhanVienObj nvObj)
         {
             return nvMod.AddData(nvObj);

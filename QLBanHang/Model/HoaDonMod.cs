@@ -15,6 +15,7 @@ namespace QLBanHang.Model
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();
 
+        
         public DataTable GetDataHD()
         {
             DataTable dt = new DataTable();
