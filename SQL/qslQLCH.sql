@@ -246,5 +246,9 @@ select * from HANGHOA
 select * from CTHD
 select * from QUANLY
 
+select * from NHANVIEN
+
+select MAX(manv)manv from NHANVIEN
+SELECT TOP 1 manv FROM NHANVIEN ORDER BY manv DESC
 
 -- end Ngoãn + An --------------------------------------------------------------

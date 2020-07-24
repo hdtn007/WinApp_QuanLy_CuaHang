@@ -73,6 +73,13 @@ namespace QLBanHang
 
         // -----------------------------------------------
 
+        AutoIDmod Idmod = new AutoIDmod();
+
+        AutoIDctrl Idctr = new AutoIDctrl();
+
+
+        // -----------------------------------------------
+
         // phân biệt giữa add và update
         int flag = 0; // trường hợp khi ấn các nút thêm sửa xóa, để set nút lưu là thêm mới hay sửa dử liệu củ...
         int flagKH = 0;
@@ -672,7 +679,16 @@ namespace QLBanHang
 
         void ganDuLieuNV(NhanVienObj nvObj) // gán dữ liệu từ textbox vào cho biến tạm nvObj
         {
-            nvObj.MaNhanVien = txtMaNv.Text.Trim();
+            AutoIDctrl iDctrl = new AutoIDctrl();
+            //DataTable IDNV = new DataTable();
+            //IDNV = iDctrl.GetLastID("NHANVIEN", "manv");
+            //object field = IDNV;
+            //thongbaoloinhanvien.Text = field.ToString();
+
+             string lastID = iDctrl.GetLastID("NHANVIEN", "manv");
+             string nextID = TangMaTuDong(lastID,"NV");
+
+            nvObj.MaNhanVien = nextID;// txtMaNv.Text.Trim(); //nextID; 
             nvObj.TenNhanVien = txtTenNv.Text.Trim();
             nvObj.GioiTinh = txtGioiTinhNv.Text.Trim();
             nvObj.NgaySinh = dtNgaySinhNv.Text.Trim();
@@ -1331,15 +1347,6 @@ namespace QLBanHang
             dtNgaySinhNv.Text = DateTime.Now.Date.ToShortDateString();
 
             clearDataNV();
-
-            DataTable dtMaNV = new DataTable();
-            dtMaNV = nvctr.getMANV();
-            dtDanhSachNhanVien.DataSource = dtMaNV;
-
-            txtMaNv.DataBindings.Clear();
-            txtMaNv.DataBindings.Add("Text", dtDanhSachNhanVien.DataSource, "manv");
-            int b=int.Parse(txtMaNv.Text.Trim())+1;
-            txtMaNv.Text = b.ToString();
         }
 
         private void mnSuaNv_Click(object sender, EventArgs e)
@@ -3067,6 +3074,44 @@ namespace QLBanHang
         }
 
         // END  KHU VỰC DÀNH CHO TAB FIX LỖI ********************************************************* //
+
+        /* ********************************************************************************************************** */
+
+
+        // START  KHU VỰC DÀNH CHO TĂNG MÃ TỰ ĐỘNG ********************************************************* //
+
+        public string TangMaTuDong(string lastID, string prefixID) // lastID (vd: NV002) , prefixID tiền tố (vd: "NV")
+        {
+                if (lastID == "")
+                {
+                    return prefixID + "001";  // nếu chưa có dữ liệu khởi tạo mã tiền tố + 001
+                }
+
+            int nextID = int.Parse(lastID.Remove(0, 5-prefixID.Length)) + 001; // NV002 - remove(0,3) = 002
+
+            int lengthNumerID = 5 - nextID.ToString().Length - prefixID.Length;// lastID.Length - prefixID.Length;
+
+                string zeroNumber = "";
+                for (int i = 1; i <= lengthNumerID; i++)
+                {
+                    if (nextID < Math.Pow(10, i))
+                    {
+                        for (int j = 1; j <= lengthNumerID - i; i++)
+                        {
+                            zeroNumber += "0"; // thêm số 0 trước hậu tốs
+                        }
+                        return prefixID + zeroNumber + nextID.ToString();
+                    }
+                }
+            return prefixID + zeroNumber + nextID.ToString();
+
+
+
+        }
+
+
+
+        // END  KHU VỰC DÀNH CHO TĂNG MÃ TỰ ĐỘNG ********************************************************* //
 
         /* ********************************************************************************************************** */
 

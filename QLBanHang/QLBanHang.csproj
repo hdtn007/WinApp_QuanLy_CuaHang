@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\AutoIDctrl.cs" />
     <Compile Include="Control\CTHDCtrl.cs" />
     <Compile Include="Control\HangHoaCtrl.cs" />
     <Compile Include="Control\HoaDonCtrl.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Control\PhanQuyenCtrl.cs" />
     <Compile Include="Control\QuanLyCtrl.cs" />
     <Compile Include="Control\ThongKeCtrl.cs" />
+    <Compile Include="Model\AutoIDmod.cs" />
     <Compile Include="Model\ConnectToSQL.cs" />
     <Compile Include="Model\CTHDMod.cs" />
     <Compile Include="Model\HangHoaMod.cs" />
