@@ -49,7 +49,6 @@ D:\WinApp\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.csproj.CoreCompile
 D:\WinApp\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\aa\QLBanHang.resources.dll
 D:\WinApp\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.exe
 D:\WinApp\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.pdb
-D:\winapp\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.csprojAssemblyReference.cache
 D:\WinApp_QuanLy_CuaHang\QLBanHang\bin\Debug\QLBanHang.exe.config
 D:\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.exe
 D:\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.pdb
@@ -71,3 +70,4 @@ D:\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.Properties.Resources.reso
 D:\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.Form2.aa.resources
 D:\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.csproj.GenerateResource.Cache
 D:\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\aa\QLBanHang.resources.dll
+D:\WinApp\WinApp_QuanLy_CuaHang\QLBanHang\obj\Debug\QLBanHang.csprojAssemblyReference.cache

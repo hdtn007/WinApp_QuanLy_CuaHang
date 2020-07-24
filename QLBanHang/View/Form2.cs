@@ -179,7 +179,9 @@ namespace QLBanHang
             bingdingNCC();
             bingdingKm();
             bingdingHH();
+
             bingdingHD();
+            loadcontrolHD();
             // bingdingThongKe();
             loadTKTraCuu();
             btnXoaTKSP.Enabled = false; // xóa thống kê sản phẩm
@@ -621,18 +623,17 @@ namespace QLBanHang
 
         }
 
-        /* ********************************************************************************************************** */
-        /* ********************************************************************************************************** */
-        /* ********************* 2.0 SETUP CÁC HÀM XỬ LÝ DÀNH CHO CÁC NÚT THÊM, SỬA , XÓA, LƯU, HỦY ********************************************** */
-        /* ********************************************************************************************************** */
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
+/* ******************************************************************************************************************************** */
+/* ********************* 2.0 SETUP CÁC HÀM XỬ LÝ DÀNH CHO CÁC NÚT THÊM, SỬA , XÓA, LƯU, HỦY *************************************** */
+/* ******************************************************************************************************************************** */
+/* ******************************************************************************************************************************** */
+
 
         // START  KHU VỰC DÀNH CHO TAB NHÂN VIÊN ********************************************************* //
-
-        // setup các nút đóng và mở 
         void dis_enNV(bool e)  // e = true (đóng) ; !e = mở
         {
-            txtMaNv.Enabled = e;
+            //txtMaNv.Enabled = e; -- Đóng khi tăng mã tự động
             txtTenNv.Enabled = e;
             txtGioiTinhNv.Enabled = e;
             dtNgaySinhNv.Enabled = e;
@@ -648,6 +649,7 @@ namespace QLBanHang
             mnSuaNv.Enabled = !e;
             mnXoaNv.Enabled = !e;
 
+            dtDanhSachNhanVien.Enabled = !e;
         }
 
         void loadcontrolNV() // truyền dữ kiện ban đầu vào cho textbox gioi tinh
@@ -656,39 +658,26 @@ namespace QLBanHang
             txtGioiTinhNv.Items.Add("Khác");
             txtGioiTinhNv.Items.Add("Nam");
             txtGioiTinhNv.Items.Add("Nữ");
-            txtGioiTinhNv.SelectedItem = 0;
         }
 
         void clearDataNV()
         {
-            //txtMaNv.Text = "";
+            txtMaNv.Text = "";         
             txtTenNv.Text = "";
-        //    txtGioiTinhNv.Text = "";
             dtNgaySinhNv.Value = DateTime.Now.Date;
             txtDiaChiNv.Text = "";
             txtSdtNv.Text = "";
             txtCmndNv.Text = "";
             txtEmailNv.Text = "";
             txtGhiChuNv.Text = "";
+            txtGioiTinhNv.Text = "";
 
-            loadcontrolNV(); // thay cho dữ liệu giới tính đã set ở hàm trước
-        
-            
-
+            loadcontrolNV(); // load gioi tinh
         }
 
-        void ganDuLieuNV(NhanVienObj nvObj) // gán dữ liệu từ textbox vào cho biến tạm nvObj
-        {
-            AutoIDctrl iDctrl = new AutoIDctrl();
-            //DataTable IDNV = new DataTable();
-            //IDNV = iDctrl.GetLastID("NHANVIEN", "manv");
-            //object field = IDNV;
-            //thongbaoloinhanvien.Text = field.ToString();
-
-             string lastID = iDctrl.GetLastID("NHANVIEN", "manv");
-             string nextID = TangMaTuDong(lastID,"NV");
-
-            nvObj.MaNhanVien = nextID;// txtMaNv.Text.Trim(); //nextID; 
+        void ganDuLieuNV(NhanVienObj nvObj) // gán dữ liệu từ textbox vào CSDL
+        { 
+            nvObj.MaNhanVien = txtMaNv.Text.Trim(); 
             nvObj.TenNhanVien = txtTenNv.Text.Trim();
             nvObj.GioiTinh = txtGioiTinhNv.Text.Trim();
             nvObj.NgaySinh = dtNgaySinhNv.Text.Trim();
@@ -697,23 +686,18 @@ namespace QLBanHang
             nvObj.CMND = txtCmndNv.Text.Trim();
             nvObj.Email = txtEmailNv.Text.Trim();
             nvObj.GhiChu = txtGhiChuNv.Text.Trim();
-           // nvObj.MatKhau = "";
-           // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
-
         //  END KHU VỰC DÀNH CHO TAB NHÂN VIÊN ********************************************************* //
 
-        /* ********************************************************************************************************** */
+
+
+/* ******************************************************************************************************************************** */
 
 
         //  START  KHU VỰC DÀNH CHO TAB KHÁCH HÀNG ********************************************************* //
-
-            
-        // setup các nút đóng và mở 
         void dis_enKH(bool e)  // e = true (đóng) ; !e = mở
         {
-            txtMaKhachHang.Enabled = e;
+           // txtMaKhachHang.Enabled = e; -- Đống khi tăng mã tự động
             txtTenKhachHang.Enabled = e;
             txtGioiTinhKhachHang.Enabled = e;
             txtDiaChiKhachHang.Enabled = e;
@@ -726,6 +710,7 @@ namespace QLBanHang
             mnSuaKh.Enabled = !e;
             mnXoaKh.Enabled = !e;
 
+            dtDanhSachKhachHang.Enabled = !e;
         }
       
         void loadcontrolKH() // truyền dữ kiện ban đầu vào cho textbox gioi tinh
@@ -734,24 +719,21 @@ namespace QLBanHang
             txtGioiTinhKhachHang.Items.Add("Khác");
             txtGioiTinhKhachHang.Items.Add("Nam");
             txtGioiTinhKhachHang.Items.Add("Nữ");
-            txtGioiTinhKhachHang.SelectedItem = 0;
         }
 
         void clearDataKH()
         {
-            //txtMaKhachHang.Text = "";
+            txtMaKhachHang.Text = "";
             txtTenKhachHang.Text = "";
             txtDiaChiKhachHang.Text = "";
             txtSDTKhachHang.Text = "";
             txtGhiChuKhachHang.Text = "";
+            txtGioiTinhKhachHang.Text = "";
 
-            loadcontrolKH(); // thay cho dữ liệu giới tính đã set ở hàm trước
-
-
-
+            loadcontrolKH(); //load gioi tinh
         }
 
-        void ganDuLieuKH(KhachHangObj khObj) // gán dữ liệu từ textbox vào cho biến tạm nvObj
+        void ganDuLieuKH(KhachHangObj khObj) // gán dữ liệu từ textbox vào CSDL
         {
             khObj.MaKhachHang = txtMaKhachHang.Text.Trim();
             khObj.TenKhachHang = txtTenKhachHang.Text.Trim();
@@ -759,19 +741,15 @@ namespace QLBanHang
             khObj.DiaChi = txtDiaChiKhachHang.Text.Trim();
             khObj.SoDienThoai = txtSDTKhachHang.Text.Trim();
             khObj.GhiChu = txtGhiChuKhachHang.Text.Trim();
-            // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
-
         //  END  KHU VỰC DÀNH CHO TAB KHÁCH HÀNG ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************* */
 
         //  START  KHU VỰC DÀNH CHO TAB LOẠI SẢN PHẨM ********************************************************* //
-
         void dis_enLHH(bool e)  // e = true (đóng) ; !e = mở
         {
-            txtMaLoaiSanPham.Enabled = e;
+            //txtMaLoaiSanPham.Enabled = e;
             txtTenLoaiSanPham.Enabled = e;
 
             mnHuyLoai.Enabled = e;
@@ -779,33 +757,30 @@ namespace QLBanHang
             mnThemLoai.Enabled = !e;
             mnSuaLoai.Enabled = !e;
             mnXoaLoai.Enabled = !e;
-
+            dtDanhSachLoaiSanPham.Enabled = !e;
         }
         
         void clearDataLHH()
         {
-            //txtMaLoaiSanPham.Text = "";
-            txtTenLoaiSanPham.Text = "";
-            
+            txtMaLoaiSanPham.Text = "";
+            txtTenLoaiSanPham.Text = "";            
         }
 
-        void ganDuLieuLHH(LoaiHangHoaObj lhhObj) // gán dữ liệu từ textbox vào cho biến tạm nvObj
+        void ganDuLieuLHH(LoaiHangHoaObj lhhObj) // gán dữ liệu từ textbox vào CSDL
         {
             lhhObj.MaLoaiHH = txtMaLoaiSanPham.Text.Trim();
             lhhObj.TenLoaiHH = txtTenLoaiSanPham.Text.Trim();
-            // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
 
         //  END  KHU VỰC DÀNH CHO TAB LOẠI SẢN PHẨM ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB NHÀ CUNG CẤP ********************************************************* //
 
         void dis_enNCC(bool e)  // e = true (đóng) ; !e = mở
         {
-            txtMaNCC.Enabled = e;
+            //txtMaNCC.Enabled = e;
             txtTenNCC.Enabled = e;
             txtDiaChiNCC.Enabled = e;
             txtSoDtNCC.Enabled = e;
@@ -816,7 +791,7 @@ namespace QLBanHang
             mnThemNcc.Enabled = !e;
             mnSuaNcc.Enabled = !e;
             mnXoaNcc.Enabled = !e;
-
+            dtDanhSachNhaCungCap.Enabled = !e;
         }
         
         void clearDataNCC()
@@ -835,8 +810,6 @@ namespace QLBanHang
             nccObj.DiaChi = txtDiaChiNCC.Text.Trim();
             nccObj.SoDienThoai = txtSoDtNCC.Text.Trim();
             nccObj.GhiChu = txtGhiChuNCC.Text.Trim();
-            // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
 
         //  END  KHU VỰC DÀNH CHO TAB NHÀ CUNG CẤP ********************************************************* //
@@ -847,7 +820,7 @@ namespace QLBanHang
 
         void dis_enKm(bool e)  // e = true (đóng) ; !e = mở
         {
-            txtMaKm.Enabled = e;
+            //txtMaKm.Enabled = e;
             txtTenKm.Enabled = e;
             txtNoiDungKm.Enabled = e;
             txtGiamKm.Enabled = e;
@@ -858,11 +831,13 @@ namespace QLBanHang
             mnSuaKm.Enabled = !e;
             mnXoaKm.Enabled = !e;
 
+            dtDanhSachKhuyenmai.Enabled = !e;
+
         }
 
         void clearDataKm()
         {
-            //txtMaKm.Text = "";
+            txtMaKm.Text = "";
             txtTenKm.Text = "";
             txtNoiDungKm.Text = "";
             txtGiamKm.Text = "0";
@@ -874,19 +849,17 @@ namespace QLBanHang
             kmObj.TenKhuyenMai = txtTenKm.Text.Trim();
             kmObj.NoiDung = txtNoiDungKm.Text.Trim();
             kmObj.Giam = int.Parse(txtGiamKm.Text.Trim());
-            // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
 
         //  END  KHU VỰC DÀNH CHO TAB KHUYẾN MÃI ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB SẢN PHẨM ********************************************************* //
 
         void dis_enHH(bool e)  // e = true (đóng) ; !e = mở
         {
-            txtMaHH.Enabled = e;
+            //txtMaHH.Enabled = e; -- Tăng mã tự động
             txtTenHH.Enabled = e;
             txtGiaNhapSp.Enabled = e;
             txtDonGiaHH.Enabled = e;
@@ -904,6 +877,7 @@ namespace QLBanHang
             mnSuaSp.Enabled = !e;
             mnXoaSp.Enabled = !e;
 
+            dtDanhSachHangHoa.Enabled = !e;
         }
 
         void loadcontrolHH() // truyền dữ kiện ban đầu vào cho textbox gioi tinh
@@ -927,28 +901,21 @@ namespace QLBanHang
             txtNhaCungCapHH.DataSource = ncc.getDataNCC();
             txtNhaCungCapHH.DisplayMember = "tenncc";
             txtNhaCungCapHH.ValueMember = "mancc";
-
             
-
-
             LoaiHangHoaCtrl loai = new LoaiHangHoaCtrl();
             txtLoaiHangHH.DataSource = loai.getDataLHH();
             txtLoaiHangHH.DisplayMember = "tenloai";
             txtLoaiHangHH.ValueMember = "maloai";
-
-
+            
             KhuyenMaiCtrl km = new KhuyenMaiCtrl();
             txtKhuyenMaiHH.DataSource = km.getDataKm();
             txtKhuyenMaiHH.DisplayMember = "tensk";
-            txtKhuyenMaiHH.ValueMember = "mask";
-
-        
-
+            txtKhuyenMaiHH.ValueMember = "mask";   
         }
 
         void clearDataHH()
         {
-            //txtMaHH.Text = "";
+            txtMaHH.Text = "";
             txtTenHH.Text = "";
             txtGiaNhapSp.Text = "";
             txtDonGiaHH.Text = "";
@@ -961,9 +928,6 @@ namespace QLBanHang
             txtGhiChuHH.Text = "";
 
             loadcontrolHH(); // thay cho dữ liệu giới tính đã set ở hàm trước
-
-
-
         }
 
         void ganDulieuHHsub()
@@ -993,13 +957,11 @@ namespace QLBanHang
             
 
             hhObj.GhiChu = txtGhiChuHH.Text.Trim();
-            // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
 
         //  END  KHU VỰC DÀNH CHO TAB SẢN PHẨM ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB HÓA ĐƠN + CTHD ********************************************************* //
 
@@ -1015,28 +977,24 @@ namespace QLBanHang
             btnThemCTHD.Enabled = e;
             btnHuyCHTD.Enabled = e;
             btnXoaSpCTHD.Enabled = e;
-          //  btnCheckKM.Enabled = e;
 
             btnInHoaDon.Enabled = !e;
             btnThemHD.Enabled = !e;
             btnXoaHD.Enabled = !e;
             btnGioHangHD.Enabled = !e;
             
-            //  clearDataHD();
-            loadcontrolHD();
 
+            loadcontrolHD();
         }
 
         void loadcontrolHD() // truyền dữ kiện ban đầu vào cho textbox 
         {
-
             //  chú ý !!!!!!!
 
             HangHoaCtrl hh = new HangHoaCtrl();
             txtSanPhamHD.DataSource = hh.getDataHH();
             txtSanPhamHD.DisplayMember = "tenhh";
             txtSanPhamHD.ValueMember = "mahh";
-
           
             KhachHangCtrl kh = new KhachHangCtrl();
             txtKhachHangHD.DataSource = kh.getDataKH();
@@ -1048,23 +1006,16 @@ namespace QLBanHang
             txtDonGiaCTHD.Text = "";
             txtGiamAdd.Text = "";
             lbloiBH.Text = "";
-
-
-
+            txtKhachHangHD.Text = "";
 
             clearDataHD();
         }
 
         void clearDataHD()
-        {
-            
+        {            
             txtSanPhamHD.Text = "";
             txtSoLuongCTHD.Text = "0";
-          //  txtTongTienHD.Text = "0.00";
             btnKhuyenMaiHD.Text = "0";
-           // txtThanhTienAdd.Text = "";
-
-
         }
 
 
@@ -1073,31 +1024,17 @@ namespace QLBanHang
 
             txtSanPhamHD.DisplayMember = "mahh";
             txtSanPhamHD.ValueMember = "tenhh";
-
-
-         //   txtKhachHangHD.DisplayMember = "makh";
-        //    txtKhachHangHD.ValueMember = "tenkh";
         }
-
-        int autoHD = 1;
-       // string macthd;
 
         void ganDuLieuHD(HoaDonObj hdObj) // gán dữ liệu từ textbox vào cho biến tạm nvObj
         {
+            /* Tăng mã tự động*/
 
-
-            hdObj.MaHoaDon = "" + autoHD; // cài đặt mã tự tăng
-            hdObj.NguoiLap = "NV001"; // cài đặt mặt định NV001
+            hdObj.MaHoaDon = txtMaHD.Text.Trim(); // cài đặt mã tự tăng
+            hdObj.NguoiLap = PhanQuyenMod.Name_USER.ToString(); // cài đặt mặt định dựa trên tên của tài khoản đăng nhập
             hdObj.KhachHang = txtKhachHangHD.Text.Trim();
             hdObj.NgayLap = txtNgayBanHD.Text.Trim();
-           // hdObj.TongTien = float.Parse(txtTongTienHD.Text.Trim());
-
-
-
-            // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
-
 
         void dis_enCTHD(bool e)  // e = true (đóng) ; !e = mở
         {
@@ -1106,36 +1043,26 @@ namespace QLBanHang
 
             txtKhachHangHD.Enabled = e;
 
-
             btnThemCTHD.Enabled = !e;
             btnHuyCHTD.Enabled = !e;
             btnXoaSpCTHD.Enabled = !e;
-           // btnCheckKM.Enabled = !e;
 
             btnInHoaDon.Enabled = !e;
             btnThemHD.Enabled = e;
             btnXoaHD.Enabled = e;
-            btnGioHangHD.Enabled = e;
+            btnGioHangHD.Enabled = e;           
             
-
-            //  clearDataHD();
             loadcontrolCTHD();
-
         }
 
         void loadcontrolCTHD() // truyền dữ kiện ban đầu vào cho textbox 
-        {
-            
+        {            
             //  chú ý !!!!!!!
             
             HangHoaCtrl hh = new HangHoaCtrl();
             txtSanPhamHD.DataSource = hh.getDataHH();
             txtSanPhamHD.DisplayMember = "tenhh";
             txtSanPhamHD.ValueMember = "mahh";
-
-           // DataTable dt = new System.Data.DataTable();
-           // dt = cthdctr.GetDonVi(macthd);
-           // txtSanPhamHD.DataSource = dt;
 
             txtDonViSp.DataBindings.Clear();
             txtDonViSp.DataBindings.Add("Text", txtSanPhamHD.DataSource, "donvi");
@@ -1152,30 +1079,18 @@ namespace QLBanHang
             txtgianhapspadd.DataBindings.Clear();
             txtgianhapspadd.DataBindings.Add("Text", txtSanPhamHD.DataSource, "gianhap");
 
-
             clearDataCTHD();
-
-
         }
 
-
-
-
-
         void clearDataCTHD()
-        {
-            
+        {            
             txtSoLuongCTHD.Text = "1";
-          //  btnKhuyenMaiHD.Text = "0";
-
-           
         }
         
         void ganDulieuCTHDsub()
         {
             txtSanPhamHD.DisplayMember = "mahh";
-            txtSanPhamHD.ValueMember = "tenhh";
-            
+            txtSanPhamHD.ValueMember = "tenhh";            
         }
         void ganDuLieuCTHD(ChiTietHoaDonObj cthdObj) // gán dữ liệu từ textbox vào cho biến tạm nvObj
         {
@@ -1194,25 +1109,17 @@ namespace QLBanHang
             int km = int.Parse(txtGiamAdd.Text.Trim());
           
             cthdObj.ThanhTien = (sl*dg)-(sl*dg*km/100);
-            
-           // hdObj.TongTien = int.Parse( );
-
-
-            // truyền null cho những dữ liệu không có textbox truyền vào
-
         }
 
         void ganTongTienHD(string mahd)
         {
-
             hdctr.UpdTongTienHD(mahd);
-
         }
 
 
         //  END  KHU VỰC DÀNH CHO TAB HÓA ĐƠN + CTHD ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************* */
         // START  KHU VỰC DÀNH CHO TAB THỐNG KÊ ********************************************************* //
   
             void TonKho_DaBan(string mahh, int soluong)
@@ -1228,7 +1135,6 @@ namespace QLBanHang
             tkObj.NgayBan = txtNgayBanHD.Text.Trim();
             tkObj.GiaBan = int.Parse(txtDonGiaCTHD.Text.Trim());
             tkObj.GiaNhap = int.Parse(txtgianhapspadd.Text.Trim());
-         //   tkObj.SoLuongDaBan = int.Parse(txtSoLuongCTHD.Text.Trim());
             tkObj.TongDoanhThu = 0;
             tkObj.LoiNhuan = 0;
 
@@ -1342,18 +1248,18 @@ namespace QLBanHang
         {
             flag = 0;
             dis_enNV(true);
-            loadcontrolNV();
-
-            dtNgaySinhNv.Text = DateTime.Now.Date.ToShortDateString();
-
             clearDataNV();
+
+            /* Tăng mã tự động */
+            string LastID = Idctr.GetLastID("NHANVIEN", "manv"); // bảng, cột được lấy mã cuối
+            txtMaNv.Text = TangMaTuDong(LastID, "NV"); // Tiền tố chữ trước mã số 
         }
 
         private void mnSuaNv_Click(object sender, EventArgs e)
         {
             flag = 1;
+            bingdingNV();
             dis_enNV(true);
-            loadcontrolNV();
         }
 
         private void mnXoaNv_Click(object sender, EventArgs e)
@@ -1367,11 +1273,9 @@ namespace QLBanHang
                 else
                     MessageBox.Show("𝐗𝐨á thất bại !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                return;
+            else return;
 
             Form2_Load(sender, e);
-
         }
 
         private void mnLuuNv_Click(object sender, EventArgs e)
@@ -1385,7 +1289,7 @@ namespace QLBanHang
                     if (nvctr.addData(nvObj))
                     {
                         MessageBox.Show("Bạn đã thêm một nhân viên mới thành công !" + " Bạn cần phải tạo một tài khoản đăng nhập mới cho nhân viên này !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        
                         Form2_Load(sender, e);
                         dis_enNV(false);
                     }
@@ -1401,52 +1305,43 @@ namespace QLBanHang
 
                         Form2_Load(sender, e);
                         dis_enNV(false);
-                    }
- 
+                    } 
                 }
             }
-            //else MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
         }
 
         private void mnHuyNv_Click(object sender, EventArgs e)
         {
+            clearDataNV();
+            dtdanhsachuser.DataBindings.Clear();
             Form2_Load(sender, e);
-            dis_enNV(false);
+            dis_enNV(false);            
         }
-
-
         //  END  KHU VỰC DÀNH CHO TAB NHÂN VIÊN ********************************************************* //
 
-        /* ********************************************************************************************************** */
+
+/* ******************************************************************************************************************************** */
+
 
         //  START  KHU VỰC DÀNH CHO TAB KHÁCH HÀNG ********************************************************* //
-
         private void mnThemKh_Click(object sender, EventArgs e)
         {
             flagKH = 0;
             dis_enKH(true);
             loadcontrolKH();
-
             clearDataKH();
 
-            DataTable dtMaNV = new DataTable();
-            dtMaNV = khctr.getMaKH();
-            dtDanhSachKhachHang.DataSource = dtMaNV;
-
-            txtMaKhachHang.DataBindings.Clear();
-            txtMaKhachHang.DataBindings.Add("Text", dtDanhSachKhachHang.DataSource,"makh");
-            int b = int.Parse(txtMaKhachHang.Text.Trim()) + 1;
-            txtMaKhachHang.Text = b.ToString();
-
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("KHACHHANG", "makh"); // bảng, cột được lấy mã cuối
+            txtMaKhachHang.Text = TangMaTuDong(LastID, "KH");  // Tiền tố chữ trước mã số 
         }
 
         private void mnSuaKh_Click(object sender, EventArgs e)
         {
             flagKH = 1;
+            bingdingKH();
+            //loadcontrolKH();
             dis_enKH(true);
-            loadcontrolKH();
-
         }
 
         private void mnXoaKh_Click(object sender, EventArgs e)
@@ -1460,11 +1355,9 @@ namespace QLBanHang
                 else
                     MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                return;
+            else return;
 
             Form2_Load(sender, e);
-
         }
 
         private void mnLuuKh_Click(object sender, EventArgs e)
@@ -1504,41 +1397,32 @@ namespace QLBanHang
 
         private void mnHuyKh_Click(object sender, EventArgs e)
         {
+            clearDataKH();
             Form2_Load(sender, e);
             dis_enKH(false);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //  END  KHU VỰC DÀNH CHO TAB KHÁCH HÀNG ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB LOẠI HÀNG HÓA ********************************************************* //
 
         private void mnThemLoai_Click(object sender, EventArgs e)
         {
-
             flagLHH = 0;
             dis_enLHH(true);
             clearDataLHH();
 
-            DataTable dtMaNV = new DataTable();
-            dtMaNV = lhhctr.getmaLHH();
-            dtDanhSachLoaiSanPham.DataSource = dtMaNV;
-
-            txtMaLoaiSanPham.DataBindings.Clear();
-            txtMaLoaiSanPham.DataBindings.Add("Text", dtDanhSachLoaiSanPham.DataSource, "maloai");
-            int b = int.Parse(txtMaLoaiSanPham.Text.Trim()) + 1;
-            txtMaLoaiSanPham.Text = b.ToString();
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("LOAIHH", "maloai"); // bảng, cột được lấy mã cuối
+            txtMaLoaiSanPham.Text = TangMaTuDong(LastID, "L");  // Tiền tố chữ trước mã số 
         }
 
         private void mnSuaLoai_Click(object sender, EventArgs e)
         {
             flagLHH = 1;
+            bingdingLHH();
             dis_enLHH(true);           
         }
 
@@ -1553,8 +1437,7 @@ namespace QLBanHang
                 else
                     MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                return;
+            else return;
 
             Form2_Load(sender, e);
         }
@@ -1590,14 +1473,12 @@ namespace QLBanHang
                     else
                         MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
-
         }
 
         private void mnHuyLoai_Click(object sender, EventArgs e)
         {
+            clearDataLHH();
             Form2_Load(sender, e);
             dis_enLHH(false);
         }
@@ -1605,30 +1486,26 @@ namespace QLBanHang
 
         //  END  KHU VỰC DÀNH CHO TAB LOẠI HÀNG HÓA ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB NHÀ CUNG CẤP ********************************************************* //
 
         private void mnThemNcc_Click(object sender, EventArgs e)
         {
+
             flagNCC = 0;
             dis_enNCC(true);
             clearDataNCC();
 
-            clearDataHH();
-            DataTable dtMaNV = new DataTable();
-            dtMaNV = nccctr.getMaNCC();
-            dtDanhSachHangHoa.DataSource = dtMaNV;
-
-            txtMaNCC.DataBindings.Clear();
-            txtMaNCC.DataBindings.Add("Text", dtDanhSachNhaCungCap.DataSource, "mancc");
-            int b = int.Parse(txtMaNCC.Text.Trim()) + 1;
-            txtMaNCC.Text = b.ToString();
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("NCC", "mancc"); // bảng, cột được lấy mã cuối
+            txtMaNCC.Text = TangMaTuDong(LastID, "NC");  // Tiền tố chữ trước mã số
         }
 
         private void mnSuaNcc_Click(object sender, EventArgs e)
         {
             flagNCC = 1;
+            bingdingNCC();
             dis_enNCC(true);
         }
 
@@ -1686,13 +1563,14 @@ namespace QLBanHang
 
         private void mnHuyNcc_Click(object sender, EventArgs e)
         {
+            clearDataNCC();
             Form2_Load(sender, e);
             dis_enNCC(false);
         }
 
         //  END  KHU VỰC DÀNH CHO TAB NHÀ CUNG CẤP ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB SỰ KIỆN ********************************************************* //
 
@@ -1701,20 +1579,16 @@ namespace QLBanHang
             flagKM = 0;
             dis_enKm(true);
             clearDataKm();
-            DataTable dtMaNV = new DataTable();
-            dtMaNV = nccctr.getMaNCC();
-            dtDanhSachHangHoa.DataSource = dtMaNV;
 
-
-            txtMaKm.DataBindings.Clear();
-            txtMaKm.DataBindings.Add("Text", dtDanhSachKhuyenmai.DataSource, "mask");
-            int b = int.Parse(txtMaKm.Text.Trim()) + 1;
-            txtMaKm.Text = b.ToString();
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("SUKIEN", "mask"); // bảng, cột được lấy mã cuối
+            txtMaKm.Text = TangMaTuDong(LastID, "KM");  // Tiền tố chữ trước mã số
         }
 
         private void mnSuaKm_Click(object sender, EventArgs e)
         {
             flagKM = 1;
+            bingdingKm();
             dis_enKm(true);
         }
 
@@ -1771,13 +1645,14 @@ namespace QLBanHang
 
         private void mnHuyKm_Click(object sender, EventArgs e)
         {
+            clearDataKm();
             Form2_Load(sender, e);
             dis_enKm(false);
         }
 
         //  END  KHU VỰC DÀNH CHO TAB SỰ KIỆN ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB HÀNG HÓA ********************************************************* //
 
@@ -1786,16 +1661,11 @@ namespace QLBanHang
             flagHH = 0;
             dis_enHH(true);
             loadcontrolHH();
-
             clearDataHH();
-            DataTable dtMaNV = new DataTable();
-            dtMaNV = hhctr.getMaHH();
-            dtDanhSachHangHoa.DataSource = dtMaNV;
 
-            txtMaHH.DataBindings.Clear();
-            txtMaHH.DataBindings.Add("Text", dtDanhSachHangHoa.DataSource, "mahh");
-            int b = int.Parse(txtMaHH.Text.Trim()) + 1;
-            txtMaHH.Text = b.ToString();
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("HANGHOA", "mahh"); // bảng, cột được lấy mã cuối
+            txtMaHH.Text = TangMaTuDong(LastID, "SP");  // Tiền tố chữ trước mã số
         }
 
         private void mnXoaSp_Click(object sender, EventArgs e)
@@ -1818,8 +1688,10 @@ namespace QLBanHang
         private void mnSuaSp_Click(object sender, EventArgs e)
         {
             flagHH = 1;
-            dis_enHH(true);
             loadcontrolHH();
+            bingdingHH();
+            dis_enHH(true);
+            
         }
 
         private void mnLuuSp_Click(object sender, EventArgs e)
@@ -1861,13 +1733,14 @@ namespace QLBanHang
 
         private void mnHuySp_Click(object sender, EventArgs e)
         {
+            clearDataHH();
             Form2_Load(sender, e);
             dis_enHH(false);
         }
 
         //  END  KHU VỰC DÀNH CHO TAB HÀNG HÓA ********************************************************* //
 
-        /* ********************************************************************************************************** */
+/* ******************************************************************************************************************************** */
 
         //  START  KHU VỰC DÀNH CHO TAB HÓA ĐƠN ********************************************************* //
 
@@ -1876,7 +1749,10 @@ namespace QLBanHang
             /*
              * Lưu mới một hóa đơn với mã tự sinh
              */
-            autoHD++;
+
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("HOADON", "mahd"); // bảng, cột được lấy mã cuối
+            txtMaHD.Text = TangMaTuDong(LastID, "HD");  // Tiền tố chữ trước mã số
 
             ganDulieuHDsub(); //không cần đổi mã thành text - text thành mã khi k có liên kết csdl
             ganDuLieuHD(hdObj);
@@ -2461,7 +2337,6 @@ namespace QLBanHang
                 txtAddPhanQuyen.Items.Clear();
                 txtAddPhanQuyen.Items.Add("2");
                 txtAddPhanQuyen.Items.Add("3");
-            //  txtAddPhanQuyen.SelectedItem = 0;
 
 
         }
@@ -2508,11 +2383,13 @@ namespace QLBanHang
                 emailsaoluunhanvienmoi.Enabled = !e;
                 txtNameUser.Enabled = !e;
                 txtAddPhanQuyen.Enabled = !e;
+
+                dtdanhsachuser.Enabled = e;
             }
 
             void dis_enAdmin(bool e) // e = mở ; !e = đóng
             {
-                mndangkymoi.Enabled = e;
+                mndangkymoi.Enabled = !e;
                 mndoimatkhau.Enabled = !e;
                 mnphanquyen.Enabled = e;
                 LuuTKmoi.Enabled = !e;
@@ -2525,7 +2402,7 @@ namespace QLBanHang
                 txtNameUser.Enabled = !e;
                 txtAddPhanQuyen.Enabled = !e;
 
-        }
+            }
 
         void dkmoinhanvien(bool e)
         {
@@ -2560,14 +2437,20 @@ namespace QLBanHang
 
         void gandulieuthemmoiuser()
         {
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("PHANQUYEN", "id"); // bảng, cột được lấy mã cuối
+            string maid = TangMaTuDong(LastID, "US");  // Tiền tố US + mã tự động tăng
+
+
             txtNameUser.DisplayMember = "manv";
             txtNameUser.ValueMember = "tennv";
 
-            int quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
-            pqObj.ID = "US003";  // phải tự động tăng
+
+            pqObj.ID = maid.Trim();
             pqObj.Taikhoan = txtAddTaiKhoan.Text.Trim();
             pqObj.MatKhau = txtReNewPass.Text.Trim();
             pqObj.Quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
+            int quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
             pqObj.maNhanVien = txtNameUser.Text.Trim();
 
             if(quyen==2)
@@ -2674,6 +2557,8 @@ namespace QLBanHang
         {
             flagPQ = 0;
             flagAdmin = 0;
+            dtdanhsachuser.Enabled = false;
+
             if (rbntTKNhanVien.Checked)
             {
                 loadUser();
@@ -2693,12 +2578,15 @@ namespace QLBanHang
             flagPQ = 1;
             flagAdmin = 1;
             doimknhanvien(true);
+            dtdanhsachuser.Enabled = false;
         }
 
         private void mnphanquyen_Click(object sender, EventArgs e)
         {
             flagPQ = 1;
             flagAdmin = 1;
+
+            dtdanhsachuser.Enabled = false;
 
             if (rbntTKNhanVien.Checked)
             {
@@ -2790,6 +2678,7 @@ namespace QLBanHang
                         MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            dtdanhsachuser.Enabled = true;
         }
 
         private void HuyTKmoi_Click(object sender, EventArgs e)
@@ -2810,6 +2699,7 @@ namespace QLBanHang
                 bingdingAdmin(); // load bảng dữ liệu
             }
 
+            dtdanhsachuser.Enabled = true;
             grLoaiTaiKhoan.Enabled = true;
         }
 
@@ -2843,11 +2733,7 @@ namespace QLBanHang
             DateTime now = DateTime.Now;
             int s = dtNgaySinhNv.Value.Year;
             // fix lỗi đễ trống các trường bắt buộc txt
-            if (txtMaNv.Text=="")
-            {
-                thongbaoloinhanvien.Text = "✘Không được bỏ trống MaNV ✘"; return false;
-            }
-            else if (txtTenNv.Text == "")
+           if (txtTenNv.Text == "")
             {
                 thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên NV✘"; return false;
             }
@@ -3082,17 +2968,34 @@ namespace QLBanHang
 
         public string TangMaTuDong(string lastID, string prefixID) // lastID (vd: NV002) , prefixID tiền tố (vd: "NV")
         {
-                if (lastID == "")
+
+            string zeroNumber = "";
+            int nextID;
+
+
+            if (lastID == "" || lastID == null)
                 {
-                    return prefixID + "001";  // nếu chưa có dữ liệu khởi tạo mã tiền tố + 001
-                }
+                    nextID = 1;  // nếu chưa có dữ liệu khởi tạo mã tiền tố + 001
+                    int lengthNumerID = 6 - nextID.ToString().Length - prefixID.Length;// lastID.Length - prefixID.Length;                  
+                    for (int i = 0; i <= lengthNumerID; i++)
+                            {
+                                if (nextID < Math.Pow(10, i))
+                                {
+                                    for (int j = 1; j <= lengthNumerID - i; i++)
+                                    {
+                                        zeroNumber += "0"; // thêm số 0 trước hậu tốs
+                                    }
+                                    return prefixID + zeroNumber + nextID.ToString();
+                                }
+                            }
+                 }
+            else
+            {
+                string sotam = lastID.Substring(prefixID.Length, 5 - prefixID.Length); // NV002 : remove(2,3) = 002
+                nextID = int.Parse(sotam.ToString()) + 1;
 
-            int nextID = int.Parse(lastID.Remove(0, 5-prefixID.Length)) + 001; // NV002 - remove(0,3) = 002
-
-            int lengthNumerID = 5 - nextID.ToString().Length - prefixID.Length;// lastID.Length - prefixID.Length;
-
-                string zeroNumber = "";
-                for (int i = 1; i <= lengthNumerID; i++)
+                int lengthNumerID = 6 - nextID.ToString().Length - prefixID.Length;// lastID.Length - prefixID.Length;                  
+                for (int i = 0; i <= lengthNumerID; i++)
                 {
                     if (nextID < Math.Pow(10, i))
                     {
@@ -3103,10 +3006,9 @@ namespace QLBanHang
                         return prefixID + zeroNumber + nextID.ToString();
                     }
                 }
+            }
             return prefixID + zeroNumber + nextID.ToString();
-
-
-
+            
         }
 
 

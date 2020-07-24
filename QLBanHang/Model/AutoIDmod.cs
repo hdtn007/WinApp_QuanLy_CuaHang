@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using QLBanHang.Object;
 
+
 namespace QLBanHang.Model
 {
     class AutoIDmod
@@ -18,36 +19,41 @@ namespace QLBanHang.Model
         public string GetLastID(string nameTable, string nameSelectColumn)
         {
 
-           // DataTable dt = new DataTable();
-            // cmd.CommandText = "SELECT TOP 1 '" + nameSelectColumn + "' FROM '" + nameTable + "' ORDER BY '" + nameSelectColumn + "' DESC";
-            cmd.CommandText = "select MAX('"+ nameSelectColumn + "')'"+ nameSelectColumn + "' from '"+ nameTable + "' ";
+            DataTable dt = new DataTable();
 
+            cmd.CommandText = "select*from "+ nameTable.ToString() + " ";// "select MAX('" + nameSelectColumn + "')'" + nameSelectColumn + "' from '" + nameTable + "' ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
+            string lastID = "";
+
             try
             {
-                var dt = new DataSet();
                 con.OpenConn();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
-                // con.CloseConn();
-                return dt.ToString();
+                con.CloseConn();
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
-               /* string mex = ex.Message;
+                string mex = ex.Message;
                 cmd.Dispose();
-                con.CloseConn(); */
+                con.CloseConn();
             }
-            finally
+           // return Convert.ToInt32(dt.Rows[0][0].ToString().Substring(2, 3));
+            //
+            if (dt.Rows.Count <= 0)
             {
-                if (con != null)
-                {
-                    con.CloseConn();
-                }
+                return lastID;
             }
+            else
+            {
+                lastID = dt.Rows[dt.Rows.Count - 1][nameSelectColumn.ToString()].ToString().Substring(0,5); // Substring(0,5) bắt đầu lấy từ vitri 1 lấy 5 ký tự
+
+                //lastID = Convert.ToInt32(dt.Rows[dt.Rows.Count-1]["manv"].ToString().Substring(1,5)); // Substring(1,5) bắt đầu lấy từ vitri 1 lấy 5 ký tự
+                return lastID;
+            }
+            //
         }
 
 

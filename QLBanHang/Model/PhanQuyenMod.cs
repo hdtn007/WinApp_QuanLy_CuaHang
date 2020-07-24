@@ -15,7 +15,7 @@ namespace QLBanHang.Model
 
         public static int QUYEN_USER; // kiểm tra quyền truy cập để ẩn tab
         public static string ID_USER; // chứa id của user đăng nhập
-        public static string Name_USER;
+        public static string Name_USER = "NV001"; // tên nhân viên đăng nhập
 
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();

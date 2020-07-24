@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -156,15 +156,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtDanhSachNhanVien = new System.Windows.Forms.DataGridView();
-            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnThemNv = new System.Windows.Forms.ToolStripMenuItem();
             this.mnSuaNv = new System.Windows.Forms.ToolStripMenuItem();
@@ -364,6 +355,15 @@
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
+            this.manv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -1219,11 +1219,11 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage7);
             resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -1246,7 +1246,6 @@
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Name = "panel1";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // thongbaoloinhanvien
             // 
@@ -1289,7 +1288,6 @@
             // txtGioiTinhNv
             // 
             this.txtGioiTinhNv.BackColor = System.Drawing.Color.White;
-            this.txtGioiTinhNv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtGioiTinhNv, "txtGioiTinhNv");
             this.txtGioiTinhNv.FormattingEnabled = true;
             this.txtGioiTinhNv.Name = "txtGioiTinhNv";
@@ -1390,8 +1388,8 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dtDanhSachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -1410,72 +1408,9 @@
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
             this.dtDanhSachNhanVien.ReadOnly = true;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
-            // 
-            // manv
-            // 
-            this.manv.DataPropertyName = "manv";
-            resources.ApplyResources(this.manv, "manv");
-            this.manv.Name = "manv";
-            this.manv.ReadOnly = true;
-            // 
-            // tennv
-            // 
-            this.tennv.DataPropertyName = "tennv";
-            resources.ApplyResources(this.tennv, "tennv");
-            this.tennv.Name = "tennv";
-            this.tennv.ReadOnly = true;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "gioitinh";
-            resources.ApplyResources(this.gioitinh, "gioitinh");
-            this.gioitinh.Name = "gioitinh";
-            this.gioitinh.ReadOnly = true;
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.DataPropertyName = "ngaysinh";
-            resources.ApplyResources(this.ngaysinh, "ngaysinh");
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.ReadOnly = true;
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "diachi";
-            resources.ApplyResources(this.diachi, "diachi");
-            this.diachi.Name = "diachi";
-            this.diachi.ReadOnly = true;
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sdt";
-            resources.ApplyResources(this.sdt, "sdt");
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            // 
-            // cmnd
-            // 
-            this.cmnd.DataPropertyName = "cmnd";
-            resources.ApplyResources(this.cmnd, "cmnd");
-            this.cmnd.Name = "cmnd";
-            this.cmnd.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            resources.ApplyResources(this.email, "email");
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // ghichu
-            // 
-            this.ghichu.DataPropertyName = "ghichu";
-            resources.ApplyResources(this.ghichu, "ghichu");
-            this.ghichu.Name = "ghichu";
-            this.ghichu.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -1623,7 +1558,6 @@
             // txtKhuyenMaiHH
             // 
             this.txtKhuyenMaiHH.BackColor = System.Drawing.Color.White;
-            this.txtKhuyenMaiHH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtKhuyenMaiHH, "txtKhuyenMaiHH");
             this.txtKhuyenMaiHH.FormattingEnabled = true;
             this.txtKhuyenMaiHH.Name = "txtKhuyenMaiHH";
@@ -1631,7 +1565,6 @@
             // txtNhaCungCapHH
             // 
             this.txtNhaCungCapHH.BackColor = System.Drawing.Color.White;
-            this.txtNhaCungCapHH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtNhaCungCapHH, "txtNhaCungCapHH");
             this.txtNhaCungCapHH.FormattingEnabled = true;
             this.txtNhaCungCapHH.Name = "txtNhaCungCapHH";
@@ -1639,7 +1572,6 @@
             // txtLoaiHangHH
             // 
             this.txtLoaiHangHH.BackColor = System.Drawing.Color.White;
-            this.txtLoaiHangHH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtLoaiHangHH, "txtLoaiHangHH");
             this.txtLoaiHangHH.FormattingEnabled = true;
             this.txtLoaiHangHH.Name = "txtLoaiHangHH";
@@ -2378,7 +2310,6 @@
             // 
             // txtGioiTinhKhachHang
             // 
-            this.txtGioiTinhKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtGioiTinhKhachHang, "txtGioiTinhKhachHang");
             this.txtGioiTinhKhachHang.FormattingEnabled = true;
             this.txtGioiTinhKhachHang.Name = "txtGioiTinhKhachHang";
@@ -3038,6 +2969,70 @@
             this.dtdanhsachcthd.ReadOnly = true;
             this.dtdanhsachcthd.RowTemplate.Height = 24;
             // 
+            // manv
+            // 
+            this.manv.DataPropertyName = "manv";
+            resources.ApplyResources(this.manv, "manv");
+            this.manv.Name = "manv";
+            this.manv.ReadOnly = true;
+            // 
+            // tennv
+            // 
+            this.tennv.DataPropertyName = "tennv";
+            resources.ApplyResources(this.tennv, "tennv");
+            this.tennv.Name = "tennv";
+            this.tennv.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.DataPropertyName = "gioitinh";
+            resources.ApplyResources(this.gioitinh, "gioitinh");
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            this.gioitinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.DataPropertyName = "ngaysinh";
+            resources.ApplyResources(this.ngaysinh, "ngaysinh");
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            resources.ApplyResources(this.diachi, "diachi");
+            this.diachi.Name = "diachi";
+            this.diachi.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sdt";
+            resources.ApplyResources(this.sdt, "sdt");
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // cmnd
+            // 
+            this.cmnd.DataPropertyName = "cmnd";
+            resources.ApplyResources(this.cmnd, "cmnd");
+            this.cmnd.Name = "cmnd";
+            this.cmnd.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            resources.ApplyResources(this.email, "email");
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // ghichu
+            // 
+            this.ghichu.DataPropertyName = "ghichu";
+            resources.ApplyResources(this.ghichu, "ghichu");
+            this.ghichu.Name = "ghichu";
+            this.ghichu.ReadOnly = true;
+            // 
             // Form2
             // 
             resources.ApplyResources(this, "$this");
@@ -3399,15 +3394,6 @@
         private System.Windows.Forms.Label txtMaSpAdd;
         private System.Windows.Forms.Label txtGiamAdd;
         private System.Windows.Forms.Button btnDonateHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhh;
         private System.Windows.Forms.DataGridViewTextBoxColumn gianhap;
@@ -3494,5 +3480,14 @@
         private System.Windows.Forms.Label thongbaoloiadmin;
         private System.Windows.Forms.Label lbloiBH;
         private System.Windows.Forms.Label txtsltonkho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
     }
 }
