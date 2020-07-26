@@ -112,7 +112,7 @@ namespace QLBanHang.Model
 
         public bool DelDataNCC(string ma)
         {
-            cmd.CommandText = "Delete NCC Where mancc = '" + ma + "'";
+            cmd.CommandText = "Delete THONGKE from HANGHOA hh, NCC nc Where  THONGKE.mahh= hh.mahh and hh.mancc=nc.mancc and nc.mancc = '" + ma + "'; Delete CTHD from HANGHOA hh, NCC nc Where nc.mancc=hh.mancc and hh.mahh = CTHD.mahh and nc.mancc = '" + ma + "';Delete HANGHOA Where mancc = '" + ma + "'; Delete NCC Where mancc = '" + ma + "' ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try

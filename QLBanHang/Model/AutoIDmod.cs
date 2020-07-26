@@ -12,16 +12,14 @@ namespace QLBanHang.Model
 {
     class AutoIDmod
     {
-
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();
 
         public string GetLastID(string nameTable, string nameSelectColumn)
         {
-
             DataTable dt = new DataTable();
 
-            cmd.CommandText = "select*from "+ nameTable.ToString() + " ";// "select MAX('" + nameSelectColumn + "')'" + nameSelectColumn + "' from '" + nameTable + "' ";
+            cmd.CommandText = "select*from "+ nameTable.ToString() + " ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -40,8 +38,7 @@ namespace QLBanHang.Model
                 cmd.Dispose();
                 con.CloseConn();
             }
-           // return Convert.ToInt32(dt.Rows[0][0].ToString().Substring(2, 3));
-            //
+
             if (dt.Rows.Count <= 0)
             {
                 return lastID;
@@ -50,10 +47,9 @@ namespace QLBanHang.Model
             {
                 lastID = dt.Rows[dt.Rows.Count - 1][nameSelectColumn.ToString()].ToString().Substring(0,5); // Substring(0,5) bắt đầu lấy từ vitri 1 lấy 5 ký tự
 
-                //lastID = Convert.ToInt32(dt.Rows[dt.Rows.Count-1]["manv"].ToString().Substring(1,5)); // Substring(1,5) bắt đầu lấy từ vitri 1 lấy 5 ký tự
                 return lastID;
             }
-            //
+            
         }
 
 

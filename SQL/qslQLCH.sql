@@ -238,17 +238,25 @@ select sum(tongthu) as tongthu, sum(loinhuan) as loinhuan, sum(soluongban) as so
 select sum(tongthu) as tongthu, sum(loinhuan) as loinhuan, sum(soluongban) as soluongban from THONGKE where  month(ngayban) = month(CONVERT(DATE,'01/01/2020',103)) and year(ngayban) = year(CONVERT(DATE,'01/01/2020',103))
 
 select sum(tongthu) as tongthu, sum(loinhuan) as loinhuan, sum(soluongban) as soluongban from THONGKE where  day(ngayban) = day(CONVERT(DATE,'01/01/2020',103)) and month(ngayban) = month(CONVERT(DATE,'01/01/2020',103)) and year(ngayban) = year(CONVERT(DATE,'01/01/2020',103))
+
+
 Delete THONGKE Where mahh = 'SP002'
 
+Delete CTHD from HANGHOA hh, NCC nc Where nc.mancc=hh.mancc and hh.mahh = CTHD.mahh and nc.mancc = 'NC004'
+
+Delete THONGKE from HANGHOA hh, NCC nc Where  THONGKE.mahh= hh.mahh and hh.mancc=nc.mancc and nc.mancc ='NC002'
+
 select * from THONGKE
-select * from HANGHOA
+
+
+
+select * from QUANLY
+select * from PHANQUYEN
+
 
 select * from CTHD
-select * from QUANLY
+select * from HANGHOA
+select * from NCC
 
-select * from NHANVIEN
-
-select MAX(manv)manv from NHANVIEN
-SELECT TOP 1 manv FROM NHANVIEN ORDER BY manv DESC
 
 -- end Ngoãn + An --------------------------------------------------------------

@@ -123,35 +123,37 @@ namespace QLBanHang
             phanquyen();
 
             //**************************************************************
+
+            dtDanhSachNhanVien.DataBindings.Clear();
             DataTable dtNhanVien = new DataTable();
             dtNhanVien = nvctr.getData();
             dtDanhSachNhanVien.DataSource = dtNhanVien; // dtDanhSachNhanVien la datagidview 
 
 
-
+            dtDanhSachKhachHang.DataBindings.Clear();
             DataTable dtKhachHang = new DataTable();
             dtKhachHang = khctr.getDataKH();
             dtDanhSachKhachHang.DataSource = dtKhachHang;
 
 
-
+            dtDanhSachLoaiSanPham.DataBindings.Clear();
             DataTable dtLoaiHH = new DataTable();
             dtLoaiHH = lhhctr.getDataLHH();
             dtDanhSachLoaiSanPham.DataSource = dtLoaiHH;
 
 
-
+            dtDanhSachNhaCungCap.DataBindings.Clear();
             DataTable dtNCC = new DataTable();
             dtNCC = nccctr.getDataNCC();
             dtDanhSachNhaCungCap.DataSource = dtNCC;
 
 
-
+            dtDanhSachKhuyenmai.DataBindings.Clear();
             DataTable dtkhuyenmai = new DataTable();
             dtkhuyenmai = kmctr.getDataKm();
             dtDanhSachKhuyenmai.DataSource = dtkhuyenmai;
 
-
+            dtDanhSachHangHoa.DataBindings.Clear();
             DataTable dtHangHoa = new DataTable();
             dtHangHoa = hhctr.getDataHH();
             dtDanhSachHangHoa.DataSource = dtHangHoa;
@@ -160,7 +162,7 @@ namespace QLBanHang
             // DataTable dtHoaDon = new DataTable();
             //  dtHoaDon = hdctr.getDataHD();
             //  dtdanhsachcthd.DataSource = dtHoaDon;
-
+            dtdanhsachcthd.DataBindings.Clear();
             DataTable dtHoaDon = new DataTable();
             dtHoaDon = hdctr.getDataHD();
             dtdanhsachcthd.DataSource = dtHoaDon;
@@ -179,10 +181,11 @@ namespace QLBanHang
             bingdingNCC();
             bingdingKm();
             bingdingHH();
-
             bingdingHD();
+            bingdingPhanQuyen();
+
+
             loadcontrolHD();
-            // bingdingThongKe();
             loadTKTraCuu();
             btnXoaTKSP.Enabled = false; // xóa thống kê sản phẩm
 
@@ -447,9 +450,6 @@ namespace QLBanHang
             txtMaHD.DataBindings.Clear();
             txtMaHD.DataBindings.Add("Text", dtdanhsachcthd.DataSource, "mahd");
 
-          //  txtKhachHangHD.DataBindings.Clear();
-          //  txtKhachHangHD.DataBindings.Add("Text", dtdanhsachcthd.DataSource, "mahd");
-
             txtTongTienHD.DataBindings.Clear();
             txtTongTienHD.DataBindings.Add("Text", dtdanhsachcthd.DataSource, "tongtien");
 
@@ -492,20 +492,6 @@ namespace QLBanHang
             txtsoluongspdamua.DataBindings.Clear();
             txtsoluongspdamua.DataBindings.Add("Text", dtdanhsachcthd.DataSource, "soluong");
 
-            /*int tonkho;
-
-            HangHoaCtrl hh = new HangHoaCtrl();
-            txtSanPhamHD.DataSource = hh.getDataHH();
-            txtSanPhamHD.DisplayMember = "tenhh";
-            txtSanPhamHD.ValueMember = "mahh";
-
-            txtsltonkho.DataBindings.Clear();
-            txtsltonkho.DataBindings.Add("Text", txtSanPhamHD.DataSource, "tonkho");
-
-            tonkho = int.Parse(txtsltonkho.Text.Trim());
-
-
-            txttonkho.Text = "( Còn lại " + tonkho + " Sản phẩm này )";*/
 
         }
 
@@ -550,9 +536,13 @@ namespace QLBanHang
 
         void bingdingPhanQuyen()
         {
+            dtdanhsachuser.DataBindings.Clear(); 
+
             DataTable dt = new System.Data.DataTable();
             dt = pqctr.GetDataPQ();
             dtdanhsachuser.DataSource = dt;
+
+            
 
             txtAddTaiKhoan.DataBindings.Clear();
             txtAddTaiKhoan.DataBindings.Add("Text", dtdanhsachuser.DataSource, "taikhoan");
@@ -1007,6 +997,8 @@ namespace QLBanHang
             txtGiamAdd.Text = "";
             lbloiBH.Text = "";
             txtKhachHangHD.Text = "";
+            txtDonViSp.Text = "";
+            txttonkho.Text = "";
 
             clearDataHD();
         }
@@ -1066,6 +1058,9 @@ namespace QLBanHang
 
             txtDonViSp.DataBindings.Clear();
             txtDonViSp.DataBindings.Add("Text", txtSanPhamHD.DataSource, "donvi");
+
+            txttonkho.DataBindings.Clear();
+            txttonkho.DataBindings.Add("Text",txtSanPhamHD.DataSource,"tonkho");
 
             txtMaSpAdd.DataBindings.Clear();
             txtMaSpAdd.DataBindings.Add("Text", txtSanPhamHD.DataSource, "mahh");
@@ -1190,8 +1185,9 @@ namespace QLBanHang
 
         // END  KHU VỰC DÀNH CHO TAB THỐNG KÊ ********************************************************* //
 
-        /* ********************************************************************************************************** */
-        // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ ADMIN ********************************************************* //
+/* ****************************************************************************************************************************** */
+      
+       // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ ADMIN ********************************************************* //
 
         void ganDulieuQL(QuanLyObj nvObj)
         {
@@ -1234,7 +1230,252 @@ namespace QLBanHang
 
         /* ********************************************************************************************************** */
 
+        // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ TÀI KHOẢN ********************************************************* //
 
+
+
+        // END  KHU VỰC DÀNH CHO TAB QUẢN LÝ TÀI KHOẢN ********************************************************* //
+        /* ********************************************************************************************************** */
+
+        void dis_enLoadUSer(bool e) // e = mở ; !e = đóng
+        {
+            rbntTKNhanVien.Checked = e;
+        }
+        void loadUser()
+        {
+            txtAddTaiKhoan.Text = "";
+            txtNewPass.Text = "";
+            txtReNewPass.Text = "";
+            emailsaoluunhanvienmoi.Text = "";
+
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+
+            gbDanhSachUser.Text = "Danh sách tài khoản User";
+            mnphanquyen.Text = "Phân quyền nhân viên";
+
+            NhanVienCtrl nv = new NhanVienCtrl();
+            txtNameUser.DataSource = nv.getData();
+            txtNameUser.DisplayMember = "tennv";
+            txtNameUser.ValueMember = "manv";
+
+            txtAddPhanQuyen.Items.Clear();
+            txtAddPhanQuyen.Items.Add("2");
+            txtAddPhanQuyen.Items.Add("3");
+
+
+        }
+
+        void loadAdmin()
+        {
+
+            txtAddTaiKhoan.Text = "admin";
+            txtNewPass.Text = "";
+            txtReNewPass.Text = "";
+            emailsaoluunhanvienmoi.Text = "";
+            txtNameUser.Text = "";
+
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+
+            gbDanhSachUser.Text = "Danh sách tài khoản Admin";
+            mnphanquyen.Text = "Đổi tên admin";
+
+            //txtAddPhanQuyen.Items.Clear();
+            txtAddPhanQuyen.Items.Clear();
+            txtAddPhanQuyen.Items.Add("1");
+            txtAddPhanQuyen.SelectedItem = 1;
+
+            NhanVienCtrl nv = new NhanVienCtrl();
+            txtNameUser.DataSource = nv.getData();
+            txtNameUser.DisplayMember = "tennv";
+            txtNameUser.ValueMember = "manv";
+
+            dtdanhsachuser.DataBindings.Clear();
+            bingdingAdmin(); // load bảng dữ liệu 
+        }
+
+        void dis_enNhanVien(bool e) // e = mở ; !e = đóng
+        {
+            mndangkymoi.Enabled = e;
+            mndoimatkhau.Enabled = e;
+            mnphanquyen.Enabled = e;
+            LuuTKmoi.Enabled = !e;
+            HuyTKmoi.Enabled = !e;
+
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = !e;
+
+            dtdanhsachuser.Enabled = e;
+        }
+
+        void dis_enAdmin(bool e) // e = mở ; !e = đóng
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = e;
+            LuuTKmoi.Enabled = !e;
+            HuyTKmoi.Enabled = !e;
+
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = !e;
+
+        }
+
+        void dkmoinhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = e;
+            txtNewPass.Enabled = e;
+            txtReNewPass.Enabled = e;
+            emailsaoluunhanvienmoi.Enabled = e;
+            txtNameUser.Enabled = e;
+            txtAddPhanQuyen.Enabled = e;
+
+            txtAddTaiKhoan.Text = "";
+            txtNewPass.Text = "";
+            txtReNewPass.Text = "";
+            emailsaoluunhanvienmoi.Text = "";
+
+            NhanVienCtrl nv = new NhanVienCtrl();
+            txtNameUser.DataSource = nv.getData();
+            txtNameUser.DisplayMember = "tennv";
+            txtNameUser.ValueMember = "manv";
+
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+            emailsaoluunhanvienmoi.DataBindings.Add("Text", txtNameUser.DataSource, "email");
+
+        }
+
+        void gandulieuthemmoiuser()
+        {
+            /* Tăng mã tự động*/
+            string LastID = Idctr.GetLastID("PHANQUYEN", "id"); // bảng, cột được lấy mã cuối
+            string maid = TangMaTuDong(LastID, "US");  // Tiền tố US + mã tự động tăng
+
+
+            txtNameUser.DisplayMember = "manv";
+            txtNameUser.ValueMember = "tennv";
+
+
+            pqObj.ID = maid.Trim();
+            pqObj.Taikhoan = txtAddTaiKhoan.Text.Trim();
+            pqObj.MatKhau = txtReNewPass.Text.Trim();
+            pqObj.Quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
+            int quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
+            pqObj.maNhanVien = txtNameUser.Text.Trim();
+
+            if (quyen == 2)
+            {
+                pqObj.GhiChu = "2. Quyền Quản Lý ( tab Bán Hàng và tab Quản Lý)";
+            }
+            else if (quyen == 3)
+            {
+                pqObj.GhiChu = "3. Quyền Nhân Viên ( tab Bán Hàng )";
+            }
+            else
+            {
+                thongbaoloiadmin.Text = "Vui lòng chọn phân quyền là : 2 hoặc 3 !";
+            }
+
+        }
+
+        void gandulieuthemmoiadmin()
+        {
+            qlObj.ID = "admin";
+            qlObj.Taikhoan = "admin";
+            qlObj.MatKhau = txtReNewPass.Text.Trim();
+            qlObj.Ten = txtNameUser.Text.Trim();
+
+        }
+        void dkmoiAdmin(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = e;
+            txtReNewPass.Enabled = e;
+            emailsaoluunhanvienmoi.Enabled = e;
+            txtNameUser.Enabled = e;
+            txtAddPhanQuyen.Enabled = e;
+
+            NhanVienCtrl nv = new NhanVienCtrl();
+            txtNameUser.DataSource = nv.getData();
+            txtNameUser.DisplayMember = "tennv";
+            txtNameUser.ValueMember = "manv";
+
+            emailsaoluunhanvienmoi.DataBindings.Clear();
+            emailsaoluunhanvienmoi.DataBindings.Add("Text", txtNameUser.DataSource, "email");
+        }
+        void doimknhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = e;
+            txtReNewPass.Enabled = e;
+            emailsaoluunhanvienmoi.Enabled = e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = !e;
+
+        }
+
+        void phanquyennhanvien(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = !e;
+            txtAddPhanQuyen.Enabled = e;
+
+        }
+        void phanquyenadmin(bool e)
+        {
+            mndangkymoi.Enabled = !e;
+            mndoimatkhau.Enabled = !e;
+            mnphanquyen.Enabled = !e;
+            LuuTKmoi.Enabled = e;
+            HuyTKmoi.Enabled = e;
+
+            grLoaiTaiKhoan.Enabled = !e;
+            txtAddTaiKhoan.Enabled = !e;
+            txtNewPass.Enabled = !e;
+            txtReNewPass.Enabled = !e;
+            emailsaoluunhanvienmoi.Enabled = !e;
+            txtNameUser.Enabled = e;
+            txtAddPhanQuyen.Enabled = !e;
+
+        }
 
         /* ********************************************************************************************************** */
         /* ********************************************************************************************************** */
@@ -1246,6 +1487,8 @@ namespace QLBanHang
 
         private void mnThemNv_Click_1(object sender, EventArgs e)
         {
+            thongbaoloinhanvien.Text = "";
+
             flag = 0;
             dis_enNV(true);
             clearDataNV();
@@ -1257,25 +1500,41 @@ namespace QLBanHang
 
         private void mnSuaNv_Click(object sender, EventArgs e)
         {
-            flag = 1;
-            bingdingNV();
-            dis_enNV(true);
+            thongbaoloinhanvien.Text = "";
+            if (txtMaNv.Text == "" || txtMaNv.Text == null)
+            {
+                thongbaoloinhanvien.Text = "Chưa chọn nhân viên. ";
+            }
+            else
+            { 
+                flag = 1;
+                bingdingNV();
+                dis_enNV(true);
+            }
         }
 
         private void mnXoaNv_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Xóa 𝗡𝗵â𝗻 𝗩𝗶ê𝗻 và 𝗧à𝗶 𝗞𝗵𝗼ả𝗻 của nhân viên này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            thongbaoloinhanvien.Text = "";
+            if (txtMaNv.Text == "" || txtMaNv.Text == null)
             {
-                // Xóa
-                if (nvctr.delDate(txtMaNv.Text.Trim()))
-                    MessageBox.Show(" 𝐗𝐨á thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("𝐗𝐨á thất bại !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                thongbaoloinhanvien.Text = "Chưa chọn nhân viên. ";
             }
-            else return;
+            else
+            {
+                DialogResult dr = MessageBox.Show("Xóa NHÂN VIÊN này. Bạn sẽ đồng thời xóa bỏ TÀI KHOẢN ĐĂNG NHẬP của nhân viên này.\n \nBẠN CÓ CHẮC KHÔNG ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Yes)
+                {
+                    // Xóa
+                    if (nvctr.delDate(txtMaNv.Text.Trim()))
+                        MessageBox.Show(" 𝐗𝐨á thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("𝐗𝐨á thất bại !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else return;
 
-            Form2_Load(sender, e);
+                Form2_Load(sender, e);
+            }
         }
 
         private void mnLuuNv_Click(object sender, EventArgs e)
@@ -1326,6 +1585,8 @@ namespace QLBanHang
         //  START  KHU VỰC DÀNH CHO TAB KHÁCH HÀNG ********************************************************* //
         private void mnThemKh_Click(object sender, EventArgs e)
         {
+            thongbaoloikhachhang.Text = "";
+
             flagKH = 0;
             dis_enKH(true);
             loadcontrolKH();
@@ -1338,26 +1599,42 @@ namespace QLBanHang
 
         private void mnSuaKh_Click(object sender, EventArgs e)
         {
-            flagKH = 1;
-            bingdingKH();
-            //loadcontrolKH();
-            dis_enKH(true);
+            thongbaoloikhachhang.Text = "";
+            if (txtMaKhachHang.Text == "" || txtMaKhachHang.Text == null)
+            {
+                thongbaoloikhachhang.Text = "Chưa chọn khách hàng cần sửa. ";
+            }
+            else
+            {
+                flagKH = 1;
+                bingdingKH();
+                //loadcontrolKH();
+                dis_enKH(true);
+            }
         }
 
         private void mnXoaKh_Click(object sender, EventArgs e)
         {
-            DialogResult dr2 = MessageBox.Show("Bạn có chắc muốn XÓA thông tin khách hàng này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr2 == DialogResult.Yes)
+            thongbaoloikhachhang.Text = "";
+            if (txtMaKhachHang.Text == "" || txtMaKhachHang.Text == null)
             {
-                // Xóa
-                if (khctr.delDateKH(txtMaKhachHang.Text.Trim()))
-                    MessageBox.Show("Bạn đã XÓA thông tin khách hàng thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                thongbaoloikhachhang.Text = "Chưa chọn khách hàng cần xóa. ";
             }
-            else return;
+            else
+            {
+                DialogResult dr2 = MessageBox.Show("Bạn có chắc muốn XÓA thông tin khách hàng này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr2 == DialogResult.Yes)
+                {
+                    // Xóa
+                    if (khctr.delDateKH(txtMaKhachHang.Text.Trim()))
+                        MessageBox.Show("Bạn đã XÓA thông tin khách hàng thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else return;
 
-            Form2_Load(sender, e);
+                Form2_Load(sender, e);
+            }
         }
 
         private void mnLuuKh_Click(object sender, EventArgs e)
@@ -1410,6 +1687,8 @@ namespace QLBanHang
 
         private void mnThemLoai_Click(object sender, EventArgs e)
         {
+            thongbaoloiloaisanpham.Text = "";
+
             flagLHH = 0;
             dis_enLHH(true);
             clearDataLHH();
@@ -1421,25 +1700,41 @@ namespace QLBanHang
 
         private void mnSuaLoai_Click(object sender, EventArgs e)
         {
-            flagLHH = 1;
-            bingdingLHH();
-            dis_enLHH(true);           
+            thongbaoloiloaisanpham.Text = "";
+            if (txtMaLoaiSanPham.Text == "" || txtMaLoaiSanPham.Text == null)
+            {
+                thongbaoloiloaisanpham.Text = "Chưa chọn loại sản phẩm cần sửa. ";
+            }
+            else
+            {
+                flagLHH = 1;
+                bingdingLHH();
+                dis_enLHH(true);
+            }
         }
 
         private void mnXoaLoai_Click(object sender, EventArgs e)
         {
-            DialogResult dr3 = MessageBox.Show("Bạn có chắc muốn XÓA thông tin Loại Sản Phẩm này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr3 == DialogResult.Yes)
+            thongbaoloiloaisanpham.Text = "";
+            if (txtMaLoaiSanPham.Text == "" || txtMaLoaiSanPham.Text == null)
             {
-                // Xóa
-                if (lhhctr.delDateLHH(txtMaLoaiSanPham.Text.Trim()))
-                    MessageBox.Show("Bạn đã XÓA thông tin Loại Sản Phẩm thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                thongbaoloiloaisanpham.Text = "Chưa chọn loại sản phẩm cần xóa. ";
             }
-            else return;
+            else
+            {
+                DialogResult dr3 = MessageBox.Show("Xóa loại sản phẩm này. Đồng nghĩa với việc xóa tất cả thông tin sản phẩm thuộc loại này.\nBạn có chắc sẽ ngừng kinh doanh loại sản phẩm này? ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr3 == DialogResult.Yes)
+                {
+                    // Xóa
+                    if (lhhctr.delDateLHH(txtMaLoaiSanPham.Text.Trim()))
+                        MessageBox.Show("Bạn đã XÓA thông tin Loại Sản Phẩm thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else return;
 
-            Form2_Load(sender, e);
+                Form2_Load(sender, e);
+            }
         }
 
         private void mnLuuLoai_Click(object sender, EventArgs e)
@@ -1492,6 +1787,7 @@ namespace QLBanHang
 
         private void mnThemNcc_Click(object sender, EventArgs e)
         {
+            thongbaoloincc.Text = "";
 
             flagNCC = 0;
             dis_enNCC(true);
@@ -1504,26 +1800,42 @@ namespace QLBanHang
 
         private void mnSuaNcc_Click(object sender, EventArgs e)
         {
-            flagNCC = 1;
-            bingdingNCC();
-            dis_enNCC(true);
+            thongbaoloincc.Text = "";
+            if (txtMaNCC.Text == "" || txtMaNCC.Text == null)
+            {
+                thongbaoloincc.Text = "Chưa chọn nhà cung cấp cần sửa. ";
+            }
+            else
+            {
+                flagNCC = 1;
+                bingdingNCC();
+                dis_enNCC(true);
+            }
         }
 
         private void mnXoaNcc_Click(object sender, EventArgs e)
         {
-            DialogResult dr4 = MessageBox.Show("Bạn có chắc muốn XÓA thông tin NCC này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr4 == DialogResult.Yes)
+            thongbaoloincc.Text = "";
+            if (txtMaNCC.Text == "" || txtMaNCC.Text == null)
             {
-                // Xóa
-                if (nccctr.delDateNCC(txtMaNCC.Text.Trim()))
-                    MessageBox.Show("Bạn đã XÓA thông tin NCC thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                thongbaoloincc.Text = "Chưa chọn nhà cung cấp cần xóa. ";
             }
             else
-                return;
+            {
+                DialogResult dr4 = MessageBox.Show("Xóa nhà cung cấp này. Tất cả các thông tin sản phẩm từ Nhà cung cấp này sẻ bị mất vĩnh viễn.\nBạn có chắn chắn không ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr4 == DialogResult.Yes)
+                {
+                    // Xóa
+                    if (nccctr.delDateNCC(txtMaNCC.Text.Trim()))
+                        MessageBox.Show("Bạn đã XÓA thông tin NCC thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    return;
 
-            Form2_Load(sender, e);
+                Form2_Load(sender, e);
+            }
         }
 
         private void mnLuuNcc_Click(object sender, EventArgs e)
@@ -1576,6 +1888,8 @@ namespace QLBanHang
 
         private void mnThemKm_Click(object sender, EventArgs e)
         {
+            thongbaoloikm.Text = "";
+
             flagKM = 0;
             dis_enKm(true);
             clearDataKm();
@@ -1587,26 +1901,42 @@ namespace QLBanHang
 
         private void mnSuaKm_Click(object sender, EventArgs e)
         {
-            flagKM = 1;
-            bingdingKm();
-            dis_enKm(true);
+            thongbaoloikm.Text = "";
+            if (txtMaKm.Text == "" || txtMaKm.Text == null)
+            {
+                thongbaoloikm.Text = "Chưa chọn khuyến mãi cần sửa. ";
+            }
+            else
+            {
+                flagKM = 1;
+                bingdingKm();
+                dis_enKm(true);
+            }
         }
 
         private void mnXoaKm_Click(object sender, EventArgs e)
         {
-            DialogResult dr5 = MessageBox.Show("Bạn có chắc muốn XÓA thông tin khuyến mãi này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr5 == DialogResult.Yes)
+            thongbaoloikm.Text = "";
+            if (txtMaKm.Text == "" || txtMaKm.Text == null)
             {
-                // Xóa
-                if (kmctr.delDateKm(txtMaKm.Text.Trim()))
-                    MessageBox.Show("Bạn đã XÓA thông tin khuyến mãi thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                thongbaoloikm.Text = "Chưa chọn khuyến mãi cần xóa. ";
             }
             else
-                return;
+            {
+                DialogResult dr5 = MessageBox.Show("Bạn có chắc muốn XÓA thông tin khuyến mãi này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr5 == DialogResult.Yes)
+                {
+                    // Xóa
+                    if (kmctr.delDateKm(txtMaKm.Text.Trim()))
+                        MessageBox.Show("Bạn đã XÓA thông tin khuyến mãi thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    return;
 
-            Form2_Load(sender, e);
+                Form2_Load(sender, e);
+            }
         }
 
         private void mnLuuKm_Click(object sender, EventArgs e)
@@ -1658,6 +1988,8 @@ namespace QLBanHang
 
         private void mnThemSp_Click(object sender, EventArgs e)
         {
+            thongbaoloisanpham.Text = "";
+
             flagHH = 0;
             dis_enHH(true);
             loadcontrolHH();
@@ -1670,27 +2002,43 @@ namespace QLBanHang
 
         private void mnXoaSp_Click(object sender, EventArgs e)
         {
-            DialogResult dr6 = MessageBox.Show("Bạn có chắc muốn XÓA thông tin sản phẩm này ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr6 == DialogResult.Yes)
+            thongbaoloisanpham.Text = "";
+            if (txtMaHH.Text == "" || txtMaHH.Text == null)
             {
-                // Xóa
-                if (hhctr.delDateHH(txtMaHH.Text.Trim()))
-                    MessageBox.Show("Bạn đã XÓA thông tin sản phẩm thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                thongbaoloisanpham.Text = "Chưa chọn sản phẩm cần xóa. ";
             }
             else
-                return;
+            {
+                DialogResult dr6 = MessageBox.Show("Xóa SẢN PHẨM này. Thông tin THỐNG KÊ DOANH THU  của sản phẩm này trong toàn bộ thời gian qua sẽ bị mất vĩnh viễn !.\nBạn có chắc chắn muốn xóa không ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr6 == DialogResult.Yes)
+                {
+                    // Xóa
+                    if (hhctr.delDateHH(txtMaHH.Text.Trim()))
+                        MessageBox.Show("Bạn đã XÓA thông tin sản phẩm thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    return;
 
-            Form2_Load(sender, e);
+                Form2_Load(sender, e);
+            }
         }
 
         private void mnSuaSp_Click(object sender, EventArgs e)
         {
-            flagHH = 1;
-            loadcontrolHH();
-            bingdingHH();
-            dis_enHH(true);
+            thongbaoloisanpham.Text = "";
+            if (txtMaHH.Text == "" || txtMaHH.Text == null)
+            {
+                thongbaoloisanpham.Text = "Chưa chọn sản phẩm cần sửa. ";
+            }
+            else
+            {
+                flagHH = 1;
+                loadcontrolHH();
+                bingdingHH();
+                dis_enHH(true);
+            }
             
         }
 
@@ -1706,26 +2054,34 @@ namespace QLBanHang
                     // TH Thêm nv mới
                     if (hhctr.addDataHH(hhObj))
                     {
+                        loadcontrolHH();
                         MessageBox.Show("Bạn đã THÊM một sản phẩm mới thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         Form2_Load(sender, e);
                         dis_enHH(false);
                     }
                     else
+                    {
+                        loadcontrolHH();
                         MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
                     // TH Sửa tt nhân viên
                     if (hhctr.updDateHH(hhObj))
                     {
+                        loadcontrolHH();
                         MessageBox.Show("Bạn đã CẬP NHẬT thông tin sản phẩm thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         Form2_Load(sender, e);
                         dis_enHH(false);
                     }
                     else
+                    {
+                        loadcontrolHH();
                         MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -1792,21 +2148,19 @@ namespace QLBanHang
             /*
              * Xóa hóa đơn + đồng thời xóa cthd
             */
-
-
-            DialogResult dr6 = MessageBox.Show("Hóa đơn này sẽ bị xóa ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr6 == DialogResult.Yes)
-            {
-                // Xóa
-                if (hdctr.delDateHD(txtMaHD.Text.Trim()))
-                    MessageBox.Show("Bạn đã XÓA thông tin hóa đơn thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dr6 = MessageBox.Show("Hóa đơn này sẽ bị xóa ?", "XÁC NHẬN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr6 == DialogResult.Yes)
+                {
+                    // Xóa
+                    if (hdctr.delDateHD(txtMaHD.Text.Trim()))
+                        MessageBox.Show("Bạn đã XÓA thông tin hóa đơn thành công !", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
-                    MessageBox.Show("XÓA THẤT BẠI : LỖI HỆ THỐNG !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-                return;
+                    return;
 
-            Form2_Load(sender, e); 
+                Form2_Load(sender, e);            
         }
 
         private void btnHuyCHTD_Click(object sender, EventArgs e)
@@ -2311,250 +2665,10 @@ namespace QLBanHang
         /* ********************************************************************************************************** */
         // START  KHU VỰC DÀNH CHO TAB QUẢN LÝ USER ********************************************************* //
 
-           
-            void dis_enLoadUSer(bool e) // e = mở ; !e = đóng
-            {
-                rbntTKNhanVien.Checked = e;
-            
-            }
-            void loadUser()
-            {
-                txtAddTaiKhoan.Text = "";
-                txtNewPass.Text = "";
-                txtReNewPass.Text = "";
-                emailsaoluunhanvienmoi.Text = "";
-
-                emailsaoluunhanvienmoi.DataBindings.Clear();
-
-                gbDanhSachUser.Text = "Danh sách tài khoản User";
-                mnphanquyen.Text = "Phân quyền nhân viên";
-
-                NhanVienCtrl nv = new NhanVienCtrl();
-                txtNameUser.DataSource = nv.getData();
-                txtNameUser.DisplayMember = "tennv";
-                txtNameUser.ValueMember = "manv";
-
-                txtAddPhanQuyen.Items.Clear();
-                txtAddPhanQuyen.Items.Add("2");
-                txtAddPhanQuyen.Items.Add("3");
-
-
-        }
-
-        void loadAdmin()
-        {
-            
-            txtAddTaiKhoan.Text = "admin";
-            txtNewPass.Text = "";
-            txtReNewPass.Text = "";
-            emailsaoluunhanvienmoi.Text = "";
-            txtNameUser.Text = "";
-
-            emailsaoluunhanvienmoi.DataBindings.Clear();
-
-            gbDanhSachUser.Text = "Danh sách tài khoản Admin";
-            mnphanquyen.Text = "Đổi tên admin";
-
-            //txtAddPhanQuyen.Items.Clear();
-            txtAddPhanQuyen.Items.Clear();
-            txtAddPhanQuyen.Items.Add("1");
-            txtAddPhanQuyen.SelectedItem = 1;
-
-            NhanVienCtrl nv = new NhanVienCtrl();
-            txtNameUser.DataSource = nv.getData();
-            txtNameUser.DisplayMember = "tennv";
-            txtNameUser.ValueMember = "manv";
-
-            dtdanhsachuser.DataBindings.Clear();
-            bingdingAdmin(); // load bảng dữ liệu 
-        }
-
-        void dis_enNhanVien(bool e) // e = mở ; !e = đóng
-            {
-                mndangkymoi.Enabled = e;
-                mndoimatkhau.Enabled = e;
-                mnphanquyen.Enabled = e;
-                LuuTKmoi.Enabled = !e;
-                HuyTKmoi.Enabled = !e;
-
-                txtAddTaiKhoan.Enabled = !e;
-                txtNewPass.Enabled = !e;
-                txtReNewPass.Enabled = !e;
-                emailsaoluunhanvienmoi.Enabled = !e;
-                txtNameUser.Enabled = !e;
-                txtAddPhanQuyen.Enabled = !e;
-
-                dtdanhsachuser.Enabled = e;
-            }
-
-            void dis_enAdmin(bool e) // e = mở ; !e = đóng
-            {
-                mndangkymoi.Enabled = !e;
-                mndoimatkhau.Enabled = !e;
-                mnphanquyen.Enabled = e;
-                LuuTKmoi.Enabled = !e;
-                HuyTKmoi.Enabled = !e;
-
-                txtAddTaiKhoan.Enabled = !e;
-                txtNewPass.Enabled = !e;
-                txtReNewPass.Enabled = !e;
-                emailsaoluunhanvienmoi.Enabled = !e;
-                txtNameUser.Enabled = !e;
-                txtAddPhanQuyen.Enabled = !e;
-
-            }
-
-        void dkmoinhanvien(bool e)
-        {
-            mndangkymoi.Enabled = !e;
-            mndoimatkhau.Enabled = !e;
-            mnphanquyen.Enabled = !e;
-            LuuTKmoi.Enabled = e;
-            HuyTKmoi.Enabled = e;
-
-            grLoaiTaiKhoan.Enabled = !e;
-            txtAddTaiKhoan.Enabled = e;
-            txtNewPass.Enabled = e;
-            txtReNewPass.Enabled = e;
-            emailsaoluunhanvienmoi.Enabled = e;
-            txtNameUser.Enabled = e;
-            txtAddPhanQuyen.Enabled = e;
-
-            txtAddTaiKhoan.Text = "";
-            txtNewPass.Text = "";
-            txtReNewPass.Text = "";
-            emailsaoluunhanvienmoi.Text = "";
-
-            NhanVienCtrl nv = new NhanVienCtrl();
-            txtNameUser.DataSource = nv.getData();
-            txtNameUser.DisplayMember = "tennv";
-            txtNameUser.ValueMember = "manv";
-
-            emailsaoluunhanvienmoi.DataBindings.Clear();
-            emailsaoluunhanvienmoi.DataBindings.Add("Text",txtNameUser.DataSource,"email");
-
-        }
-
-        void gandulieuthemmoiuser()
-        {
-            /* Tăng mã tự động*/
-            string LastID = Idctr.GetLastID("PHANQUYEN", "id"); // bảng, cột được lấy mã cuối
-            string maid = TangMaTuDong(LastID, "US");  // Tiền tố US + mã tự động tăng
-
-
-            txtNameUser.DisplayMember = "manv";
-            txtNameUser.ValueMember = "tennv";
-
-
-            pqObj.ID = maid.Trim();
-            pqObj.Taikhoan = txtAddTaiKhoan.Text.Trim();
-            pqObj.MatKhau = txtReNewPass.Text.Trim();
-            pqObj.Quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
-            int quyen = int.Parse(txtAddPhanQuyen.Text.Trim());
-            pqObj.maNhanVien = txtNameUser.Text.Trim();
-
-            if(quyen==2)
-            {
-                pqObj.GhiChu = "2. Quyền Quản Lý ( tab Bán Hàng và tab Quản Lý)";
-            }
-            else if (quyen == 3)
-            {
-                pqObj.GhiChu = "3. Quyền Nhân Viên ( tab Bán Hàng )";
-            }
-            else
-            {
-                thongbaoloiadmin.Text = "Vui lòng chọn phân quyền là : 2 hoặc 3 !";
-            }
-            
-        }
-
-        void gandulieuthemmoiadmin()
-        {            
-            qlObj.ID = "admin";
-            qlObj.Taikhoan = "admin";
-            qlObj.MatKhau = txtReNewPass.Text.Trim();
-            qlObj.Ten = txtNameUser.Text.Trim();
-
-        }
-        void dkmoiAdmin(bool e)
-        {
-            mndangkymoi.Enabled = !e;
-            mndoimatkhau.Enabled = !e;
-            mnphanquyen.Enabled = !e;
-            LuuTKmoi.Enabled = e;
-            HuyTKmoi.Enabled = e;
-
-            grLoaiTaiKhoan.Enabled = !e;
-            txtAddTaiKhoan.Enabled = !e;
-            txtNewPass.Enabled = e;
-            txtReNewPass.Enabled = e;
-            emailsaoluunhanvienmoi.Enabled = e;
-            txtNameUser.Enabled = e;
-            txtAddPhanQuyen.Enabled = e;
-
-            NhanVienCtrl nv = new NhanVienCtrl();
-            txtNameUser.DataSource = nv.getData();
-            txtNameUser.DisplayMember = "tennv";
-            txtNameUser.ValueMember = "manv";
-
-            emailsaoluunhanvienmoi.DataBindings.Clear();
-            emailsaoluunhanvienmoi.DataBindings.Add("Text", txtNameUser.DataSource, "email");
-        }
-        void doimknhanvien(bool e)
-        {
-            mndangkymoi.Enabled = !e;
-            mndoimatkhau.Enabled = !e;
-            mnphanquyen.Enabled = !e;
-            LuuTKmoi.Enabled = e;
-            HuyTKmoi.Enabled = e;
-
-            grLoaiTaiKhoan.Enabled = !e;
-            txtAddTaiKhoan.Enabled = !e;
-            txtNewPass.Enabled = e;
-            txtReNewPass.Enabled = e;
-            emailsaoluunhanvienmoi.Enabled = e;
-            txtNameUser.Enabled = !e;
-            txtAddPhanQuyen.Enabled = !e;
-
-        }
-
-        void phanquyennhanvien(bool e)
-        {
-            mndangkymoi.Enabled = !e;
-            mndoimatkhau.Enabled = !e;
-            mnphanquyen.Enabled = !e;
-            LuuTKmoi.Enabled = e;
-            HuyTKmoi.Enabled = e;
-
-            grLoaiTaiKhoan.Enabled = !e;
-            txtAddTaiKhoan.Enabled = !e;
-            txtNewPass.Enabled = !e;
-            txtReNewPass.Enabled = !e;
-            emailsaoluunhanvienmoi.Enabled = !e;
-            txtNameUser.Enabled = !e;
-            txtAddPhanQuyen.Enabled = e;
-
-        }
-        void phanquyenadmin(bool e)
-        {
-            mndangkymoi.Enabled = !e;
-            mndoimatkhau.Enabled = !e;
-            mnphanquyen.Enabled = !e;
-            LuuTKmoi.Enabled = e;
-            HuyTKmoi.Enabled = e;
-
-            grLoaiTaiKhoan.Enabled = !e;
-            txtAddTaiKhoan.Enabled = !e;
-            txtNewPass.Enabled = !e;
-            txtReNewPass.Enabled = !e;
-            emailsaoluunhanvienmoi.Enabled = !e;
-            txtNameUser.Enabled = e;
-            txtAddPhanQuyen.Enabled = !e;
-
-        }
-
         private void mndangkymoi_Click(object sender, EventArgs e)
         {
+            thongbaoloiadmin.Text = "";
+
             flagPQ = 0;
             flagAdmin = 0;
             dtdanhsachuser.Enabled = false;
@@ -2575,26 +2689,42 @@ namespace QLBanHang
 
         private void mndoimatkhau_Click(object sender, EventArgs e)
         {
-            flagPQ = 1;
-            flagAdmin = 1;
-            doimknhanvien(true);
-            dtdanhsachuser.Enabled = false;
+            thongbaoloiadmin.Text = "";
+            if (txtAddTaiKhoan.Text == "" || txtAddTaiKhoan.Text == null)
+            {
+                thongbaoloiadmin.Text = "Chưa chọn tài khoản cần đổi mật khẩu. ";
+            }
+            else
+            {
+                flagPQ = 1;
+                flagAdmin = 1;
+                doimknhanvien(true);
+                dtdanhsachuser.Enabled = false;
+            }
         }
 
         private void mnphanquyen_Click(object sender, EventArgs e)
         {
-            flagPQ = 1;
-            flagAdmin = 1;
-
-            dtdanhsachuser.Enabled = false;
-
-            if (rbntTKNhanVien.Checked)
+            thongbaoloiadmin.Text = "";
+            if (txtAddTaiKhoan.Text == "" || txtAddTaiKhoan.Text == null)
             {
-                phanquyennhanvien(true);
+                thongbaoloiadmin.Text = "Chưa chọn tài khoản cần phân quyền lại. ";
             }
-            else if (rbntTKAdmin.Checked)
+            else
             {
-                phanquyenadmin(true);
+                flagPQ = 1;
+                flagAdmin = 1;
+
+                dtdanhsachuser.Enabled = false;
+
+                if (rbntTKNhanVien.Checked)
+                {
+                    phanquyennhanvien(true);
+                }
+                else if (rbntTKAdmin.Checked)
+                {
+                    phanquyenadmin(true);
+                }
             }
         }
 
@@ -2620,8 +2750,12 @@ namespace QLBanHang
 
                     }
                     else
+                    {
                         MessageBox.Show("THÊM THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                        txtNameUser.DisplayMember = "tennv";
+                        txtNameUser.ValueMember = "manv";
+                    }
+                    }
                 else
                 {
                     // Sửa tài khoản nhân viên
@@ -2636,7 +2770,11 @@ namespace QLBanHang
                         grLoaiTaiKhoan.Enabled = true;
                     }
                     else
+                    {
                         MessageBox.Show("CẬP NHẬT THẤT BẠI : NHẬP SAI THÔNG TIN !", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtNameUser.DisplayMember = "tennv";
+                        txtNameUser.ValueMember = "manv";
+                    }
                 }
             }
             else if(rbntTKAdmin.Checked)
@@ -2737,31 +2875,29 @@ namespace QLBanHang
             {
                 thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên NV✘"; return false;
             }
+            else if (txtGioiTinhNv.SelectedItem == null)
+            {
+                thongbaoloinhanvien.Text = "✘ Chọn sai giới tính ✘"; return false;
+            }
+            else if ((now.Year - s) < 18)
+            {
+                thongbaoloinhanvien.Text = "✘ Ngày Sinh Không Hợp Lệ ✘"; return false;
+            }
             else if(txtDiaChiNv.Text=="")
             {
                 thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên DiaChi✘"; return false;
+            }
+            else if (txtSdtNv.Text == "")
+            {
+                thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên SĐT ✘"; return false;
             }
 
             else if (txtCmndNv.Text == "")
             {
                 thongbaoloinhanvien.Text = "✘Không được bỏ trống CMND ✘"; return false;
             }
-            else if (txtSdtNv.Text == "")
-            {
-                thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên SĐT ✘"; return false;
-            }
-            else if (txtSdtNv.Text == "")
-            {
-                thongbaoloinhanvien.Text = "✘Không được bỏ trống Tên SĐT ✘"; return false;
-            }
-            else if(txtGioiTinhNv.SelectedItem == null)
-            {
-                thongbaoloinhanvien.Text = "✘ Vui lòng chọn giới tính Nhân Viên ✘"; return false;
-            }
-            else if ((now.Year - s) <18)
-            {
-                thongbaoloinhanvien.Text = "✘ Ngày Sinh Không Hợp Lệ ✘"; return false;
-            }
+            
+            
             else
             {
                 try
@@ -2959,6 +3095,40 @@ namespace QLBanHang
 
         }
 
+
+        private void txtSoLuongCTHD_ValueChanged(object sender, EventArgs e)
+        {
+            Fixloisoluongcthd();
+        }
+
+        private bool Fixloisoluongcthd()
+        {
+            lbloiBH.Text = "";
+
+            String soluongmua = txtSoLuongCTHD.Value.ToString();
+            String tonkho = txttonkho.Text.Trim();
+
+            int sl = int.Parse(soluongmua);
+
+            int result = 0;
+            if (int.TryParse(txttonkho.Text, out result))
+
+
+                if (sl > result)
+                {
+                    lbloiBH.Text = "Vượt quá số lượng còn lại";
+                   // txtSoLuongCTHD;// = result.ToString();
+                    return false;
+                }
+                else
+                {
+                    lbloiBH.Text = "";
+                    return true;
+                }
+            return false;
+        }
+
+
         // END  KHU VỰC DÀNH CHO TAB FIX LỖI ********************************************************* //
 
         /* ********************************************************************************************************** */
@@ -3010,6 +3180,12 @@ namespace QLBanHang
             return prefixID + zeroNumber + nextID.ToString();
             
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            ReloadThongKe(tkObj);
+        }
+
 
 
 
