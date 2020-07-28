@@ -122,7 +122,7 @@ CREATE TABLE CTHD (
 CREATE TABLE QUANLY (
 	id nchar(5),
     taikhoan nchar(5),
-    matkhau nchar(20),
+    matkhau nchar(100),
 	ten nvarchar(50)
 
 	CONSTRAINT pk_quanly PRIMARY KEY (id),
@@ -133,7 +133,7 @@ CREATE TABLE QUANLY (
 CREATE TABLE PHANQUYEN (
     id nchar(5),
 	taikhoan nchar(20),
-	matkhau nchar(20),
+	matkhau nchar(100),
     phanquyen int,
 	manv nchar(5),
 	ghichu nchar(255)
@@ -158,6 +158,7 @@ CREATE TABLE THONGKE (   -- thống kê số lượng từng sản phẩm bán t
 	CONSTRAINT pk_thongke PRIMARY KEY (mahh,ngayban),
 
 );
+
 
 
 select mahh, ngayban, soluongban, tongthu, loinhuan from THONGKE
@@ -246,15 +247,15 @@ Delete CTHD from HANGHOA hh, NCC nc Where nc.mancc=hh.mancc and hh.mahh = CTHD.m
 
 Delete THONGKE from HANGHOA hh, NCC nc Where  THONGKE.mahh= hh.mahh and hh.mancc=nc.mancc and nc.mancc ='NC002'
 
-select * from THONGKE
+Delete  from PHANQUYEN
 
 
 
-select * from QUANLY
+Delete  from QUANLY
 select * from PHANQUYEN
 
 
-select * from CTHD
+select * from QUANLY
 select * from HANGHOA
 select * from NCC
 

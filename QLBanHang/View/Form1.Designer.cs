@@ -130,7 +130,7 @@
             this.txtThongBaoDangnhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.txtThongBaoDangnhap.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtThongBaoDangnhap.ForeColor = System.Drawing.Color.White;
-            this.txtThongBaoDangnhap.Location = new System.Drawing.Point(103, 212);
+            this.txtThongBaoDangnhap.Location = new System.Drawing.Point(58, 211);
             this.txtThongBaoDangnhap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtThongBaoDangnhap.Name = "txtThongBaoDangnhap";
             this.txtThongBaoDangnhap.Size = new System.Drawing.Size(85, 19);
