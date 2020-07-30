@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label47 = new System.Windows.Forms.Label();
             this.txtmailsaoluu = new System.Windows.Forms.TextBox();
             this.txtNoteInternet = new System.Windows.Forms.Label();
             this.hidepassmoi2 = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,6 @@
             this.label68 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabledulieuthongke = new System.Windows.Forms.DataGridView();
             this.btnReloadThongKe = new System.Windows.Forms.Button();
@@ -103,6 +103,7 @@
             this.label50 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.checksaoluu = new System.Windows.Forms.CheckBox();
             this.thongbaoloiadmin = new System.Windows.Forms.Label();
             this.gbDanhSachUser = new System.Windows.Forms.GroupBox();
             this.dtdanhsachuser = new System.Windows.Forms.DataGridView();
@@ -365,7 +366,6 @@
             this.txttonkhosub = new System.Windows.Forms.Label();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
-            this.checksaoluu = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -503,6 +503,13 @@
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.TabStop = false;
             // 
+            // label47
+            // 
+            resources.ApplyResources(this.label47, "label47");
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label47.Name = "label47";
+            this.label47.Click += new System.EventHandler(this.label47_Click);
+            // 
             // txtmailsaoluu
             // 
             resources.ApplyResources(this.txtmailsaoluu, "txtmailsaoluu");
@@ -623,13 +630,6 @@
             // 
             resources.ApplyResources(this.label44, "label44");
             this.label44.Name = "label44";
-            // 
-            // label47
-            // 
-            resources.ApplyResources(this.label47, "label47");
-            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label47.Name = "label47";
-            this.label47.Click += new System.EventHandler(this.label47_Click);
             // 
             // tabPage2
             // 
@@ -1013,6 +1013,14 @@
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
+            // checksaoluu
+            // 
+            resources.ApplyResources(this.checksaoluu, "checksaoluu");
+            this.checksaoluu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checksaoluu.Name = "checksaoluu";
+            this.checksaoluu.UseVisualStyleBackColor = false;
+            this.checksaoluu.CheckedChanged += new System.EventHandler(this.checksaoluu_CheckedChanged);
+            // 
             // thongbaoloiadmin
             // 
             resources.ApplyResources(this.thongbaoloiadmin, "thongbaoloiadmin");
@@ -1390,8 +1398,8 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dtDanhSachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -1410,8 +1418,8 @@
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
             this.dtDanhSachNhanVien.ReadOnly = true;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
             // 
             // manv
@@ -3099,14 +3107,6 @@
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.ReadOnly = true;
             this.dtdanhsachcthd.RowTemplate.Height = 24;
-            // 
-            // checksaoluu
-            // 
-            resources.ApplyResources(this.checksaoluu, "checksaoluu");
-            this.checksaoluu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.checksaoluu.Name = "checksaoluu";
-            this.checksaoluu.UseVisualStyleBackColor = false;
-            this.checksaoluu.CheckedChanged += new System.EventHandler(this.checksaoluu_CheckedChanged);
             // 
             // Form2
             // 
