@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using QLBanHang.Object;
+using System.Security.Cryptography;
 
 
 namespace QLBanHang.Model
@@ -14,8 +15,8 @@ namespace QLBanHang.Model
     {
 
         public static int QUYEN_USER; // kiểm tra quyền truy cập để ẩn tab
-        public static string ID_USER; // chứa id của user đăng nhập
-        public static string Name_USER;
+        public static string ID_USER; // chứa id của user đăng nhập để truy cập bất cứ thông tin liên quan
+        public static string Name_USER; // tên nhân viên đăng nhập
 
         ConnectToSQL con = new ConnectToSQL();
         SqlCommand cmd = new SqlCommand();
@@ -155,6 +156,47 @@ namespace QLBanHang.Model
 
             return pq;
         }
+
+
+        public string Checkname(string taikhoan)  // lấy quyền đăng nhập
+        {
+            DataTable dt = new DataTable();
+            string pq = "";
+
+            cmd.CommandText = "Select * From PHANQUYEN where taikhoan='" + taikhoan + "' ";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.OpenConn();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                sda.Fill(dt);
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        pq = dr["manv"].ToString();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+            finally
+            {
+                con.CloseConn();
+            }
+
+            return pq;
+        }
+
+
 
 
     }

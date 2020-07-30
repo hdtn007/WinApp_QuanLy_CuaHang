@@ -122,7 +122,7 @@ CREATE TABLE CTHD (
 CREATE TABLE QUANLY (
 	id nchar(5),
     taikhoan nchar(5),
-    matkhau nchar(20),
+    matkhau nchar(100),
 	ten nvarchar(50)
 
 	CONSTRAINT pk_quanly PRIMARY KEY (id),
@@ -133,7 +133,7 @@ CREATE TABLE QUANLY (
 CREATE TABLE PHANQUYEN (
     id nchar(5),
 	taikhoan nchar(20),
-	matkhau nchar(20),
+	matkhau nchar(100),
     phanquyen int,
 	manv nchar(5),
 	ghichu nchar(255)
@@ -158,6 +158,7 @@ CREATE TABLE THONGKE (   -- thống kê số lượng từng sản phẩm bán t
 	CONSTRAINT pk_thongke PRIMARY KEY (mahh,ngayban),
 
 );
+
 
 
 select mahh, ngayban, soluongban, tongthu, loinhuan from THONGKE
@@ -238,17 +239,25 @@ select sum(tongthu) as tongthu, sum(loinhuan) as loinhuan, sum(soluongban) as so
 select sum(tongthu) as tongthu, sum(loinhuan) as loinhuan, sum(soluongban) as soluongban from THONGKE where  month(ngayban) = month(CONVERT(DATE,'01/01/2020',103)) and year(ngayban) = year(CONVERT(DATE,'01/01/2020',103))
 
 select sum(tongthu) as tongthu, sum(loinhuan) as loinhuan, sum(soluongban) as soluongban from THONGKE where  day(ngayban) = day(CONVERT(DATE,'01/01/2020',103)) and month(ngayban) = month(CONVERT(DATE,'01/01/2020',103)) and year(ngayban) = year(CONVERT(DATE,'01/01/2020',103))
+
+
 Delete THONGKE Where mahh = 'SP002'
 
-select * from THONGKE
-select * from HANGHOA
+Delete CTHD from HANGHOA hh, NCC nc Where nc.mancc=hh.mancc and hh.mahh = CTHD.mahh and nc.mancc = 'NC004'
 
-select * from CTHD
+Delete THONGKE from HANGHOA hh, NCC nc Where  THONGKE.mahh= hh.mahh and hh.mancc=nc.mancc and nc.mancc ='NC002'
+
+Delete  from PHANQUYEN
+
+
+
+Delete  from QUANLY
+select * from PHANQUYEN
+
+
 select * from QUANLY
+select * from HANGHOA
+select * from NCC
 
-select * from NHANVIEN
-
-select MAX(manv)manv from NHANVIEN
-SELECT TOP 1 manv FROM NHANVIEN ORDER BY manv DESC
 
 -- end Ngoãn + An --------------------------------------------------------------

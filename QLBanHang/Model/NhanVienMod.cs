@@ -112,7 +112,7 @@ namespace QLBanHang.Model
 
         public bool DelData(string ma)
         {
-            cmd.CommandText = "Delete NHANVIEN Where manv = '" + ma + "'";
+            cmd.CommandText = "Delete PHANQUYEN Where manv='" + ma + "'; Delete NHANVIEN Where manv = '" + ma + "' "; // xóa bản nhiều trước
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try

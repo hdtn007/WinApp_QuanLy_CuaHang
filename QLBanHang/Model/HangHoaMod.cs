@@ -137,7 +137,7 @@ namespace QLBanHang.Model
 
         public bool DelDataHH(string ma)
         {
-            cmd.CommandText = "Delete HANGHOA Where mahh = '" + ma + "'";
+            cmd.CommandText = "Delete CTHD Where mahh = '" + ma + "'; Delete HANGHOA Where mahh = '" + ma + "';Delete THONGKE Where mahh = '" + ma + "' ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try

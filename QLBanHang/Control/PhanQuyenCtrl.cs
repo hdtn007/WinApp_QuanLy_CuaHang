@@ -37,5 +37,10 @@ namespace QLBanHang.Control
         {
             return pqMod.UpdDataPQ(pqObj);
         }
+
+        public string CheckName(string taikhoan)
+        {
+            return pqMod.Checkname(taikhoan);
+        }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -171,56 +171,6 @@
             this.mnXoaNv = new System.Windows.Forms.ToolStripMenuItem();
             this.mnLuuNv = new System.Windows.Forms.ToolStripMenuItem();
             this.mnHuyNv = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.thongbaoloisanpham = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtDaBanHH = new System.Windows.Forms.TextBox();
-            this.txtTonKhoHH = new System.Windows.Forms.NumericUpDown();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtKhuyenMaiHH = new System.Windows.Forms.ComboBox();
-            this.txtNhaCungCapHH = new System.Windows.Forms.ComboBox();
-            this.txtLoaiHangHH = new System.Windows.Forms.ComboBox();
-            this.txtDonViHH = new System.Windows.Forms.ComboBox();
-            this.txtGiaNhapSp = new System.Windows.Forms.TextBox();
-            this.txtGhiChuHH = new System.Windows.Forms.TextBox();
-            this.txtDonGiaHH = new System.Windows.Forms.TextBox();
-            this.txtTenHH = new System.Windows.Forms.TextBox();
-            this.txtMaHH = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dtDanhSachHangHoa = new System.Windows.Forms.DataGridView();
-            this.mahh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenhh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gianhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.daban = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ghichusp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.mnThemSp = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnSuaSp = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnXoaSp = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnLuuSp = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnHuySp = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -275,6 +225,75 @@
             this.mnXoaKm = new System.Windows.Forms.ToolStripMenuItem();
             this.mnLuuKm = new System.Windows.Forms.ToolStripMenuItem();
             this.mnHuyKm = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.thongbaoloiloaisanpham = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.txtTenLoaiSanPham = new System.Windows.Forms.TextBox();
+            this.txtMaLoaiSanPham = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.dtDanhSachLoaiSanPham = new System.Windows.Forms.DataGridView();
+            this.maloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenloaiHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip6 = new System.Windows.Forms.MenuStrip();
+            this.mnThemLoai = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnSuaLoai = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnXoaLoai = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnLuuLoai = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnHuyLoai = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.thongbaoloisanpham = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtDaBanHH = new System.Windows.Forms.TextBox();
+            this.txtTonKhoHH = new System.Windows.Forms.NumericUpDown();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtKhuyenMaiHH = new System.Windows.Forms.ComboBox();
+            this.txtNhaCungCapHH = new System.Windows.Forms.ComboBox();
+            this.txtLoaiHangHH = new System.Windows.Forms.ComboBox();
+            this.txtDonViHH = new System.Windows.Forms.ComboBox();
+            this.txtGiaNhapSp = new System.Windows.Forms.TextBox();
+            this.txtGhiChuHH = new System.Windows.Forms.TextBox();
+            this.txtDonGiaHH = new System.Windows.Forms.TextBox();
+            this.txtTenHH = new System.Windows.Forms.TextBox();
+            this.txtMaHH = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtDanhSachHangHoa = new System.Windows.Forms.DataGridView();
+            this.mahh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gianhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tonkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.daban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichusp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.mnThemSp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnSuaSp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnXoaSp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnLuuSp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnHuySp = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -306,25 +325,6 @@
             this.mnXoaKh = new System.Windows.Forms.ToolStripMenuItem();
             this.mnLuuKh = new System.Windows.Forms.ToolStripMenuItem();
             this.mnHuyKh = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.thongbaoloiloaisanpham = new System.Windows.Forms.Label();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.txtTenLoaiSanPham = new System.Windows.Forms.TextBox();
-            this.txtMaLoaiSanPham = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.dtDanhSachLoaiSanPham = new System.Windows.Forms.DataGridView();
-            this.maloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenloaiHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip6 = new System.Windows.Forms.MenuStrip();
-            this.mnThemLoai = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnSuaLoai = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnXoaLoai = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnLuuLoai = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnHuyLoai = new System.Windows.Forms.ToolStripMenuItem();
             this.tabBanHang = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
@@ -362,8 +362,10 @@
             this.txtTTKhuyenMai = new System.Windows.Forms.Label();
             this.btnThemCTHD = new System.Windows.Forms.Button();
             this.txtKhachHangHD = new System.Windows.Forms.ComboBox();
+            this.txttonkhosub = new System.Windows.Forms.Label();
             this.gbDanhSachCTHD = new System.Windows.Forms.GroupBox();
             this.dtdanhsachcthd = new System.Windows.Forms.DataGridView();
+            this.checksaoluu = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -395,14 +397,6 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachNhanVien)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTonKhoHH)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachHangHoa)).BeginInit();
-            this.menuStrip2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -418,13 +412,6 @@
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachKhuyenmai)).BeginInit();
             this.menuStrip4.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachKhachHang)).BeginInit();
-            this.menuStrip5.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -432,6 +419,21 @@
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachLoaiSanPham)).BeginInit();
             this.menuStrip6.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTonKhoHH)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachHangHoa)).BeginInit();
+            this.menuStrip2.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachKhachHang)).BeginInit();
+            this.menuStrip5.SuspendLayout();
             this.tabBanHang.SuspendLayout();
             this.panel12.SuspendLayout();
             this.groupBox15.SuspendLayout();
@@ -453,7 +455,7 @@
             // 
             // tabAdmin
             // 
-            this.tabAdmin.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabAdmin.Controls.Add(this.tabControl3);
             this.tabAdmin.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.tabAdmin, "tabAdmin");
@@ -470,14 +472,15 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPage1.Controls.Add(this.groupBox13);
-            this.tabPage1.Controls.Add(this.label47);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             // 
             // groupBox13
             // 
+            this.groupBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox13.Controls.Add(this.label47);
             this.groupBox13.Controls.Add(this.txtmailsaoluu);
             this.groupBox13.Controls.Add(this.txtNoteInternet);
             this.groupBox13.Controls.Add(this.hidepassmoi2);
@@ -502,8 +505,8 @@
             // 
             // txtmailsaoluu
             // 
-            this.txtmailsaoluu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtmailsaoluu, "txtmailsaoluu");
+            this.txtmailsaoluu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmailsaoluu.Name = "txtmailsaoluu";
             // 
             // txtNoteInternet
@@ -514,48 +517,48 @@
             // 
             // hidepassmoi2
             // 
-            this.hidepassmoi2.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.hidepassmoi2, "hidepassmoi2");
+            this.hidepassmoi2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.hidepassmoi2.Name = "hidepassmoi2";
             this.hidepassmoi2.TabStop = false;
             this.hidepassmoi2.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // showpassmoi2
             // 
-            this.showpassmoi2.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.showpassmoi2, "showpassmoi2");
+            this.showpassmoi2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.showpassmoi2.Name = "showpassmoi2";
             this.showpassmoi2.TabStop = false;
             this.showpassmoi2.Click += new System.EventHandler(this.showpassmoi2_Click);
             // 
             // hidepassmoi1
             // 
-            this.hidepassmoi1.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.hidepassmoi1, "hidepassmoi1");
+            this.hidepassmoi1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.hidepassmoi1.Name = "hidepassmoi1";
             this.hidepassmoi1.TabStop = false;
             this.hidepassmoi1.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // showpassmoi1
             // 
-            this.showpassmoi1.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.showpassmoi1, "showpassmoi1");
+            this.showpassmoi1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.showpassmoi1.Name = "showpassmoi1";
             this.showpassmoi1.TabStop = false;
             this.showpassmoi1.Click += new System.EventHandler(this.showpassmoi1_Click);
             // 
             // hidepasscu
             // 
-            this.hidepasscu.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.hidepasscu, "hidepasscu");
+            this.hidepasscu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.hidepasscu.Name = "hidepasscu";
             this.hidepasscu.TabStop = false;
             this.hidepasscu.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // showpasscu
             // 
-            this.showpasscu.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.showpasscu, "showpasscu");
+            this.showpasscu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.showpasscu.Name = "showpasscu";
             this.showpasscu.TabStop = false;
             this.showpasscu.Click += new System.EventHandler(this.showpasscu_Click);
@@ -569,36 +572,36 @@
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtMatKhauCu, "txtMatKhauCu");
+            this.txtMatKhauCu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             // 
             // btnHuyMatKhau
             // 
-            this.btnHuyMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             resources.ApplyResources(this.btnHuyMatKhau, "btnHuyMatKhau");
+            this.btnHuyMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnHuyMatKhau.Name = "btnHuyMatKhau";
             this.btnHuyMatKhau.UseVisualStyleBackColor = false;
             this.btnHuyMatKhau.Click += new System.EventHandler(this.btnHuyMatKhau_Click);
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtMatKhauMoi, "txtMatKhauMoi");
+            this.txtMatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             // 
             // btnLuuMatKhau
             // 
-            this.btnLuuMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             resources.ApplyResources(this.btnLuuMatKhau, "btnLuuMatKhau");
+            this.btnLuuMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnLuuMatKhau.Name = "btnLuuMatKhau";
             this.btnLuuMatKhau.UseVisualStyleBackColor = false;
             this.btnLuuMatKhau.Click += new System.EventHandler(this.btnLuuMatKhau_Click);
             // 
             // txtNhapLaiMatKhau
             // 
-            this.txtNhapLaiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtNhapLaiMatKhau, "txtNhapLaiMatKhau");
+            this.txtNhapLaiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             // 
             // label38
@@ -626,10 +629,11 @@
             resources.ApplyResources(this.label47, "label47");
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label47.Name = "label47";
+            this.label47.Click += new System.EventHandler(this.label47_Click);
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPage2.Controls.Add(this.tabledulieuthongke);
             this.tabPage2.Controls.Add(this.btnReloadThongKe);
             this.tabPage2.Controls.Add(this.groupBox18);
@@ -647,15 +651,16 @@
             // 
             // btnReloadThongKe
             // 
-            this.btnReloadThongKe.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReloadThongKe.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnReloadThongKe, "btnReloadThongKe");
-            this.btnReloadThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReloadThongKe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnReloadThongKe.Name = "btnReloadThongKe";
             this.btnReloadThongKe.UseVisualStyleBackColor = false;
             this.btnReloadThongKe.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox18
             // 
+            this.groupBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox18.Controls.Add(this.btnXoaTKSP);
             this.groupBox18.Controls.Add(this.txtGiaNhapSpPhuChu);
             this.groupBox18.Controls.Add(this.txtGiaBanSpPhuChu);
@@ -855,11 +860,12 @@
             // 
             // txtDateBangSoLieu
             // 
-            this.txtDateBangSoLieu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDateBangSoLieu.BackColor = System.Drawing.Color.White;
             this.txtDateBangSoLieu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtDateBangSoLieu, "txtDateBangSoLieu");
             this.txtDateBangSoLieu.ForeColor = System.Drawing.Color.Red;
             this.txtDateBangSoLieu.Name = "txtDateBangSoLieu";
+            this.txtDateBangSoLieu.ReadOnly = true;
             // 
             // txtTrongNgayBSL
             // 
@@ -907,7 +913,6 @@
             // txtChonSanPhamThongKe
             // 
             this.txtChonSanPhamThongKe.BackColor = System.Drawing.Color.White;
-            this.txtChonSanPhamThongKe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtChonSanPhamThongKe, "txtChonSanPhamThongKe");
             this.txtChonSanPhamThongKe.FormattingEnabled = true;
             this.txtChonSanPhamThongKe.Name = "txtChonSanPhamThongKe";
@@ -992,14 +997,15 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPage9.Controls.Add(this.panel13);
             resources.ApplyResources(this.tabPage9, "tabPage9");
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel13.Controls.Add(this.checksaoluu);
             this.panel13.Controls.Add(this.thongbaoloiadmin);
             this.panel13.Controls.Add(this.gbDanhSachUser);
             this.panel13.Controls.Add(this.groupBox19);
@@ -1023,7 +1029,7 @@
             // dtdanhsachuser
             // 
             this.dtdanhsachuser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtdanhsachuser.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtdanhsachuser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtdanhsachuser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtdanhsachuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtdanhsachuser, "dtdanhsachuser");
@@ -1034,6 +1040,7 @@
             // 
             // groupBox19
             // 
+            this.groupBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox19.Controls.Add(this.grLoaiTaiKhoan);
             this.groupBox19.Controls.Add(this.emailsaoluunhanvienmoi);
             this.groupBox19.Controls.Add(this.listBox1);
@@ -1085,7 +1092,7 @@
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.ForeColor = System.Drawing.Color.Gray;
@@ -1098,6 +1105,7 @@
             // 
             // txtAddPhanQuyen
             // 
+            this.txtAddPhanQuyen.BackColor = System.Drawing.Color.White;
             this.txtAddPhanQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtAddPhanQuyen, "txtAddPhanQuyen");
             this.txtAddPhanQuyen.FormattingEnabled = true;
@@ -1161,7 +1169,7 @@
             // 
             // menuStrip7
             // 
-            this.menuStrip7.BackColor = System.Drawing.Color.Gray;
+            this.menuStrip7.BackColor = System.Drawing.Color.White;
             this.menuStrip7.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip7.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1210,7 +1218,7 @@
             // 
             // tabQuanLy
             // 
-            this.tabQuanLy.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabQuanLy.Controls.Add(this.tabControl2);
             this.tabQuanLy.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.tabQuanLy, "tabQuanLy");
@@ -1219,18 +1227,18 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage7);
             resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage3.BackColor = System.Drawing.Color.White;
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.tabPage3, "tabPage3");
@@ -1238,15 +1246,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel1.Controls.Add(this.thongbaoloinhanvien);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Name = "panel1";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // thongbaoloinhanvien
             // 
@@ -1256,7 +1263,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.BackColor = System.Drawing.Color.MediumTurquoise;
             this.groupBox2.Controls.Add(this.dtNgaySinhNv);
             this.groupBox2.Controls.Add(this.txtGioiTinhNv);
             this.groupBox2.Controls.Add(this.txtGhiChuNv);
@@ -1289,50 +1296,42 @@
             // txtGioiTinhNv
             // 
             this.txtGioiTinhNv.BackColor = System.Drawing.Color.White;
-            this.txtGioiTinhNv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtGioiTinhNv, "txtGioiTinhNv");
             this.txtGioiTinhNv.FormattingEnabled = true;
             this.txtGioiTinhNv.Name = "txtGioiTinhNv";
             // 
             // txtGhiChuNv
             // 
-            this.txtGhiChuNv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtGhiChuNv, "txtGhiChuNv");
             this.txtGhiChuNv.Name = "txtGhiChuNv";
             // 
             // txtSdtNv
             // 
-            this.txtSdtNv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtSdtNv, "txtSdtNv");
             this.txtSdtNv.Name = "txtSdtNv";
             // 
             // txtDiaChiNv
             // 
-            this.txtDiaChiNv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtDiaChiNv, "txtDiaChiNv");
             this.txtDiaChiNv.Name = "txtDiaChiNv";
             // 
             // txtEmailNv
             // 
-            this.txtEmailNv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtEmailNv, "txtEmailNv");
             this.txtEmailNv.Name = "txtEmailNv";
             // 
             // txtCmndNv
             // 
-            this.txtCmndNv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtCmndNv, "txtCmndNv");
             this.txtCmndNv.Name = "txtCmndNv";
             // 
             // txtTenNv
             // 
-            this.txtTenNv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtTenNv, "txtTenNv");
             this.txtTenNv.Name = "txtTenNv";
             // 
             // txtMaNv
             // 
-            this.txtMaNv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtMaNv, "txtMaNv");
             this.txtMaNv.Name = "txtMaNv";
             // 
@@ -1383,6 +1382,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.groupBox1.Controls.Add(this.dtDanhSachNhanVien);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
@@ -1390,10 +1390,10 @@
             // 
             // dtDanhSachNhanVien
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachNhanVien.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dtDanhSachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1410,8 +1410,8 @@
             this.dtDanhSachNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dtDanhSachNhanVien.Name = "dtDanhSachNhanVien";
             this.dtDanhSachNhanVien.ReadOnly = true;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.dtDanhSachNhanVien.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtDanhSachNhanVien.RowTemplate.Height = 24;
             // 
             // manv
@@ -1434,6 +1434,7 @@
             resources.ApplyResources(this.gioitinh, "gioitinh");
             this.gioitinh.Name = "gioitinh";
             this.gioitinh.ReadOnly = true;
+            this.gioitinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // ngaysinh
             // 
@@ -1479,7 +1480,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Gray;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -1532,9 +1533,566 @@
             this.mnHuyNv.Name = "mnHuyNv";
             this.mnHuyNv.Click += new System.EventHandler(this.mnHuyNv_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.White;
+            this.tabPage5.Controls.Add(this.panel3);
+            this.tabPage5.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.tabPage5, "tabPage5");
+            this.tabPage5.Name = "tabPage5";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel8);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel8.Controls.Add(this.thongbaoloincc);
+            this.panel8.Controls.Add(this.groupBox5);
+            this.panel8.Controls.Add(this.groupBox6);
+            this.panel8.Controls.Add(this.menuStrip3);
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            // 
+            // thongbaoloincc
+            // 
+            resources.ApplyResources(this.thongbaoloincc, "thongbaoloincc");
+            this.thongbaoloincc.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloincc.Name = "thongbaoloincc";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txtGhiChuNCC);
+            this.groupBox5.Controls.Add(this.txtSoDtNCC);
+            this.groupBox5.Controls.Add(this.txtDiaChiNCC);
+            this.groupBox5.Controls.Add(this.txtTenNCC);
+            this.groupBox5.Controls.Add(this.txtMaNCC);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.label30);
+            this.groupBox5.Controls.Add(this.label31);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // txtGhiChuNCC
+            // 
+            resources.ApplyResources(this.txtGhiChuNCC, "txtGhiChuNCC");
+            this.txtGhiChuNCC.Name = "txtGhiChuNCC";
+            // 
+            // txtSoDtNCC
+            // 
+            resources.ApplyResources(this.txtSoDtNCC, "txtSoDtNCC");
+            this.txtSoDtNCC.Name = "txtSoDtNCC";
+            // 
+            // txtDiaChiNCC
+            // 
+            resources.ApplyResources(this.txtDiaChiNCC, "txtDiaChiNCC");
+            this.txtDiaChiNCC.Name = "txtDiaChiNCC";
+            // 
+            // txtTenNCC
+            // 
+            resources.ApplyResources(this.txtTenNCC, "txtTenNCC");
+            this.txtTenNCC.Name = "txtTenNCC";
+            // 
+            // txtMaNCC
+            // 
+            resources.ApplyResources(this.txtMaNCC, "txtMaNCC");
+            this.txtMaNCC.Name = "txtMaNCC";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.Name = "label31";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dtDanhSachNhaCungCap);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // dtDanhSachNhaCungCap
+            // 
+            this.dtDanhSachNhaCungCap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtDanhSachNhaCungCap.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dtDanhSachNhaCungCap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtDanhSachNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDanhSachNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mancc,
+            this.tennccNCC,
+            this.diachiNCC,
+            this.sdtNCC,
+            this.ghichuNCC});
+            resources.ApplyResources(this.dtDanhSachNhaCungCap, "dtDanhSachNhaCungCap");
+            this.dtDanhSachNhaCungCap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dtDanhSachNhaCungCap.Name = "dtDanhSachNhaCungCap";
+            this.dtDanhSachNhaCungCap.ReadOnly = true;
+            this.dtDanhSachNhaCungCap.RowTemplate.Height = 24;
+            // 
+            // mancc
+            // 
+            this.mancc.DataPropertyName = "mancc";
+            resources.ApplyResources(this.mancc, "mancc");
+            this.mancc.Name = "mancc";
+            this.mancc.ReadOnly = true;
+            // 
+            // tennccNCC
+            // 
+            this.tennccNCC.DataPropertyName = "tenncc";
+            resources.ApplyResources(this.tennccNCC, "tennccNCC");
+            this.tennccNCC.Name = "tennccNCC";
+            this.tennccNCC.ReadOnly = true;
+            // 
+            // diachiNCC
+            // 
+            this.diachiNCC.DataPropertyName = "diachi";
+            resources.ApplyResources(this.diachiNCC, "diachiNCC");
+            this.diachiNCC.Name = "diachiNCC";
+            this.diachiNCC.ReadOnly = true;
+            // 
+            // sdtNCC
+            // 
+            this.sdtNCC.DataPropertyName = "sdt";
+            resources.ApplyResources(this.sdtNCC, "sdtNCC");
+            this.sdtNCC.Name = "sdtNCC";
+            this.sdtNCC.ReadOnly = true;
+            // 
+            // ghichuNCC
+            // 
+            this.ghichuNCC.DataPropertyName = "ghichu";
+            resources.ApplyResources(this.ghichuNCC, "ghichuNCC");
+            this.ghichuNCC.Name = "ghichuNCC";
+            this.ghichuNCC.ReadOnly = true;
+            // 
+            // menuStrip3
+            // 
+            this.menuStrip3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.menuStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnThemNcc,
+            this.mnSuaNcc,
+            this.mnXoaNcc,
+            this.mnLuuNcc,
+            this.mnHuyNcc});
+            resources.ApplyResources(this.menuStrip3, "menuStrip3");
+            this.menuStrip3.Name = "menuStrip3";
+            // 
+            // mnThemNcc
+            // 
+            this.mnThemNcc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnThemNcc.ForeColor = System.Drawing.Color.Black;
+            this.mnThemNcc.Name = "mnThemNcc";
+            resources.ApplyResources(this.mnThemNcc, "mnThemNcc");
+            this.mnThemNcc.Click += new System.EventHandler(this.mnThemNcc_Click);
+            // 
+            // mnSuaNcc
+            // 
+            this.mnSuaNcc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnSuaNcc.ForeColor = System.Drawing.Color.Black;
+            this.mnSuaNcc.Name = "mnSuaNcc";
+            resources.ApplyResources(this.mnSuaNcc, "mnSuaNcc");
+            this.mnSuaNcc.Click += new System.EventHandler(this.mnSuaNcc_Click);
+            // 
+            // mnXoaNcc
+            // 
+            this.mnXoaNcc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnXoaNcc.ForeColor = System.Drawing.Color.Black;
+            this.mnXoaNcc.Name = "mnXoaNcc";
+            resources.ApplyResources(this.mnXoaNcc, "mnXoaNcc");
+            this.mnXoaNcc.Click += new System.EventHandler(this.mnXoaNcc_Click);
+            // 
+            // mnLuuNcc
+            // 
+            this.mnLuuNcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.mnLuuNcc, "mnLuuNcc");
+            this.mnLuuNcc.ForeColor = System.Drawing.Color.Black;
+            this.mnLuuNcc.Name = "mnLuuNcc";
+            this.mnLuuNcc.Click += new System.EventHandler(this.mnLuuNcc_Click);
+            // 
+            // mnHuyNcc
+            // 
+            this.mnHuyNcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.mnHuyNcc, "mnHuyNcc");
+            this.mnHuyNcc.ForeColor = System.Drawing.Color.Black;
+            this.mnHuyNcc.Name = "mnHuyNcc";
+            this.mnHuyNcc.Click += new System.EventHandler(this.mnHuyNcc_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.White;
+            this.tabPage6.Controls.Add(this.panel4);
+            this.tabPage6.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.tabPage6, "tabPage6");
+            this.tabPage6.Name = "tabPage6";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel9);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel9.Controls.Add(this.thongbaoloikm);
+            this.panel9.Controls.Add(this.groupBox7);
+            this.panel9.Controls.Add(this.groupBox8);
+            this.panel9.Controls.Add(this.menuStrip4);
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
+            // 
+            // thongbaoloikm
+            // 
+            resources.ApplyResources(this.thongbaoloikm, "thongbaoloikm");
+            this.thongbaoloikm.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloikm.Name = "thongbaoloikm";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label20);
+            this.groupBox7.Controls.Add(this.txtGiamKm);
+            this.groupBox7.Controls.Add(this.txtNoiDungKm);
+            this.groupBox7.Controls.Add(this.txtTenKm);
+            this.groupBox7.Controls.Add(this.txtMaKm);
+            this.groupBox7.Controls.Add(this.label34);
+            this.groupBox7.Controls.Add(this.label36);
+            this.groupBox7.Controls.Add(this.label39);
+            this.groupBox7.Controls.Add(this.label40);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label20.Name = "label20";
+            // 
+            // txtGiamKm
+            // 
+            resources.ApplyResources(this.txtGiamKm, "txtGiamKm");
+            this.txtGiamKm.Name = "txtGiamKm";
+            // 
+            // txtNoiDungKm
+            // 
+            resources.ApplyResources(this.txtNoiDungKm, "txtNoiDungKm");
+            this.txtNoiDungKm.Name = "txtNoiDungKm";
+            // 
+            // txtTenKm
+            // 
+            resources.ApplyResources(this.txtTenKm, "txtTenKm");
+            this.txtTenKm.Name = "txtTenKm";
+            // 
+            // txtMaKm
+            // 
+            resources.ApplyResources(this.txtMaKm, "txtMaKm");
+            this.txtMaKm.Name = "txtMaKm";
+            // 
+            // label34
+            // 
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.Name = "label34";
+            // 
+            // label36
+            // 
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.Name = "label36";
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.Name = "label39";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.dtDanhSachKhuyenmai);
+            resources.ApplyResources(this.groupBox8, "groupBox8");
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.TabStop = false;
+            // 
+            // dtDanhSachKhuyenmai
+            // 
+            this.dtDanhSachKhuyenmai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtDanhSachKhuyenmai.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dtDanhSachKhuyenmai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtDanhSachKhuyenmai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDanhSachKhuyenmai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mask,
+            this.tenskSK,
+            this.noidung,
+            this.giamSK});
+            resources.ApplyResources(this.dtDanhSachKhuyenmai, "dtDanhSachKhuyenmai");
+            this.dtDanhSachKhuyenmai.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dtDanhSachKhuyenmai.Name = "dtDanhSachKhuyenmai";
+            this.dtDanhSachKhuyenmai.ReadOnly = true;
+            this.dtDanhSachKhuyenmai.RowTemplate.Height = 24;
+            // 
+            // mask
+            // 
+            this.mask.DataPropertyName = "mask";
+            resources.ApplyResources(this.mask, "mask");
+            this.mask.Name = "mask";
+            this.mask.ReadOnly = true;
+            // 
+            // tenskSK
+            // 
+            this.tenskSK.DataPropertyName = "tensk";
+            resources.ApplyResources(this.tenskSK, "tenskSK");
+            this.tenskSK.Name = "tenskSK";
+            this.tenskSK.ReadOnly = true;
+            // 
+            // noidung
+            // 
+            this.noidung.DataPropertyName = "noidung";
+            resources.ApplyResources(this.noidung, "noidung");
+            this.noidung.Name = "noidung";
+            this.noidung.ReadOnly = true;
+            // 
+            // giamSK
+            // 
+            this.giamSK.DataPropertyName = "giam";
+            resources.ApplyResources(this.giamSK, "giamSK");
+            this.giamSK.Name = "giamSK";
+            this.giamSK.ReadOnly = true;
+            // 
+            // menuStrip4
+            // 
+            this.menuStrip4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.menuStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnThemKm,
+            this.mnSuaKm,
+            this.mnXoaKm,
+            this.mnLuuKm,
+            this.mnHuyKm});
+            resources.ApplyResources(this.menuStrip4, "menuStrip4");
+            this.menuStrip4.Name = "menuStrip4";
+            // 
+            // mnThemKm
+            // 
+            this.mnThemKm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnThemKm.ForeColor = System.Drawing.Color.Black;
+            this.mnThemKm.Name = "mnThemKm";
+            resources.ApplyResources(this.mnThemKm, "mnThemKm");
+            this.mnThemKm.Click += new System.EventHandler(this.mnThemKm_Click);
+            // 
+            // mnSuaKm
+            // 
+            this.mnSuaKm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnSuaKm.ForeColor = System.Drawing.Color.Black;
+            this.mnSuaKm.Name = "mnSuaKm";
+            resources.ApplyResources(this.mnSuaKm, "mnSuaKm");
+            this.mnSuaKm.Click += new System.EventHandler(this.mnSuaKm_Click);
+            // 
+            // mnXoaKm
+            // 
+            this.mnXoaKm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnXoaKm.ForeColor = System.Drawing.Color.Black;
+            this.mnXoaKm.Name = "mnXoaKm";
+            resources.ApplyResources(this.mnXoaKm, "mnXoaKm");
+            this.mnXoaKm.Click += new System.EventHandler(this.mnXoaKm_Click);
+            // 
+            // mnLuuKm
+            // 
+            this.mnLuuKm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.mnLuuKm, "mnLuuKm");
+            this.mnLuuKm.ForeColor = System.Drawing.Color.Black;
+            this.mnLuuKm.Name = "mnLuuKm";
+            this.mnLuuKm.Click += new System.EventHandler(this.mnLuuKm_Click);
+            // 
+            // mnHuyKm
+            // 
+            this.mnHuyKm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.mnHuyKm, "mnHuyKm");
+            this.mnHuyKm.ForeColor = System.Drawing.Color.Black;
+            this.mnHuyKm.Name = "mnHuyKm";
+            this.mnHuyKm.Click += new System.EventHandler(this.mnHuyKm_Click);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.White;
+            this.tabPage8.Controls.Add(this.panel6);
+            this.tabPage8.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.tabPage8, "tabPage8");
+            this.tabPage8.Name = "tabPage8";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel11);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel11.Controls.Add(this.thongbaoloiloaisanpham);
+            this.panel11.Controls.Add(this.groupBox11);
+            this.panel11.Controls.Add(this.groupBox12);
+            this.panel11.Controls.Add(this.menuStrip6);
+            resources.ApplyResources(this.panel11, "panel11");
+            this.panel11.Name = "panel11";
+            // 
+            // thongbaoloiloaisanpham
+            // 
+            resources.ApplyResources(this.thongbaoloiloaisanpham, "thongbaoloiloaisanpham");
+            this.thongbaoloiloaisanpham.ForeColor = System.Drawing.Color.Red;
+            this.thongbaoloiloaisanpham.Name = "thongbaoloiloaisanpham";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.txtTenLoaiSanPham);
+            this.groupBox11.Controls.Add(this.txtMaLoaiSanPham);
+            this.groupBox11.Controls.Add(this.label54);
+            this.groupBox11.Controls.Add(this.label55);
+            resources.ApplyResources(this.groupBox11, "groupBox11");
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.TabStop = false;
+            // 
+            // txtTenLoaiSanPham
+            // 
+            resources.ApplyResources(this.txtTenLoaiSanPham, "txtTenLoaiSanPham");
+            this.txtTenLoaiSanPham.Name = "txtTenLoaiSanPham";
+            // 
+            // txtMaLoaiSanPham
+            // 
+            resources.ApplyResources(this.txtMaLoaiSanPham, "txtMaLoaiSanPham");
+            this.txtMaLoaiSanPham.Name = "txtMaLoaiSanPham";
+            // 
+            // label54
+            // 
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.Name = "label54";
+            // 
+            // label55
+            // 
+            resources.ApplyResources(this.label55, "label55");
+            this.label55.Name = "label55";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.dtDanhSachLoaiSanPham);
+            resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.TabStop = false;
+            // 
+            // dtDanhSachLoaiSanPham
+            // 
+            this.dtDanhSachLoaiSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtDanhSachLoaiSanPham.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dtDanhSachLoaiSanPham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtDanhSachLoaiSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDanhSachLoaiSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maloai,
+            this.tenloaiHH});
+            resources.ApplyResources(this.dtDanhSachLoaiSanPham, "dtDanhSachLoaiSanPham");
+            this.dtDanhSachLoaiSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dtDanhSachLoaiSanPham.Name = "dtDanhSachLoaiSanPham";
+            this.dtDanhSachLoaiSanPham.ReadOnly = true;
+            this.dtDanhSachLoaiSanPham.RowTemplate.Height = 24;
+            // 
+            // maloai
+            // 
+            this.maloai.DataPropertyName = "maloai";
+            resources.ApplyResources(this.maloai, "maloai");
+            this.maloai.Name = "maloai";
+            this.maloai.ReadOnly = true;
+            // 
+            // tenloaiHH
+            // 
+            this.tenloaiHH.DataPropertyName = "tenloai";
+            resources.ApplyResources(this.tenloaiHH, "tenloaiHH");
+            this.tenloaiHH.Name = "tenloaiHH";
+            this.tenloaiHH.ReadOnly = true;
+            // 
+            // menuStrip6
+            // 
+            this.menuStrip6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.menuStrip6.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip6.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnThemLoai,
+            this.mnSuaLoai,
+            this.mnXoaLoai,
+            this.mnLuuLoai,
+            this.mnHuyLoai});
+            resources.ApplyResources(this.menuStrip6, "menuStrip6");
+            this.menuStrip6.Name = "menuStrip6";
+            // 
+            // mnThemLoai
+            // 
+            this.mnThemLoai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnThemLoai.ForeColor = System.Drawing.Color.Black;
+            this.mnThemLoai.Name = "mnThemLoai";
+            resources.ApplyResources(this.mnThemLoai, "mnThemLoai");
+            this.mnThemLoai.Click += new System.EventHandler(this.mnThemLoai_Click);
+            // 
+            // mnSuaLoai
+            // 
+            this.mnSuaLoai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnSuaLoai.ForeColor = System.Drawing.Color.Black;
+            this.mnSuaLoai.Name = "mnSuaLoai";
+            resources.ApplyResources(this.mnSuaLoai, "mnSuaLoai");
+            this.mnSuaLoai.Click += new System.EventHandler(this.mnSuaLoai_Click);
+            // 
+            // mnXoaLoai
+            // 
+            this.mnXoaLoai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mnXoaLoai.ForeColor = System.Drawing.Color.Black;
+            this.mnXoaLoai.Name = "mnXoaLoai";
+            resources.ApplyResources(this.mnXoaLoai, "mnXoaLoai");
+            this.mnXoaLoai.Click += new System.EventHandler(this.mnXoaLoai_Click);
+            // 
+            // mnLuuLoai
+            // 
+            this.mnLuuLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.mnLuuLoai, "mnLuuLoai");
+            this.mnLuuLoai.ForeColor = System.Drawing.Color.Black;
+            this.mnLuuLoai.Name = "mnLuuLoai";
+            this.mnLuuLoai.Click += new System.EventHandler(this.mnLuuLoai_Click);
+            // 
+            // mnHuyLoai
+            // 
+            this.mnHuyLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.mnHuyLoai, "mnHuyLoai");
+            this.mnHuyLoai.ForeColor = System.Drawing.Color.Black;
+            this.mnHuyLoai.Name = "mnHuyLoai";
+            this.mnHuyLoai.Click += new System.EventHandler(this.mnHuyLoai_Click);
+            // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage4.BackColor = System.Drawing.Color.White;
             this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.tabPage4, "tabPage4");
@@ -1548,7 +2106,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel7.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel7.Controls.Add(this.thongbaoloisanpham);
             this.panel7.Controls.Add(this.groupBox3);
             this.panel7.Controls.Add(this.groupBox4);
@@ -1595,11 +2153,12 @@
             // 
             // txtDaBanHH
             // 
-            this.txtDaBanHH.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDaBanHH.BackColor = System.Drawing.Color.MediumTurquoise;
             this.txtDaBanHH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtDaBanHH, "txtDaBanHH");
-            this.txtDaBanHH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtDaBanHH.ForeColor = System.Drawing.Color.White;
             this.txtDaBanHH.Name = "txtDaBanHH";
+            this.txtDaBanHH.ReadOnly = true;
             // 
             // txtTonKhoHH
             // 
@@ -1623,7 +2182,6 @@
             // txtKhuyenMaiHH
             // 
             this.txtKhuyenMaiHH.BackColor = System.Drawing.Color.White;
-            this.txtKhuyenMaiHH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtKhuyenMaiHH, "txtKhuyenMaiHH");
             this.txtKhuyenMaiHH.FormattingEnabled = true;
             this.txtKhuyenMaiHH.Name = "txtKhuyenMaiHH";
@@ -1631,7 +2189,6 @@
             // txtNhaCungCapHH
             // 
             this.txtNhaCungCapHH.BackColor = System.Drawing.Color.White;
-            this.txtNhaCungCapHH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtNhaCungCapHH, "txtNhaCungCapHH");
             this.txtNhaCungCapHH.FormattingEnabled = true;
             this.txtNhaCungCapHH.Name = "txtNhaCungCapHH";
@@ -1639,20 +2196,50 @@
             // txtLoaiHangHH
             // 
             this.txtLoaiHangHH.BackColor = System.Drawing.Color.White;
-            this.txtLoaiHangHH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtLoaiHangHH, "txtLoaiHangHH");
             this.txtLoaiHangHH.FormattingEnabled = true;
             this.txtLoaiHangHH.Name = "txtLoaiHangHH";
             // 
             // txtDonViHH
             // 
+            this.txtDonViHH.AutoCompleteCustomSource.AddRange(new string[] {
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource1"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource2"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource3"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource4"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource5"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource6"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource7"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource8"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource9"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource10"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource11"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource12"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource13"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource14"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource15"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource16"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource17"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource18"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource19"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource20"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource21"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource22"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource23"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource24"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource25"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource26"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource27"),
+            resources.GetString("txtDonViHH.AutoCompleteCustomSource28")});
+            this.txtDonViHH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtDonViHH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             resources.ApplyResources(this.txtDonViHH, "txtDonViHH");
             this.txtDonViHH.FormattingEnabled = true;
             this.txtDonViHH.Name = "txtDonViHH";
             // 
             // txtGiaNhapSp
             // 
-            this.txtGiaNhapSp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtGiaNhapSp, "txtGiaNhapSp");
             this.txtGiaNhapSp.Name = "txtGiaNhapSp";
             // 
@@ -1664,19 +2251,53 @@
             // 
             // txtDonGiaHH
             // 
-            this.txtDonGiaHH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDonGiaHH.AutoCompleteCustomSource.AddRange(new string[] {
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource1"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource2"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource3"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource4"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource5"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource6"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource7"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource8"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource9"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource10"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource11"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource12"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource13"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource14"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource15"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource16"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource17"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource18"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource19"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource20"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource21"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource22"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource23"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource24"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource25"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource26"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource27"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource28"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource29"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource30"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource31"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource32"),
+            resources.GetString("txtDonGiaHH.AutoCompleteCustomSource33")});
+            this.txtDonGiaHH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtDonGiaHH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             resources.ApplyResources(this.txtDonGiaHH, "txtDonGiaHH");
             this.txtDonGiaHH.Name = "txtDonGiaHH";
             // 
             // txtTenHH
             // 
-            this.txtTenHH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtTenHH, "txtTenHH");
             this.txtTenHH.Name = "txtTenHH";
             // 
             // txtMaHH
             // 
-            this.txtMaHH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtMaHH, "txtMaHH");
             this.txtMaHH.Name = "txtMaHH";
             // 
@@ -1751,7 +2372,7 @@
             // dtDanhSachHangHoa
             // 
             this.dtDanhSachHangHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtDanhSachHangHoa.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachHangHoa.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dtDanhSachHangHoa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1859,7 +2480,7 @@
             // 
             // menuStrip2
             // 
-            this.menuStrip2.BackColor = System.Drawing.Color.Gray;
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.menuStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1912,425 +2533,9 @@
             this.mnHuySp.Name = "mnHuySp";
             this.mnHuySp.Click += new System.EventHandler(this.mnHuySp_Click);
             // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage5.Controls.Add(this.panel3);
-            this.tabPage5.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.tabPage5, "tabPage5");
-            this.tabPage5.Name = "tabPage5";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel8);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Controls.Add(this.thongbaoloincc);
-            this.panel8.Controls.Add(this.groupBox5);
-            this.panel8.Controls.Add(this.groupBox6);
-            this.panel8.Controls.Add(this.menuStrip3);
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
-            // thongbaoloincc
-            // 
-            resources.ApplyResources(this.thongbaoloincc, "thongbaoloincc");
-            this.thongbaoloincc.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloincc.Name = "thongbaoloincc";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txtGhiChuNCC);
-            this.groupBox5.Controls.Add(this.txtSoDtNCC);
-            this.groupBox5.Controls.Add(this.txtDiaChiNCC);
-            this.groupBox5.Controls.Add(this.txtTenNCC);
-            this.groupBox5.Controls.Add(this.txtMaNCC);
-            this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Controls.Add(this.label27);
-            this.groupBox5.Controls.Add(this.label30);
-            this.groupBox5.Controls.Add(this.label31);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
-            // txtGhiChuNCC
-            // 
-            this.txtGhiChuNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtGhiChuNCC, "txtGhiChuNCC");
-            this.txtGhiChuNCC.Name = "txtGhiChuNCC";
-            // 
-            // txtSoDtNCC
-            // 
-            this.txtSoDtNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtSoDtNCC, "txtSoDtNCC");
-            this.txtSoDtNCC.Name = "txtSoDtNCC";
-            // 
-            // txtDiaChiNCC
-            // 
-            this.txtDiaChiNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtDiaChiNCC, "txtDiaChiNCC");
-            this.txtDiaChiNCC.Name = "txtDiaChiNCC";
-            // 
-            // txtTenNCC
-            // 
-            this.txtTenNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtTenNCC, "txtTenNCC");
-            this.txtTenNCC.Name = "txtTenNCC";
-            // 
-            // txtMaNCC
-            // 
-            this.txtMaNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtMaNCC, "txtMaNCC");
-            this.txtMaNCC.Name = "txtMaNCC";
-            // 
-            // label24
-            // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
-            // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
-            // label27
-            // 
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.Name = "label27";
-            // 
-            // label30
-            // 
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.Name = "label30";
-            // 
-            // label31
-            // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.Name = "label31";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.dtDanhSachNhaCungCap);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
-            // 
-            // dtDanhSachNhaCungCap
-            // 
-            this.dtDanhSachNhaCungCap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtDanhSachNhaCungCap.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dtDanhSachNhaCungCap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dtDanhSachNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtDanhSachNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mancc,
-            this.tennccNCC,
-            this.diachiNCC,
-            this.sdtNCC,
-            this.ghichuNCC});
-            resources.ApplyResources(this.dtDanhSachNhaCungCap, "dtDanhSachNhaCungCap");
-            this.dtDanhSachNhaCungCap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dtDanhSachNhaCungCap.Name = "dtDanhSachNhaCungCap";
-            this.dtDanhSachNhaCungCap.ReadOnly = true;
-            this.dtDanhSachNhaCungCap.RowTemplate.Height = 24;
-            // 
-            // mancc
-            // 
-            this.mancc.DataPropertyName = "mancc";
-            resources.ApplyResources(this.mancc, "mancc");
-            this.mancc.Name = "mancc";
-            this.mancc.ReadOnly = true;
-            // 
-            // tennccNCC
-            // 
-            this.tennccNCC.DataPropertyName = "tenncc";
-            resources.ApplyResources(this.tennccNCC, "tennccNCC");
-            this.tennccNCC.Name = "tennccNCC";
-            this.tennccNCC.ReadOnly = true;
-            // 
-            // diachiNCC
-            // 
-            this.diachiNCC.DataPropertyName = "diachi";
-            resources.ApplyResources(this.diachiNCC, "diachiNCC");
-            this.diachiNCC.Name = "diachiNCC";
-            this.diachiNCC.ReadOnly = true;
-            // 
-            // sdtNCC
-            // 
-            this.sdtNCC.DataPropertyName = "sdt";
-            resources.ApplyResources(this.sdtNCC, "sdtNCC");
-            this.sdtNCC.Name = "sdtNCC";
-            this.sdtNCC.ReadOnly = true;
-            // 
-            // ghichuNCC
-            // 
-            this.ghichuNCC.DataPropertyName = "ghichu";
-            resources.ApplyResources(this.ghichuNCC, "ghichuNCC");
-            this.ghichuNCC.Name = "ghichuNCC";
-            this.ghichuNCC.ReadOnly = true;
-            // 
-            // menuStrip3
-            // 
-            this.menuStrip3.BackColor = System.Drawing.Color.Gray;
-            this.menuStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnThemNcc,
-            this.mnSuaNcc,
-            this.mnXoaNcc,
-            this.mnLuuNcc,
-            this.mnHuyNcc});
-            resources.ApplyResources(this.menuStrip3, "menuStrip3");
-            this.menuStrip3.Name = "menuStrip3";
-            // 
-            // mnThemNcc
-            // 
-            this.mnThemNcc.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnThemNcc.ForeColor = System.Drawing.Color.Black;
-            this.mnThemNcc.Name = "mnThemNcc";
-            resources.ApplyResources(this.mnThemNcc, "mnThemNcc");
-            this.mnThemNcc.Click += new System.EventHandler(this.mnThemNcc_Click);
-            // 
-            // mnSuaNcc
-            // 
-            this.mnSuaNcc.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnSuaNcc.ForeColor = System.Drawing.Color.Black;
-            this.mnSuaNcc.Name = "mnSuaNcc";
-            resources.ApplyResources(this.mnSuaNcc, "mnSuaNcc");
-            this.mnSuaNcc.Click += new System.EventHandler(this.mnSuaNcc_Click);
-            // 
-            // mnXoaNcc
-            // 
-            this.mnXoaNcc.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnXoaNcc.ForeColor = System.Drawing.Color.Black;
-            this.mnXoaNcc.Name = "mnXoaNcc";
-            resources.ApplyResources(this.mnXoaNcc, "mnXoaNcc");
-            this.mnXoaNcc.Click += new System.EventHandler(this.mnXoaNcc_Click);
-            // 
-            // mnLuuNcc
-            // 
-            this.mnLuuNcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.mnLuuNcc, "mnLuuNcc");
-            this.mnLuuNcc.ForeColor = System.Drawing.Color.Black;
-            this.mnLuuNcc.Name = "mnLuuNcc";
-            this.mnLuuNcc.Click += new System.EventHandler(this.mnLuuNcc_Click);
-            // 
-            // mnHuyNcc
-            // 
-            this.mnHuyNcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.mnHuyNcc, "mnHuyNcc");
-            this.mnHuyNcc.ForeColor = System.Drawing.Color.Black;
-            this.mnHuyNcc.Name = "mnHuyNcc";
-            this.mnHuyNcc.Click += new System.EventHandler(this.mnHuyNcc_Click);
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage6.Controls.Add(this.panel4);
-            this.tabPage6.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.tabPage6, "tabPage6");
-            this.tabPage6.Name = "tabPage6";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel9);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel9.Controls.Add(this.thongbaoloikm);
-            this.panel9.Controls.Add(this.groupBox7);
-            this.panel9.Controls.Add(this.groupBox8);
-            this.panel9.Controls.Add(this.menuStrip4);
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.Name = "panel9";
-            // 
-            // thongbaoloikm
-            // 
-            resources.ApplyResources(this.thongbaoloikm, "thongbaoloikm");
-            this.thongbaoloikm.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloikm.Name = "thongbaoloikm";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Controls.Add(this.txtGiamKm);
-            this.groupBox7.Controls.Add(this.txtNoiDungKm);
-            this.groupBox7.Controls.Add(this.txtTenKm);
-            this.groupBox7.Controls.Add(this.txtMaKm);
-            this.groupBox7.Controls.Add(this.label34);
-            this.groupBox7.Controls.Add(this.label36);
-            this.groupBox7.Controls.Add(this.label39);
-            this.groupBox7.Controls.Add(this.label40);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Name = "label20";
-            // 
-            // txtGiamKm
-            // 
-            this.txtGiamKm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtGiamKm, "txtGiamKm");
-            this.txtGiamKm.Name = "txtGiamKm";
-            // 
-            // txtNoiDungKm
-            // 
-            this.txtNoiDungKm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtNoiDungKm, "txtNoiDungKm");
-            this.txtNoiDungKm.Name = "txtNoiDungKm";
-            // 
-            // txtTenKm
-            // 
-            this.txtTenKm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtTenKm, "txtTenKm");
-            this.txtTenKm.Name = "txtTenKm";
-            // 
-            // txtMaKm
-            // 
-            this.txtMaKm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtMaKm, "txtMaKm");
-            this.txtMaKm.Name = "txtMaKm";
-            // 
-            // label34
-            // 
-            resources.ApplyResources(this.label34, "label34");
-            this.label34.Name = "label34";
-            // 
-            // label36
-            // 
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.Name = "label36";
-            // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.dtDanhSachKhuyenmai);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.TabStop = false;
-            // 
-            // dtDanhSachKhuyenmai
-            // 
-            this.dtDanhSachKhuyenmai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtDanhSachKhuyenmai.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dtDanhSachKhuyenmai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dtDanhSachKhuyenmai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtDanhSachKhuyenmai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mask,
-            this.tenskSK,
-            this.noidung,
-            this.giamSK});
-            resources.ApplyResources(this.dtDanhSachKhuyenmai, "dtDanhSachKhuyenmai");
-            this.dtDanhSachKhuyenmai.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dtDanhSachKhuyenmai.Name = "dtDanhSachKhuyenmai";
-            this.dtDanhSachKhuyenmai.ReadOnly = true;
-            this.dtDanhSachKhuyenmai.RowTemplate.Height = 24;
-            // 
-            // mask
-            // 
-            this.mask.DataPropertyName = "mask";
-            resources.ApplyResources(this.mask, "mask");
-            this.mask.Name = "mask";
-            this.mask.ReadOnly = true;
-            // 
-            // tenskSK
-            // 
-            this.tenskSK.DataPropertyName = "tensk";
-            resources.ApplyResources(this.tenskSK, "tenskSK");
-            this.tenskSK.Name = "tenskSK";
-            this.tenskSK.ReadOnly = true;
-            // 
-            // noidung
-            // 
-            this.noidung.DataPropertyName = "noidung";
-            resources.ApplyResources(this.noidung, "noidung");
-            this.noidung.Name = "noidung";
-            this.noidung.ReadOnly = true;
-            // 
-            // giamSK
-            // 
-            this.giamSK.DataPropertyName = "giam";
-            resources.ApplyResources(this.giamSK, "giamSK");
-            this.giamSK.Name = "giamSK";
-            this.giamSK.ReadOnly = true;
-            // 
-            // menuStrip4
-            // 
-            this.menuStrip4.BackColor = System.Drawing.Color.Gray;
-            this.menuStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip4.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnThemKm,
-            this.mnSuaKm,
-            this.mnXoaKm,
-            this.mnLuuKm,
-            this.mnHuyKm});
-            resources.ApplyResources(this.menuStrip4, "menuStrip4");
-            this.menuStrip4.Name = "menuStrip4";
-            // 
-            // mnThemKm
-            // 
-            this.mnThemKm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnThemKm.ForeColor = System.Drawing.Color.Black;
-            this.mnThemKm.Name = "mnThemKm";
-            resources.ApplyResources(this.mnThemKm, "mnThemKm");
-            this.mnThemKm.Click += new System.EventHandler(this.mnThemKm_Click);
-            // 
-            // mnSuaKm
-            // 
-            this.mnSuaKm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnSuaKm.ForeColor = System.Drawing.Color.Black;
-            this.mnSuaKm.Name = "mnSuaKm";
-            resources.ApplyResources(this.mnSuaKm, "mnSuaKm");
-            this.mnSuaKm.Click += new System.EventHandler(this.mnSuaKm_Click);
-            // 
-            // mnXoaKm
-            // 
-            this.mnXoaKm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnXoaKm.ForeColor = System.Drawing.Color.Black;
-            this.mnXoaKm.Name = "mnXoaKm";
-            resources.ApplyResources(this.mnXoaKm, "mnXoaKm");
-            this.mnXoaKm.Click += new System.EventHandler(this.mnXoaKm_Click);
-            // 
-            // mnLuuKm
-            // 
-            this.mnLuuKm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.mnLuuKm, "mnLuuKm");
-            this.mnLuuKm.ForeColor = System.Drawing.Color.Black;
-            this.mnLuuKm.Name = "mnLuuKm";
-            this.mnLuuKm.Click += new System.EventHandler(this.mnLuuKm_Click);
-            // 
-            // mnHuyKm
-            // 
-            this.mnHuyKm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.mnHuyKm, "mnHuyKm");
-            this.mnHuyKm.ForeColor = System.Drawing.Color.Black;
-            this.mnHuyKm.Name = "mnHuyKm";
-            this.mnHuyKm.Click += new System.EventHandler(this.mnHuyKm_Click);
-            // 
             // tabPage7
             // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage7.BackColor = System.Drawing.Color.White;
             this.tabPage7.Controls.Add(this.panel5);
             this.tabPage7.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.tabPage7, "tabPage7");
@@ -2344,7 +2549,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel10.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel10.Controls.Add(this.thongbaoloikhachhang);
             this.panel10.Controls.Add(this.groupBox9);
             this.panel10.Controls.Add(this.groupBox10);
@@ -2378,38 +2583,32 @@
             // 
             // txtGioiTinhKhachHang
             // 
-            this.txtGioiTinhKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.txtGioiTinhKhachHang, "txtGioiTinhKhachHang");
             this.txtGioiTinhKhachHang.FormattingEnabled = true;
             this.txtGioiTinhKhachHang.Name = "txtGioiTinhKhachHang";
             // 
             // txtGhiChuKhachHang
             // 
-            this.txtGhiChuKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtGhiChuKhachHang, "txtGhiChuKhachHang");
             this.txtGhiChuKhachHang.Name = "txtGhiChuKhachHang";
             // 
             // txtSDTKhachHang
             // 
-            this.txtSDTKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtSDTKhachHang, "txtSDTKhachHang");
             this.txtSDTKhachHang.Name = "txtSDTKhachHang";
             // 
             // txtDiaChiKhachHang
             // 
-            this.txtDiaChiKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtDiaChiKhachHang, "txtDiaChiKhachHang");
             this.txtDiaChiKhachHang.Name = "txtDiaChiKhachHang";
             // 
             // txtTenKhachHang
             // 
-            this.txtTenKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtTenKhachHang, "txtTenKhachHang");
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             // 
             // txtMaKhachHang
             // 
-            this.txtMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtMaKhachHang, "txtMaKhachHang");
             this.txtMaKhachHang.Name = "txtMaKhachHang";
             // 
@@ -2453,7 +2652,7 @@
             // dtDanhSachKhachHang
             // 
             this.dtDanhSachKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtDanhSachKhachHang.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dtDanhSachKhachHang.BackgroundColor = System.Drawing.Color.MediumTurquoise;
             this.dtDanhSachKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtDanhSachKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2513,7 +2712,7 @@
             // 
             // menuStrip5
             // 
-            this.menuStrip5.BackColor = System.Drawing.Color.Gray;
+            this.menuStrip5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.menuStrip5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip5.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2565,161 +2764,9 @@
             this.mnHuyKh.Name = "mnHuyKh";
             this.mnHuyKh.Click += new System.EventHandler(this.mnHuyKh_Click);
             // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage8.Controls.Add(this.panel6);
-            this.tabPage8.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.tabPage8, "tabPage8");
-            this.tabPage8.Name = "tabPage8";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.panel11);
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel11.Controls.Add(this.thongbaoloiloaisanpham);
-            this.panel11.Controls.Add(this.groupBox11);
-            this.panel11.Controls.Add(this.groupBox12);
-            this.panel11.Controls.Add(this.menuStrip6);
-            resources.ApplyResources(this.panel11, "panel11");
-            this.panel11.Name = "panel11";
-            // 
-            // thongbaoloiloaisanpham
-            // 
-            resources.ApplyResources(this.thongbaoloiloaisanpham, "thongbaoloiloaisanpham");
-            this.thongbaoloiloaisanpham.ForeColor = System.Drawing.Color.Red;
-            this.thongbaoloiloaisanpham.Name = "thongbaoloiloaisanpham";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.txtTenLoaiSanPham);
-            this.groupBox11.Controls.Add(this.txtMaLoaiSanPham);
-            this.groupBox11.Controls.Add(this.label54);
-            this.groupBox11.Controls.Add(this.label55);
-            resources.ApplyResources(this.groupBox11, "groupBox11");
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.TabStop = false;
-            // 
-            // txtTenLoaiSanPham
-            // 
-            this.txtTenLoaiSanPham.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtTenLoaiSanPham, "txtTenLoaiSanPham");
-            this.txtTenLoaiSanPham.Name = "txtTenLoaiSanPham";
-            // 
-            // txtMaLoaiSanPham
-            // 
-            this.txtMaLoaiSanPham.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtMaLoaiSanPham, "txtMaLoaiSanPham");
-            this.txtMaLoaiSanPham.Name = "txtMaLoaiSanPham";
-            // 
-            // label54
-            // 
-            resources.ApplyResources(this.label54, "label54");
-            this.label54.Name = "label54";
-            // 
-            // label55
-            // 
-            resources.ApplyResources(this.label55, "label55");
-            this.label55.Name = "label55";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.dtDanhSachLoaiSanPham);
-            resources.ApplyResources(this.groupBox12, "groupBox12");
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.TabStop = false;
-            // 
-            // dtDanhSachLoaiSanPham
-            // 
-            this.dtDanhSachLoaiSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtDanhSachLoaiSanPham.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dtDanhSachLoaiSanPham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dtDanhSachLoaiSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtDanhSachLoaiSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maloai,
-            this.tenloaiHH});
-            resources.ApplyResources(this.dtDanhSachLoaiSanPham, "dtDanhSachLoaiSanPham");
-            this.dtDanhSachLoaiSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dtDanhSachLoaiSanPham.Name = "dtDanhSachLoaiSanPham";
-            this.dtDanhSachLoaiSanPham.ReadOnly = true;
-            this.dtDanhSachLoaiSanPham.RowTemplate.Height = 24;
-            // 
-            // maloai
-            // 
-            this.maloai.DataPropertyName = "maloai";
-            resources.ApplyResources(this.maloai, "maloai");
-            this.maloai.Name = "maloai";
-            this.maloai.ReadOnly = true;
-            // 
-            // tenloaiHH
-            // 
-            this.tenloaiHH.DataPropertyName = "tenloai";
-            resources.ApplyResources(this.tenloaiHH, "tenloaiHH");
-            this.tenloaiHH.Name = "tenloaiHH";
-            this.tenloaiHH.ReadOnly = true;
-            // 
-            // menuStrip6
-            // 
-            this.menuStrip6.BackColor = System.Drawing.Color.Gray;
-            this.menuStrip6.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip6.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnThemLoai,
-            this.mnSuaLoai,
-            this.mnXoaLoai,
-            this.mnLuuLoai,
-            this.mnHuyLoai});
-            resources.ApplyResources(this.menuStrip6, "menuStrip6");
-            this.menuStrip6.Name = "menuStrip6";
-            // 
-            // mnThemLoai
-            // 
-            this.mnThemLoai.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnThemLoai.ForeColor = System.Drawing.Color.Black;
-            this.mnThemLoai.Name = "mnThemLoai";
-            resources.ApplyResources(this.mnThemLoai, "mnThemLoai");
-            this.mnThemLoai.Click += new System.EventHandler(this.mnThemLoai_Click);
-            // 
-            // mnSuaLoai
-            // 
-            this.mnSuaLoai.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnSuaLoai.ForeColor = System.Drawing.Color.Black;
-            this.mnSuaLoai.Name = "mnSuaLoai";
-            resources.ApplyResources(this.mnSuaLoai, "mnSuaLoai");
-            this.mnSuaLoai.Click += new System.EventHandler(this.mnSuaLoai_Click);
-            // 
-            // mnXoaLoai
-            // 
-            this.mnXoaLoai.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mnXoaLoai.ForeColor = System.Drawing.Color.Black;
-            this.mnXoaLoai.Name = "mnXoaLoai";
-            resources.ApplyResources(this.mnXoaLoai, "mnXoaLoai");
-            this.mnXoaLoai.Click += new System.EventHandler(this.mnXoaLoai_Click);
-            // 
-            // mnLuuLoai
-            // 
-            this.mnLuuLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.mnLuuLoai, "mnLuuLoai");
-            this.mnLuuLoai.ForeColor = System.Drawing.Color.Black;
-            this.mnLuuLoai.Name = "mnLuuLoai";
-            this.mnLuuLoai.Click += new System.EventHandler(this.mnLuuLoai_Click);
-            // 
-            // mnHuyLoai
-            // 
-            this.mnHuyLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.mnHuyLoai, "mnHuyLoai");
-            this.mnHuyLoai.ForeColor = System.Drawing.Color.Black;
-            this.mnHuyLoai.Name = "mnHuyLoai";
-            this.mnHuyLoai.Click += new System.EventHandler(this.mnHuyLoai_Click);
-            // 
             // tabBanHang
             // 
-            this.tabBanHang.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabBanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tabBanHang.Controls.Add(this.panel12);
             this.tabBanHang.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.tabBanHang, "tabBanHang");
@@ -2735,7 +2782,7 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox15.Controls.Add(this.btnDonateHD);
             this.groupBox15.Controls.Add(this.txtsoluongspdamua);
             this.groupBox15.Controls.Add(this.txtGiamAdd);
@@ -2754,10 +2801,11 @@
             // 
             // btnDonateHD
             // 
+            this.btnDonateHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             resources.ApplyResources(this.btnDonateHD, "btnDonateHD");
-            this.btnDonateHD.ForeColor = System.Drawing.Color.White;
+            this.btnDonateHD.ForeColor = System.Drawing.Color.Black;
             this.btnDonateHD.Name = "btnDonateHD";
-            this.btnDonateHD.UseVisualStyleBackColor = true;
+            this.btnDonateHD.UseVisualStyleBackColor = false;
             this.btnDonateHD.Click += new System.EventHandler(this.btnDonateHD_Click);
             // 
             // txtsoluongspdamua
@@ -2807,6 +2855,7 @@
             this.btnInHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.UseVisualStyleBackColor = false;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // txtMaSpCTHD
             // 
@@ -2858,6 +2907,7 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox14.Controls.Add(this.lbloiBH);
             this.groupBox14.Controls.Add(this.txttonkho);
             this.groupBox14.Controls.Add(this.btnKhuyenMaiHD);
@@ -2877,6 +2927,7 @@
             this.groupBox14.Controls.Add(this.txtTTKhuyenMai);
             this.groupBox14.Controls.Add(this.btnThemCTHD);
             this.groupBox14.Controls.Add(this.txtKhachHangHD);
+            this.groupBox14.Controls.Add(this.txttonkhosub);
             this.groupBox14.ForeColor = System.Drawing.SystemColors.Desktop;
             resources.ApplyResources(this.groupBox14, "groupBox14");
             this.groupBox14.Name = "groupBox14";
@@ -2891,7 +2942,8 @@
             // txttonkho
             // 
             resources.ApplyResources(this.txttonkho, "txttonkho");
-            this.txttonkho.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txttonkho.BackColor = System.Drawing.Color.White;
+            this.txttonkho.ForeColor = System.Drawing.Color.DarkRed;
             this.txttonkho.Name = "txttonkho";
             // 
             // btnKhuyenMaiHD
@@ -2916,10 +2968,10 @@
             resources.ApplyResources(this.txtSanPhamHD, "txtSanPhamHD");
             this.txtSanPhamHD.FormattingEnabled = true;
             this.txtSanPhamHD.Name = "txtSanPhamHD";
+            this.txtSanPhamHD.SelectedIndexChanged += new System.EventHandler(this.txtSanPhamHD_SelectedIndexChanged);
             // 
             // txtSoLuongCTHD
             // 
-            this.txtSoLuongCTHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtSoLuongCTHD, "txtSoLuongCTHD");
             this.txtSoLuongCTHD.Name = "txtSoLuongCTHD";
             this.txtSoLuongCTHD.Value = new decimal(new int[] {
@@ -2927,11 +2979,13 @@
             0,
             0,
             0});
+            this.txtSoLuongCTHD.ValueChanged += new System.EventHandler(this.txtSoLuongCTHD_ValueChanged);
             // 
             // txtDonViSp
             // 
             resources.ApplyResources(this.txtDonViSp, "txtDonViSp");
-            this.txtDonViSp.ForeColor = System.Drawing.Color.Red;
+            this.txtDonViSp.BackColor = System.Drawing.Color.White;
+            this.txtDonViSp.ForeColor = System.Drawing.Color.DarkRed;
             this.txtDonViSp.Name = "txtDonViSp";
             // 
             // label7
@@ -3019,8 +3073,15 @@
             this.txtKhachHangHD.FormattingEnabled = true;
             this.txtKhachHangHD.Name = "txtKhachHangHD";
             // 
+            // txttonkhosub
+            // 
+            resources.ApplyResources(this.txttonkhosub, "txttonkhosub");
+            this.txttonkhosub.ForeColor = System.Drawing.Color.DarkRed;
+            this.txttonkhosub.Name = "txttonkhosub";
+            // 
             // gbDanhSachCTHD
             // 
+            this.gbDanhSachCTHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gbDanhSachCTHD.Controls.Add(this.dtdanhsachcthd);
             resources.ApplyResources(this.gbDanhSachCTHD, "gbDanhSachCTHD");
             this.gbDanhSachCTHD.Name = "gbDanhSachCTHD";
@@ -3034,15 +3095,24 @@
             this.dtdanhsachcthd.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtdanhsachcthd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dtdanhsachcthd, "dtdanhsachcthd");
+            this.dtdanhsachcthd.GridColor = System.Drawing.Color.Black;
             this.dtdanhsachcthd.Name = "dtdanhsachcthd";
             this.dtdanhsachcthd.ReadOnly = true;
             this.dtdanhsachcthd.RowTemplate.Height = 24;
+            // 
+            // checksaoluu
+            // 
+            resources.ApplyResources(this.checksaoluu, "checksaoluu");
+            this.checksaoluu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checksaoluu.Name = "checksaoluu";
+            this.checksaoluu.UseVisualStyleBackColor = false;
+            this.checksaoluu.CheckedChanged += new System.EventHandler(this.checksaoluu_CheckedChanged);
             // 
             // Form2
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tabControl1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
@@ -3052,7 +3122,6 @@
             this.tabAdmin.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hidepassmoi2)).EndInit();
@@ -3092,17 +3161,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachNhanVien)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTonKhoHH)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachHangHoa)).EndInit();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -3124,16 +3182,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachKhuyenmai)).EndInit();
             this.menuStrip4.ResumeLayout(false);
             this.menuStrip4.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachKhachHang)).EndInit();
-            this.menuStrip5.ResumeLayout(false);
-            this.menuStrip5.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
@@ -3144,6 +3192,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachLoaiSanPham)).EndInit();
             this.menuStrip6.ResumeLayout(false);
             this.menuStrip6.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTonKhoHH)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachHangHoa)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachKhachHang)).EndInit();
+            this.menuStrip5.ResumeLayout(false);
+            this.menuStrip5.PerformLayout();
             this.tabBanHang.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
@@ -3178,7 +3247,6 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnThemNv;
@@ -3399,15 +3467,6 @@
         private System.Windows.Forms.Label txtMaSpAdd;
         private System.Windows.Forms.Label txtGiamAdd;
         private System.Windows.Forms.Button btnDonateHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
         private System.Windows.Forms.DataGridViewTextBoxColumn mahh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenhh;
         private System.Windows.Forms.DataGridViewTextBoxColumn gianhap;
@@ -3494,5 +3553,17 @@
         private System.Windows.Forms.Label thongbaoloiadmin;
         private System.Windows.Forms.Label lbloiBH;
         private System.Windows.Forms.Label txtsltonkho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
+        private System.Windows.Forms.Label txttonkhosub;
+        private System.Windows.Forms.CheckBox checksaoluu;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
