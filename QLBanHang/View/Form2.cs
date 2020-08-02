@@ -3190,6 +3190,10 @@ namespace QLBanHang
                 lbloiBH.Text = "Vui lòng chọn sản phẩm";
                 return false;
             }
+            else if (txtSoLuongCTHD.Value == null || txtSoLuongCTHD.Value==0)
+            { lbloiBH.Text = "Số lượng không hợp lệ.";
+                return false;
+            }
             else if (int.TryParse(txttonkho.Text, out result))
             {
                 if (result == 0)

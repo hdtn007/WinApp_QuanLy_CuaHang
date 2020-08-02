@@ -37,7 +37,7 @@ namespace QLBanHang.Model
         public ConnectToSQL()
         {
             StrCon = @"Data Source= HO-DOAN-THANH-N\SQLEXPRESS; ;Initial Catalog = QL_CUAHANG;Integrated Security=True"; // sua mat khau , password cua csdl
-            StrCon = @"Data Source= DESKTOP-N4SKFIV; ;Initial Catalog = QL_CUAHANG;Integrated Security=True"; // sua mat khau , password cua csdl
+           /* StrCon = @"Data Source= DESKTOP-N4SKFIV; ;Initial Catalog = QL_CUAHANG;Integrated Security=True"; // sua mat khau , password cua csdl*/
             Conn = new SqlConnection(StrCon);
         }
         #endregion
